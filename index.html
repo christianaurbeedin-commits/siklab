@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Project SIKLAB v45</title>
+<title>Project SIKLAB v46</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -2799,6 +2799,61 @@ html.native input,html.native textarea{-webkit-user-select:text;user-select:text
 #updov .upin b{color:#d6ffe9;font-size:15px}#updov .upin small{color:#c9f5dc;font-size:12px;line-height:1.35}#updov .row{display:flex;gap:6px}
 #updov.force{inset:0;left:0;bottom:0;transform:none;width:auto;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(5,3,20,.92)}
 @media (prefers-reduced-motion:reduce){#maintov .mtic{animation:none}}
+
+/* ===================== v46 ===================== */
+/* quarters & pacing list: readable text (a 3D label style used the same class name) */
+.tq ul.tl{font:600 13px/1.45 var(--body,sans-serif)!important;fill:currentColor;stroke:none;paint-order:normal;text-anchor:start}
+.tq ul.tl li{color:#d6e0ff}
+/* duel answer explanation: on the battle picture */
+.dfield,.bfield{position:relative}
+.roundres.onfield{position:absolute!important;left:8px!important;right:8px!important;bottom:8px!important;top:auto!important;z-index:7;margin:0!important;max-height:calc(100% - 16px);overflow:auto;background:rgba(11,8,38,.94)!important;border:2px solid #ffc600!important;border-image:none!important;border-radius:14px!important;padding:8px 12px!important;font-size:13px;line-height:1.35}
+/* teacher logout: icon only */
+.tlogout{padding:0!important;width:44px;min-width:44px;justify-content:center}
+.tlogout span{font-size:20px!important;line-height:1}
+/* maintenance and update panels */
+.clpanel .clstate{font-weight:800;font-size:14px;padding:8px 10px;border-radius:10px;text-align:center}
+.clpanel .clstate.ok{background:rgba(56,224,143,.14);border:2px solid rgba(56,224,143,.5);color:#d6ffe9}
+.clpanel .clstate.bad{background:rgba(255,92,120,.14);border:2px solid rgba(255,92,120,.55);color:#ffd9e0}
+.clpanel .cllbl{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#c9c3f0}
+.clpanel .cllbl select{flex:1}
+.clvers{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.clvers div{display:flex;flex-direction:column;align-items:center;padding:6px 4px;border-radius:10px;background:rgba(11,8,38,.6);border:2px solid #3b3190}
+.clvers small{font-size:10px;letter-spacing:.06em;color:#a9a3d8;font-weight:800}.clvers b{font-size:13px;color:#ffe27a}
+.clpanel form{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+/* review after a stage or duel */
+.rv46{margin-top:8px;text-align:left}.rv46 summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.rvq{padding:8px 10px;margin-top:6px;border-radius:10px;background:rgba(11,8,38,.55);border-left:4px solid #38e08f}
+.rvq.no{border-left-color:#ff4f6d}.rvh{display:flex;gap:6px;font-size:14px}.rvh span{font-weight:900;color:#38e08f}.rvq.no .rvh span{color:#ff4f6d}
+.rva{font-size:13px;margin-top:3px;color:#d6ffe9}.rvf{font-size:12px;color:#b9b2e8;margin-top:2px}
+/* emotes */
+.duel{position:relative}.duel .p{position:relative}
+.emo46{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:8}
+.emob{width:38px;height:38px;border-radius:50%;border:2px solid #ffc600;background:#211a52;font-size:20px;cursor:pointer;box-shadow:0 3px 0 #8a5005}
+.emop{position:absolute;top:44px;left:50%;transform:translateX(-50%);width:260px;padding:8px;border-radius:14px;background:#140f36;border:2px solid #ffc600;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.emop[hidden]{display:none}.emop>button{font-size:24px;width:38px;height:38px;border:0;background:rgba(255,255,255,.08);border-radius:10px;cursor:pointer}
+.emoph{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}.emoph button{border:2px solid #3b3190;background:#211a52;color:#fff;border-radius:999px;padding:5px 10px;font:700 12px var(--body);cursor:pointer}
+.emobub{position:absolute;top:-6px;left:50%;transform:translate(-50%,-100%);font-size:30px;z-index:9;animation:emoup 2.6s ease forwards;pointer-events:none}
+.emobub.txt{font:800 13px var(--body);background:#fff;color:#14112e;border-radius:12px;padding:5px 9px;white-space:nowrap;box-shadow:0 3px 0 rgba(0,0,0,.3)}
+@keyframes emoup{0%{opacity:0;transform:translate(-50%,-60%) scale(.6)}12%{opacity:1;transform:translate(-50%,-100%) scale(1.1)}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-140%)}}
+/* my learning */
+.lrsum{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:6px}
+.lrsum div{display:flex;flex-direction:column;align-items:center;padding:8px 2px;border-radius:12px;background:rgba(11,8,38,.55);border:2px solid #3b3190;text-align:center}
+.lrsum b{font:800 22px var(--display);color:#ffe27a}.lrsum small{font-size:10px;font-weight:800;color:#c9c3f0;line-height:1.2}
+.lrsum .master{border-color:#38e08f}.lrsum .near{border-color:#46a6ff}.lrsum .practice{border-color:#ff9a3d}
+.lrt .lrh{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.lrt .lrh b{font-size:15px}
+.lrchip{flex:none;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:#2d2470;white-space:nowrap}
+.lrt.master .lrchip{background:#14935a}.lrt.near .lrchip{background:#1b64b8}.lrt.practice .lrchip{background:#b8501b}
+.lrbar{height:10px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin:6px 0}.lrbar i{display:block;height:100%;background:linear-gradient(90deg,#ff9a3d,#ffc600,#38e08f)}
+.lrn46 .tabs{display:flex;gap:4px;overflow-x:auto}.lrn46 .tabs button{flex:none}
+/* music picker */
+.bgm46.on{border-color:#ffc600!important}
+/* brighter look */
+:root{--night:#1d1850;--panel:#2a226b;--panel2:#382f8d;--muted:#cdc7f2}
+/* voice chat */
+.vc46{display:flex;align-items:center;gap:6px;margin-top:6px;grid-column:1/-1;width:100%}
+.vcb{min-width:40px;height:36px;border-radius:12px;border:2px solid #46a6ff;background:#1b2a6b;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 3px 0 #0a1a4a;padding:0 8px}
+.vcb.on{border-color:#38e08f;background:#14583c}.vcb.muted{border-color:#ff4f6d;background:#5e1424}.vcb.sm{min-width:36px;font-size:15px}
+.vc46 small{font-size:12px;font-weight:800;color:#d6ffe9}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#140f36"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="SIKLAB"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><meta name="description" content="Project SIKLAB: a G11 General Science adventure game for Manuel Luis Quezon Senior High School, SDO Manila.">
 </head>
@@ -38470,10 +38525,10 @@ function start8(data){S=load()||(data&&data.S)||fresh();const f=fresh();Object.k
 
 
 /* ===================== v9 · QUESTION ROTATION (least-recently-seen first) ===================== */
-function pickRot(keys,n,pre){if(!keys.length)return [];const seen=S.seenQ||(S.seenQ={});const r=k=>seen[pre+k]||0;let src=shuffle(keys).sort((a,b)=>r(a)-r(b));const out=[];
+function pickRot45(keys,n,pre){if(!keys.length)return [];const seen=S.seenQ||(S.seenQ={});const r=k=>seen[pre+k]||0;let src=shuffle(keys).sort((a,b)=>r(a)-r(b));const out=[];
  while(out.length<n){out.push(...src.slice(0,n-out.length));src=shuffle(keys);}
  out.forEach(k=>{S.seenN=(S.seenN||0)+1;seen[pre+k]=S.seenN;});return out;}
-function getQ(topics,n){let pool=[];(topics||[]).forEach(t=>{if(QB[t])QB[t].forEach((_,i)=>pool.push(t+'|'+i));});if(!pool.length)pool=QB.p_daily.map((_,i)=>'p_daily|'+i);
+function getQ45(topics,n){let pool=[];(topics||[]).forEach(t=>{if(QB[t])QB[t].forEach((_,i)=>pool.push(t+'|'+i));});if(!pool.length)pool=QB.p_daily.map((_,i)=>'p_daily|'+i);
  return pickRot(pool,n,'').map(k=>{const p=k.split('|');return prepQ(p[0],+p[1]);});}
 function keysOf(BANK,topics){const out=[];(topics||[]).forEach(t=>{if(BANK[t])BANK[t].forEach((_,i)=>out.push(t+'|'+i));});return out;}
 const unkey=(BANK,k)=>{const p=k.split('|');return {t:p[0],v:BANK[p[0]][+p[1]]};};
@@ -38851,7 +38906,7 @@ Object.assign(ART,{
 /* ===================== v10 · TITLE HEADING ===================== */
 function vTitle19(){let h=vTitle9();
  if(!S.hero&&UI.creating)return h.replace('<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>',schoolHead('sm')+'<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>');
- return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v45');}
+ return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v46');}
 function vHome10(){let h=vHome9().replace(schoolStrip('lob'),'');const t=S.hb.tr;
  return h.replace('<div class="ltiles">','<div class="ltiles three">').replace('<button class="ltile base"','<button class="ltile sd" data-act="go" data-v="hb"><span class="li sdi">⚔️</span><span><b>CLAN BATTLE</b><small>Hero battle · '+t+' 🏆</small></span></button><button class="ltile base"');}
 /* ===================== v10 · SCIENCE CAPSULES ===================== */
@@ -39940,7 +39995,7 @@ function fitOne(el,min){if(!el||!el.isConnected)return;const cs=getComputedStyle
  while(over()&&fs>min&&n<16){fs-=1;el.style.fontSize=fs+'px';n++;}
 }
 function fitAll19(root){(root||document).querySelectorAll(FITSEL).forEach(el=>fitOne(el,el.matches('.hud .ttl,.ptitle')?11:10));}
-let fitQ=0;function fitSoon(){if(fitQ)return;fitQ=requestAnimationFrame(()=>{fitQ=0;fitAll(document.getElementById('app'));});}
+let fitQ=0;function fitSoon(){if(fitQ)return;fitQ=setTimeout(()=>{fitQ=0;fitAll(document.getElementById('app'));},120);}
 try{const mo=new MutationObserver(fitSoon);const go2=()=>{const a=document.getElementById('app');if(a)mo.observe(a,{childList:true,subtree:true});else setTimeout(go2,200);};go2();addEventListener('resize',fitSoon);}catch(e){}
 /* 2) duels and boss fights fit the screen; round results float, nothing scrolls */
 function addFeed(host,html){host.insertAdjacentHTML('beforeend',html);const el=host.lastElementChild;if(host.closest&&host.closest('.duelv,.bossv'))return;seeIt(el);}
@@ -40208,7 +40263,7 @@ function audioUnlock(){audioInit();const c=AU.ctx;
 function introTouch(e){const skip=e&&e.target&&e.target.closest&&e.target.closest('.iskipb');
  if(UNLOCKED&&!UI.intro)return;audioUnlock().then(ok=>{if(ok&&UI.intro&&!INTRO_SND&&!skip){INTRO_GEST=true;introSounds((performance.now()-INTRO_T0)/1000);}});}
 ['pointerup','touchend','click','keydown'].forEach(ev=>addEventListener(ev,introTouch,{capture:true,passive:true}));
-function start(data){start19(data);UI.lg={step:'pick'};if(S.hero)accSync();UI.gate=false;introStart();}
+function start22(data){start19(data);UI.lg={step:'pick'};if(S.hero)accSync();UI.gate=false;introStart();}
 Object.assign(A,{introSkip:()=>{if(UI.intro){INTRO_GEST=true;introEnd();}}});
 
 
@@ -40916,7 +40971,7 @@ function tDevApply(){const t=tGet();if(!t||!t.set||!S||!S.teacher)return;TSK.for
 let TDEVS=null;
 function render35b(){if(S&&S!==TDEVS){TDEVS=S;try{tDevApply();}catch(e){}}if(V.name==='teacher'&&!UI.teach){V={name:'tlogin',back:V.back};}render32();}
 const tBack=()=>S&&S.hero?'hero':'title';
-function vTlogin(){const T=tGet();const L=UI.tl||(UI.tl={step:T?'pw':'new'});
+function vTlogin44(){const T=tGet();const L=UI.tl||(UI.tl={step:T?'pw':'new'});
  const inp=(id,ph,ac,t)=>'<div class="pwrow"><input type="'+(t||'password')+'" id="'+id+'" placeholder="'+ph+'" autocomplete="'+ac+'" maxlength="64" spellcheck="false" autocapitalize="off" aria-label="'+ph+'">'+(t?'':'<button type="button" class="pweye" data-act="pwEye" data-f="'+id+'" aria-label="Show or hide password">👁</button>')+'</div>';
  let card='';
  if(L.step==='new')card='<form class="lgcard" id="tlogform" data-k="new" novalidate><div class="lgh">👩‍🏫 TEACHER ACCOUNT</div><div class="lgsub">Set up the teacher login for this device. Students can’t open the teacher dashboard without this password.</div>'+
@@ -41017,7 +41072,7 @@ function mAnswer44(k){
   if(dop)later(()=>duelAtk('l',{dmg:dop,first:oFirst,c:'#ff9aab'},()=>{M.hp=Math.max(0,M.hp-dop);const e=$('mhp');if(e)e.style.width=(M.hp/M.maxhp*100)+'%';hpTxt();buzz(60);}),dp?(ult?1250:900):150);
   if(!dp&&!dop)sfx('bad');
   addFeed($('mq'),'<div class="roundres"><b>'+(pc?'✓ You hit for '+dp+(pFirst?' (first strike!)':''):k<0?'⏱ Too slow':'✗ Missed')+'</b> · '+esc(M.opp.n)+': '+(oc?(dop?'hit for '+dop:'blocked'):'missed')+note+'<br><span class="muted">'+(pc?'':'Answer: <b>'+Q.o[Q.a]+'</b>. ')+Q.f+'</span></div>');
-  later(()=>{M.round++;mRound();},(dp&&dop?3600:3000)+(ult?400:0));
+  later(()=>{M.round++;mRound();},M.live?5000:((dp&&dop?4400:4000)+(ult?400:0)+(pc?0:1500)));
  };
  if(wait>0&&wait<4000){const os=$('ost');if(os)os.textContent='answering…';later(reveal,Math.min(wait,1200));}else reveal();}
 function hpTxt(){const a=$('mhpt'),b=$('ohpt');if(a)a.textContent=M.hp+' / '+M.maxhp;if(b)b.textContent=M.ohp+' / '+M.omax;}
@@ -41054,7 +41109,7 @@ function vResults39(){let h=vResults33p();if(RES&&RES.links&&V.name==='results')
 const mPts=isl=>((S.mast||{})[isl]||0);
 const mLv=isl=>Math.min(20,Math.floor(Math.sqrt(mPts(isl)/3)));
 const mNext=isl=>{const l=mLv(isl);return l>=20?null:3*(l+1)*(l+1);};
-function record(Q,ok){record32(Q,ok);if(ok&&Q&&Q.t){const T=topicById(Q.t);if(T&&T.isl){S.mast=S.mast||{};const b=mLv(T.isl);S.mast[T.isl]=(S.mast[T.isl]||0)+1;if(mLv(T.isl)>b)later(()=>toast('🧠 '+ISL[T.isl].s+' Mastery Lv '+mLv(T.isl)+'! Your battles hit harder.'),400);}}}
+function record45(Q,ok){record32(Q,ok);if(ok&&Q&&Q.t){const T=topicById(Q.t);if(T&&T.isl){S.mast=S.mast||{};const b=mLv(T.isl);S.mast[T.isl]=(S.mast[T.isl]||0)+1;if(mLv(T.isl)>b)later(()=>toast('🧠 '+ISL[T.isl].s+' Mastery Lv '+mLv(T.isl)+'! Your battles hit harder.'),400);}}}
 function masteryPanel(){return '<div class="panel plain mastp"><div class="shead">🧠 SCIENCE MASTERY</div><div class="small muted">Every correct answer anywhere (Adventure, lessons, duels, Clan Battle, the Lab) builds Mastery. Each level adds +2% Quiz Duel damage for that subject, and +1% Clan Battle skill power when your hero class matches it.</div>'+
  ISLANDS.map(I=>{const l=mLv(I.id),p=mPts(I.id),nx=mNext(I.id),pv=3*l*l;return '<div class="mrow"><div><b style="color:'+I.c+'">'+I.s+' · Lv '+l+'</b><small class="muted">'+p+' correct answers'+(nx?' · next level at '+nx:'')+'</small><div class="pbar"><i style="width:'+(nx?Math.round((p-pv)/(nx-pv)*100):100)+'%;background:'+I.c+'"></i></div></div></div>';}).join('')+'</div>';}
 /* clan battle uses mastery, your duel rank and your card deck */
@@ -43673,7 +43728,7 @@ document.addEventListener('change',e=>{if(e.target&&e.target.dataset&&e.target.d
 const STABS=[['game','🎮','Game'],['sound','🔊','Sound'],['gfx','🖥️','Graphics'],['acct','👤','Account']];
 const tgl=(act,k,label,on,extra)=>'<button class="toggle" data-act="'+act+'"'+(k?' data-k="'+k+'"':'')+(extra||'')+'><span>'+label+'</span><span class="tv'+(on===true?' on':on===false?' off':'')+'">'+(on===true?'ON':on===false?'OFF':on)+'</span></button>';
 const slider=(k,label,v)=>'<label class="vslide"><span>'+label+'</span><input type="range" min="0" max="100" step="5" value="'+Math.round((v==null?1:v)*100)+'" data-vol="'+k+'" aria-label="'+label+'"><output>'+Math.round((v==null?1:v)*100)+'%</output></label>';
-function setHTML(){const t=UI.setab||'game';const st=S.settings||{};let b='';
+function setHTML45(){const t=UI.setab||'game';const st=S.settings||{};let b='';
  if(t==='game'){const lim=S.teacher&&S.teacher.limit;b='<div class="sgrp"><b>PLAY</b>'+tgl('togVib','', '📳 Vibration', st.vib!==false)+tgl('tipsReset','','💡 Show screen tips again','›')+'</div>'+
   '<div class="sgrp"><b>HELP</b>'+tgl('mgo','','📖 How to play','›',' data-v="guide"')+tgl('toEvents','','🔑 Enter a teacher code','›')+'</div>'+
   '<div class="sgrp"><b>PLAY TIME</b><div class="small">'+'Played today: <b>'+playMin()+(lim?' of '+lim:'')+' min</b>'+(S.teacher&&S.teacher.quiet?' · Quiet hours 10 PM–5 AM':'')+'. Rest your eyes every 20–30 minutes.</div></div>';}
@@ -44298,7 +44353,7 @@ window.addEventListener('submit',e=>{if(e.target.id!=='obform')return;if(!(UI.ob
  setTimeout(()=>{if(!S||!S.hero||!OBP)return;const p=OBP;OBP=null;hbInit();if(S.hb.cls!==p.cls){try{hbCls37({id:p.cls});}catch(_){S.hb.cls=p.cls;}}S.hb.clsLock=1;S.hero.look=S.hero.look||{};S.hero.look.hat='crown';if(p.crown)S.hero.look.crown=p.crown;save();render();},0);},true);
 /* ---------- 3. Quiz Duel: questions from the island you are on ---------- */
 const DQN={};function DQ(t,arr){if(!QB[t])QB[t]=[];arr.forEach(q=>QB[t].push(q));const T=topicById(t);DQN[T.isl]=(DQN[T.isl]||0)+arr.length;}
-function duelQs(n){const isl=curIsl();const all=TOPICS.filter(t=>t.isl===isl).map(t=>t.id);const reached=reachedTopics(isl).filter(t=>all.includes(t));
+function duelQs45(n){const isl=curIsl();const all=TOPICS.filter(t=>t.isl===isl).map(t=>t.id);const reached=reachedTopics(isl).filter(t=>all.includes(t));
  let pool=keysOf(QB,reached.length?reached:all);if(pool.length<n)pool=keysOf(QB,all);return pickRot(pool,n,'duel:'+isl).map(k=>{const p=k.split('|');return prepQ(p[0],+p[1]);});}
 /* ---------- 4. Shop: compact tiles + detail drawer ---------- */
 const STSIDE=matchMedia('(orientation:landscape) and (min-width:640px)');
@@ -45128,7 +45183,7 @@ function star3d(n){let o='<div class="stars3d" role="img" aria-label="'+n+' of 3
  for(let i=0;i<3;i++){const on=i<n;let L='';for(let z=-4;z<=4;z++){const f=z===4?'url(#s3f)':z===-4?'#b07800':on?'#d99a00':'#3b3866';L+='<svg class="st3l" viewBox="0 0 64 64" style="transform:translateZ('+(z*1.6)+'px)"><path d="'+STARP+'" fill="'+(on?f:(z===4?'#55528a':'#2b2950'))+'" stroke="'+(on?'#8a5005':'#1a1838')+'" stroke-width="'+(Math.abs(z)===4?2:0)+'"/>'+(z===4&&on?'<path d="M22 18l10-6 10 6" stroke="#fff" stroke-opacity=".7" stroke-width="3" fill="none" stroke-linecap="round"/>':'')+'</svg>';}
   o+='<div class="st3w'+(on?' on':' off')+(i===1?' mid':'')+'" style="--d:'+(0.35+i*.45).toFixed(2)+'s"><i class="st3burst"></i><div class="st3c">'+L+'</div></div>';}
  return o+'<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="s3f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset=".45" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient></defs></svg></div>';}
-function vResults(){let h=vResults39();if(RES&&RES.win&&RES.game!=='arena'&&RES.stars!=null)h=h.replace(/<div class="bigstars"[^>]*>[\s\S]*?<\/svg><\/div>/,star3d(RES.stars));
+function vResults45(){let h=vResults39();if(RES&&RES.win&&RES.game!=='arena'&&RES.stars!=null)h=h.replace(/<div class="bigstars"[^>]*>[\s\S]*?<\/svg><\/div>/,star3d(RES.stars));
  if(RES&&RES.win&&!RES._s3){RES._s3=1;for(let i=0;i<(RES.stars||0);i++)later(()=>{try{sfx('star');}catch(e){}},1050+i*450);}return h;}
 
 /* ---------- 11. Capsule reveal: 3D light crown instead of flat rays ---------- */
@@ -45340,7 +45395,7 @@ function deckPanel(){let h=deckPanel42();let k=0;const n=deckOpenN();
 
 /* ---------- music: no overlap, plays on the login screen ---------- */
 function musicOn43(){if(!AU.ctx||AU.mt||UI.intro||UI.gate)return;if(S&&S.settings&&S.settings.music===false)return;if(AU.ctx.state==='suspended')AU.ctx.resume();AU.next=AU.ctx.currentTime+.05;AU.mt=setInterval(musicTick,40);}
-function setTrack(){const n=V.name==='results'?(RES&&RES.win?'victory':'defeat'):TMAP[V.name]||'lobby';if(AU.track===n)return;AU.track=n;AU.step=0;
+function setTrack45(){const n=V.name==='results'?(RES&&RES.win?'victory':'defeat'):TMAP[V.name]||'lobby';if(AU.track===n)return;AU.track=n;AU.step=0;
  if(AU.ctx&&AU.mg){const t=AU.ctx.currentTime,g=AU.mg.gain,lvl=g.value||.62;try{g.cancelScheduledValues(t);g.setValueAtTime(lvl,t);g.linearRampToValueAtTime(0,t+.12);g.setValueAtTime(0,t+.3);g.linearRampToValueAtTime(lvl,t+.42);}catch(e){}AU.next=t+.32;}else if(AU.ctx)AU.next=AU.ctx.currentTime+.08;}
 const musicTick42=musicTick;
 musicTick=function(){if(!AU.ctx)return;const T=TRK[AU.track||'lobby'];const spb=60/T.bpm/4;const now0=AU.ctx.currentTime;if(AU.next<now0-.03){const miss=Math.ceil((now0-AU.next)/spb);AU.step+=miss;AU.next+=miss*spb;if(AU.next<now0)AU.next=now0+.02;}if(T.hymn)hymnTick(T);else musicTick42();};
@@ -45662,7 +45717,7 @@ A.rSec=d=>{UI.rsec=d.s;sfx('tap');render();};
 function refreshHud(){refreshHud43();try{teachHead();}catch(e){}}
 function teachHead44(){const v=$('view');if(!v)return;v.classList.toggle('tview',V.name==='teacher'&&!!UI.teach);if(V.name!=='teacher'||!UI.teach)return;const hud=v.querySelector('.hud');if(!hud||hud.dataset.t44)return;hud.dataset.t44=1;hud.classList.add('thud');
  hud.querySelectorAll('.res,.tutorbtn,[data-act=go][aria-label=Back]').forEach(e=>e.remove());
- if(!hud.querySelector('[data-act=tOut]')){const b=document.createElement('button');b.className='tlogout';b.dataset.act='tOut';b.setAttribute('aria-label','Log out of the teacher dashboard');b.innerHTML='<span>⎋</span> Log out';hud.appendChild(b);}
+ if(!hud.querySelector('[data-act=tOut]')){const b=document.createElement('button');b.className='tlogout';b.dataset.act='tOut';b.setAttribute('aria-label','Log out of the teacher dashboard');b.innerHTML='<span aria-hidden="true">⏻</span>';b.title='Log out';hud.appendChild(b);}
  requestAnimationFrame(()=>{v.style.setProperty('--thud',hud.offsetHeight+'px');});}
 
 /* ---------- 4. Hero: crown text, zoom/rotate buttons, coats and style ---------- */
@@ -46052,7 +46107,7 @@ const clCode=e=>String((e&&(e.code||e.message))||e||'');
 const clS=(v,n)=>String(v==null?'':v).replace(/[<>&"'`\\]/g,'').slice(0,n||24);
 function clLook(l){const o={};if(!l||typeof l!=='object')return {skin:1,hair:0,hc:0};Object.keys(l).slice(0,20).forEach(k=>{if(!/^\w{1,12}$/.test(k))return;const v=l[k];if(typeof v==='number'&&isFinite(v))o[k]=v;else if(typeof v==='string'&&/^[\w#.-]{0,24}$/.test(v))o[k]=v;else if(typeof v==='boolean')o[k]=v;});return o;}
 const clSec=v=>SECS.some(s=>s[0]===v)?v:'gst';
-function clUnsub(){CL.unsub.forEach(f=>{try{f();}catch(e){}});CL.unsub=[];}
+function clUnsub(){CL.unsub.forEach(f=>{try{f();}catch(e){}});CL.unsub=[];CL.tOn=false;}
 function clWarn(e,what){console.warn('[cloud]',what||'',e);CL.lastErr=clCode(e);}
 const clRand=n=>{const r=crypto.getRandomValues(new Uint8Array(n));return [...r].map(b=>b.toString(16).padStart(2,'0')).join('');};
 const clIsModal=t=>queue[0]&&queue[0].t===t;
@@ -46159,7 +46214,7 @@ async function clTeacherIn(email,pw){const cur=FB.user();if(cur&&cur.email!==ema
  const uid=cur&&cur.email===email?cur.uid:await FB.signIn(email,pw);
  const t=await FB.get('teachers/'+uid).catch(()=>null);if(!t){await FB.signOut();throw {code:'not-teacher'};}
  CL.uid=uid;CL.role='t';CL.k=null;CL.tname=t.name||'';clTeacherStart();return uid;}
-function clTeacherStart(){clUnsub();CL.stat='on';
+function clTeacherStart(){clUnsub();CL.stat='on';CL.tOn=true;
  CL.unsub.push(FB.listenQ('players',{where:[['ok','==','p']]},L=>{CL.pend=L.sort((a,b)=>(a.t||0)-(b.t||0));if(V.name==='teacher')render();},e=>clWarn(e,'pend')));
  CL.unsub.push(FB.listenQ('inbox',{order:['t','asc'],limit:200},L=>{L.forEach(x=>{try{tIngest(x.code);}catch(e){}FB.del('inbox/'+x.id).catch(()=>{});});},e=>clWarn(e,'inbox')));
  clTData(false);clRoster(true);}
@@ -46314,12 +46369,13 @@ function vLogin(){let h=vLogin44L();const L=UI.lg||{};
  if(L.step==='pick'&&fbOn()){const i=h.indexOf('data-act="lgNew"');if(i>0){const j=h.indexOf('</button>',i)+9;h=h.slice(0,j)+'<button class="gbtn blue block lgcloud" data-act="clLg">☁️ I have an account</button>'+clGetApp()+h.slice(j);}}
  if(L.step==='cloud')h=loginShell('<form class="lgcard" id="clform" novalidate><div class="lgh">LOG IN</div><div class="lgsub">Use the nickname and password you made when you signed up. Your save comes from the school server.</div><input id="clnick" maxlength="14" placeholder="Nickname" autocomplete="username" aria-label="Nickname" value="'+esc(L.nick||'')+'" autocapitalize="off" spellcheck="false">'+clInp('clpw','Password','current-password')+
   '<div class="lgerr" role="alert">'+(L.err||'')+'</div><button class="gbtn green block" type="submit"'+(L.busy?' disabled':'')+'>'+(L.busy?'☁️ Getting your save…':'Log in ▶')+'</button><button class="lglink" type="button" data-act="lgBack">‹ Back</button></form>');
- if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v45');
- return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v45');}
+ if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v46');
+ return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v46');}
 function clGetApp(){if(!window.FB||FB.native)return '';const ua=navigator.userAgent;const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
  if(/Android/i.test(ua)&&FB.cfg&&FB.cfg.apk)return '<a class="lglink lgapp" href="'+esc(FB.cfg.apk)+'" rel="noopener">📱 Get the Android app</a>';
  if(ios&&!sa)return '<div class="lgsub small lgapp">📱 iPhone: tap Share › <b>Add to Home Screen</b> to open SIKLAB like an app.</div>';return '';}
 function waitCard(L){let h=waitCard44(L);if(!fbOn())return h;const u=accGet().u[L.k];if(!u||!u.ap||u.ap.st==='ok')return h;
+ if(u.cl===1||(CL.uid&&CL.wk===L.k)){h=h.replace(/<div class="lgsub">Your reference number<\/div><div class="refno">[^<]*<\/div>/,'').replace(/<div class="lgsub">Show this reference number[\s\S]*?just tap your name again\.<\/div>/,'');}
  let b='';
  if(CL.stat==='sending'&&CL.wk==null)b='<div class="clwait">☁️ Sending your sign-up to your teacher…</div>';
  else if(u.cl==='taken')b='<div class="clwait bad">⚠️ That nickname is already used online. Remove this sign-up and make a new player with another nickname.</div><button class="gbtn red sm" data-act="apDel" data-k="'+esc(L.k)+'">Remove this sign-up</button>';
@@ -46356,7 +46412,7 @@ function clSetHTML(){if(!S||!S.hero||!SEC.k)return '';if(!window.FB||!FB.ready)r
  if(CL.relink===SEC.k)return '<form class="clset" id="rlform"><b>☁️ Fix your online account</b><small>Your password changed on this phone, but the school server still has the old one. Type the old password (or the temporary one from your teacher) and your current password.</small>'+clInp('rlold','Old or temporary password','off')+clInp('rlcur','Current password','current-password')+'<button class="gbtn blue sm" type="submit">Fix it</button><small id="rlerr" style="color:var(--bad);font-weight:700"></small></form>';
  if(!clOn())return '<form class="clset" id="cnform"><b>☁️ Not connected</b><small>Connect to back up your save and use ranks, live duels and clans.</small>'+clInp('cnpw','Your password','current-password')+'<button class="gbtn blue sm" type="submit">Connect</button><small id="cnerr" style="color:var(--bad);font-weight:700"></small></form>';
  const ok=clOk();return '<div class="clset"><b>☁️ Online'+(ok?'':' · waiting for teacher approval')+'</b><small>'+(CL.tsave?'Last backup '+ago(CL.tsave):'Backing up…')+(ok?'':' · Ranks, live duels, clans and sending work turn on once your teacher approves you.')+'</small><div class="row"><button class="gbtn sm" data-act="clSync">⟳ Back up now</button><button class="gbtn sm '+(S.settings.push?'green':'blue')+'" data-act="clPush">'+(S.settings.push?'🔔 Notifications on':'🔔 Turn on notifications')+'</button></div></div>';}
-function warModal(m){if(m.t==='lvwait')return lvWaitHTML();let h=warModal44L(m);
+function warModal(m){if(m.t==='lvwait')return lvWaitHTML();if(m.t==='prac46')return pracHTML46(m);let h=warModal44L(m);
  if(m.t==='settings'&&S&&S.hero){const blk='<div class="sgrp"><b>ONLINE</b>'+clSetHTML()+'</div>';const k=h.indexOf('<div class="sgrp"><b>DANGER');
   if(/data-t="acct" aria-selected="true"/.test(h)&&k>=0)h=h.slice(0,k)+blk+h.slice(k);else if(h.indexOf('<div class="sgrp"><b>ACCOUNT</b>')>=0)h=h.replace('<div class="sgrp"><b>ACCOUNT</b>',blk+'<div class="sgrp"><b>ACCOUNT</b>');
   h=h.replace(' · saved on this device',clOn()?' · saved on this device and the school server':' · saved on this device').replace('progress is saved on this device',clOn()?'progress is saved on this device and backed up online':'progress is saved on this device');}
@@ -46370,22 +46426,24 @@ function clTCard(){if(!window.FB||!FB.ready)return '<div class="panel plain clca
  return '<details class="panel plain clcard"'+(UI.tcOpen?' open':'')+'><summary class="shead">☁️ ONLINE · '+esc(u.email||'')+(np?' · <span class="clbadge">'+np+' waiting</span>':'')+'</summary>'+
   '<div class="small muted">'+(CL.rostN!=null?CL.rostN+' learners on the server. ':'')+'Approvals, work, exam results and attendance sync by themselves.</div>'+
   '<div class="row"><button class="gbtn sm" data-act="clRost">⟳ Refresh learners</button><button class="gbtn sm '+(tp?'green':'blue')+'" data-act="clPush">'+(tp?'🔔 Alerts on':'🔔 Alert me')+'</button><button class="gbtn sm dark" data-act="clTOut">Sign out</button></div>'+
-  clAppHTML()+'<form id="tnform" class="clnote"><div class="kvh">SEND A NOTICE TO PHONES</div><textarea id="tntx" maxlength="140" rows="2" placeholder="e.g. Bring your lab notebook tomorrow."></textarea><div class="row"><select id="tnsec" aria-label="Who gets it">'+clSecOpts(true)+'</select><button class="gbtn green sm" type="submit">🔔 Send</button></div></form></details>';}
-function vTeacher(){let h=vTeacher44L();if(!UI.teach)return h;const i=h.indexOf('<div class="panel');const c=clTCard();if(fbOn()&&clT()&&Date.now()-CL.rost>300000)setTimeout(()=>clRoster(false),50);return i>0?h.slice(0,i)+c+h.slice(i):h+c;}
+  '<form id="tnform" class="clnote"><div class="kvh">SEND A NOTICE TO PHONES</div><textarea id="tntx" maxlength="140" rows="2" placeholder="e.g. Bring your lab notebook tomorrow."></textarea><div class="row"><select id="tnsec" aria-label="Who gets it">'+clSecOpts(true)+'</select><button class="gbtn green sm" type="submit">🔔 Send</button></div></form></details>';}
+function vTeacher(){let h=vTeacher44L();if(!UI.teach)return h;if(clT()&&!CL.tOn)setTimeout(()=>{if(clT()&&!CL.tOn)clTeacherStart();},0);if(clT())h+=clMaintPanel()+clUpdPanel()+clVoicePanel();if(clT())h=h.replace('Settings here apply to every player on this device. Share the class code so students’ own phones get them too.','☁️ Connected to the school server: use 📣 Send to learners under any code box to reach every learner’s game.');const i=h.indexOf('<div class="panel');const c=clTCard();if(fbOn()&&clT()&&Date.now()-CL.rost>300000)setTimeout(()=>clRoster(false),50);return i>0?h.slice(0,i)+c+h.slice(i):h+c;}
 Object.assign(A,{clRost:()=>{clRoster(true);sfx('tap');toast('Refreshing…');},clTOut:async()=>{clUnsub();try{await FB.signOut();}catch(e){}CL.uid=null;CL.role=null;CL.pend=[];sfx('tap');render();},
  clAp:d=>clApprove(d.u,true),clNo:d=>{if(confirm('Decline this sign-up?'))clApprove(d.u,false);}});
 addEventListener('toggle',e=>{if(e.target&&e.target.classList&&e.target.classList.contains('clcard'))UI.tcOpen=e.target.open;},true);
 function apprPanel(){let h=apprPanel44();if(!clT())return h;
+ h=h.replace('<div class="small muted">Every new player needs your approval before they can play.</div>','').replace(/<div class="kvh">LEARNER SIGNED UP ON THEIR OWN PHONE<\/div>[\s\S]*?<\/form>/,'').replace(/<div class="apout">[\s\S]*?<\/div>/,'').replace('New players must be approved before they can play.','New players must be approved before they can play. Online sign-ups appear here by themselves, so no codes are needed.');
+ if(/WAITING ON THIS DEVICE · 0</.test(h))h=h.replace(/<div class="kvh">WAITING ON THIS DEVICE · 0<\/div><div class="small muted">No sign-ups waiting on this device\.<\/div>/,'');
  const rows=CL.pend.length?CL.pend.map(p=>'<div class="mrow aprow"><div><b>'+esc(p.nick)+'</b><small class="muted">'+esc(secName(p.sec)||'')+(p.ref?' · '+esc(p.ref):'')+'</small><small class="muted">Signed up '+ago(p.t)+'</small></div><div class="abbtn2"><button class="gbtn green sm" data-act="clAp" data-u="'+esc(p.id)+'">✓ Approve</button><button class="gbtn red sm" data-act="clNo" data-u="'+esc(p.id)+'">✕ Decline</button></div></div>').join(''):'<div class="small muted">No online sign-ups waiting.</div>';
  const add='<div class="kvh">☁️ ONLINE SIGN-UPS · '+CL.pend.length+'</div>'+rows+
   '<details class="clrs"><summary class="kvh">🔑 LEARNER FORGOT THEIR ONLINE PASSWORD</summary><div class="small muted">Set a temporary password. The learner types it in Settings › Fix online account. Their save stays encrypted; this only unlocks the online copy.</div><form id="clrsform" class="apgen"><input id="clrsn" maxlength="14" placeholder="Nickname" autocomplete="off"><input id="clrsp" maxlength="64" placeholder="Temporary password" autocomplete="off"><button class="gbtn sm" type="submit">Set</button></form><div class="small" id="clrsout"></div></details>';
- return h.replace('<div class="kvh">WAITING ON THIS DEVICE',add+'<div class="kvh">WAITING ON THIS DEVICE');}
+ const intro='so no codes are needed.</div>';return h.indexOf(intro)>=0?h.replace(intro,intro+add):h.replace('<div class="kvh">WAITING ON THIS DEVICE',add+'<div class="kvh">WAITING ON THIS DEVICE');}
 function monPanel(){const h=monPanel44();if(!clT())return h;return h.replace('<div class="shead">MONITORING · LEARNERS</div>','<div class="shead">MONITORING · LEARNERS</div><div class="clbar">☁️ '+(CL.rostN!=null?CL.rostN+' learners synced from the server':'Syncing from the server…')+' <button class="gbtn sm" data-act="clRost">⟳ Refresh</button></div>');}
 
 /* ---------- ranks ---------- */
 function vRanks(){if(!clOk()){return vRanks44L();}clBoard();if(!CL.board)return vRanks44L().replace(/<p class="note">[\s\S]*?<\/p>/,'<p class="note">Loading the real ranks…</p>');
  const keep=SAMPLE.slice(),lf=lookFor,me=nk(S.hero.name);SAMPLE.length=0;CL.board.filter(p=>nk(p.n)!==me).forEach(p=>SAMPLE.push({n:p.n,a:'🧑‍🔬',xp:p.xp||0,tr:p.tr||0,st:p.st||0,sec:p.sec||'gst'}));
- let h;try{lookFor=n=>CL.looks[n]||lf(n);h=vRanks44L();}finally{SAMPLE.length=0;keep.forEach(x=>SAMPLE.push(x));lookFor=lf;}
+ let h;try{lookFor=n=>{const k=CL.looks[n];if(k&&Object.keys(k).length){try{return lookOf({look:k,name:n},{});}catch(e){}}return lf(n);};h=vRanks44L();}finally{SAMPLE.length=0;keep.forEach(x=>SAMPLE.push(x));lookFor=lf;}
  return h.replace(/<p class="note">[\s\S]*?<\/p>/,'<p class="note">Real SIKLAB learners · updates about every 10 minutes.</p>');}
 
 /* ---------- small things added after every render ---------- */
@@ -46394,14 +46452,14 @@ function clDecorate(){
  if(clT()&&UI.teach)Object.keys(CLSEND).forEach(id=>{const t=$(id);if(!t||t.dataset.cl)return;t.dataset.cl=1;const one=id==='recode';
   const d=document.createElement('div');d.className='clsend';d.innerHTML=(one?'':'<select class="clsec" aria-label="Send to">'+clSecOpts(true)+'</select>')+'<button class="gbtn green sm" data-act="clPostEl" data-el="'+id+'">📣 Send to '+(one?'that learner':'learners')+'</button>';
   let at=t.nextElementSibling;if(at&&at.matches&&at.matches('button'))at.after(d);else t.after(d);});
- if(clOk()&&$('view')){const a=document.querySelector('#view [data-act="arenaGo"]');if(a&&!$('lvcard')){const b=document.createElement('button');b.id='lvcard';b.className='mcard duel lvcard';b.setAttribute('data-act','lvGo');b.style.width='100%';
+ if(clOk()&&$('view')&&V.name==='arena'){const a=document.querySelector('#view [data-act="arenaGo"]');if(a&&!$('lvcard')){const b=document.createElement('button');b.id='lvcard';b.className='mcard duel lvcard';b.setAttribute('data-act','lvGo');b.style.width='100%';
    b.innerHTML='<span class="mc-i lvdot">🌐</span><b>LIVE QUIZ DUEL</b><small>Same questions, real classmate, right now</small><span class="mc-go">FIND</span>';a.after(b);}}
  document.querySelectorAll('.note').forEach(n=>{if(clOk()&&/simulated in this prototype/.test(n.textContent))n.textContent='Clans are real SIKLAB learners. Teams you battle are AI-controlled; for a real opponent, try the Live Quiz Duel in 1 V 1.';});}
 A.clPostEl=d=>{const t=$(d.el);if(!t)return;const box=t.parentElement&&t.parentElement.querySelector('.clsend .clsec');let to='';
  if(d.el==='recode'){to=nk((($('rnk')||{}).value)||'');if(!to){toast('Type the learner’s nickname first.');return;}}
  clPost(t.value.trim(),box?box.value:'all',to);};
 let CLDEC=0;new MutationObserver(()=>{if(CLDEC)return;CLDEC=requestAnimationFrame(()=>{CLDEC=0;try{clDecorate();}catch(e){}});}).observe(document.documentElement,{childList:true,subtree:true});
-function render(){render44L();if(S&&S.hero&&clOk()&&V.name==='ranks')clBoard();}
+function render45(){render44L();if(S&&S.hero&&clOk()&&V.name==='ranks')clBoard();}
 
 /* ===================== v45 · MAINTENANCE MODE + UPDATE PUSH =====================
    config/app on the server holds {maint:{on,msg,until}, ver:{web,apk,minWeb,minApk,notes,t}}.
@@ -46409,7 +46467,7 @@ function render(){render44L();if(S&&S.hero&&clOk()&&V.name==='ranks')clBoard();}
 const APPCFG={maint:null,ver:null,seen:0,off:null};
 const myBuild=()=>(window.FB&&FB.cfg&&+FB.cfg.build)||0;
 const isNative=()=>!!(window.FB&&FB.native);
-function cfgWatch(){if(!window.FB||!FB.ready||APPCFG.off)return;APPCFG.off=FB.listenDoc('config/app',c=>{APPCFG.maint=(c&&c.maint)||null;APPCFG.ver=(c&&c.ver)||null;cfgApply();if(V.name==='teacher'&&UI.teach)render();},e=>clWarn(e,'config'));}
+function cfgWatch(){if(!window.FB||!FB.ready||APPCFG.off)return;APPCFG.off=FB.listenDoc('config/app',c=>{APPCFG.maint=(c&&c.maint)||null;APPCFG.ver=(c&&c.ver)||null;APPCFG.voice=(c&&c.voice)||null;cfgApply();if(V.name==='teacher'&&UI.teach)render();},e=>clWarn(e,'config'));}
 const maintOn=()=>{const m=APPCFG.maint;return !!(m&&m.on&&(!m.until||m.until>Date.now()));};
 const teacherCtx=()=>!!(UI.teach||['teacher','tlogin'].includes(V.name)||clT());
 function verState(){const v=APPCFG.ver;const b=myBuild();if(!v||!b)return null;const nat=isNative();const latest=+(nat?v.apk:v.web)||0,min=+(nat?v.minApk:v.minWeb)||0;
@@ -46439,13 +46497,16 @@ addEventListener('fbready',()=>{cfgWatch();});if(window.FB&&FB.ready)setTimeout(
 const A_go45=go;go=function(name,opts){if(maintOn()&&!['teacher','tlogin','title'].includes(name)&&!UI.teach){cfgApply();return;}A_go45(name,opts);setTimeout(cfgApply,0);};
 
 /* ---------- teacher controls ---------- */
-function clAppHTML(){const m=APPCFG.maint||{},v=APPCFG.ver||{};const on=maintOn();
- return '<div class="kvh">🛠️ MAINTENANCE MODE</div><div class="small muted">Turn this on before big changes. Learners see a “please come back later” screen and can’t play; you can still use the dashboard.</div>'+
-  '<form id="mtform" class="clnote"><textarea id="mtmsg" maxlength="160" rows="2" placeholder="Message for learners (optional)">'+esc(m.msg||'')+'</textarea><div class="row"><label class="small">Back by<select id="mtuntil"><option value="0">No time set</option><option value="30">30 minutes</option><option value="60">1 hour</option><option value="180">3 hours</option><option value="720">12 hours</option></select></label>'+
-  '<button class="gbtn '+(on?'green':'red')+' sm" type="submit">'+(on?'✅ Turn OFF maintenance':'🛠️ Turn ON maintenance')+'</button></div>'+(on?'<div class="clwait bad">Maintenance is ON'+(m.until?' until '+esc(new Date(m.until).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})):'')+'.</div>':'')+'</form>'+
-  '<div class="kvh">🚀 UPDATE PUSH</div><div class="small muted">After you upload a new web version or build a new app, open that new version here and publish it. Every older copy then shows an update message, and phones get a notification.</div>'+
-  '<div class="small"><b>This copy:</b> '+(isNative()?'Android app':'web link')+' · build '+myBuild()+'<br><b>Newest published:</b> web '+(v.web||'—')+' · app '+(v.apk||'—')+'</div>'+
-  '<form id="upform" class="clnote"><textarea id="upnotes" maxlength="160" rows="2" placeholder="What’s new (shown in the update message)">'+esc(v.notes||'')+'</textarea><label class="rcchk"><input type="checkbox" id="upforce"> Require it (older versions must update before playing)</label><button class="gbtn blue sm" type="submit"'+(myBuild()?'':' disabled')+'>🚀 Publish this '+(isNative()?'app':'web')+' version & notify everyone</button></form>';}
+function clMaintPanel(){const m=APPCFG.maint||{};const on=maintOn();
+ return '<div class="panel plain clpanel"><div class="shead">MAINTENANCE MODE</div><div class="clstate '+(on?'bad':'ok')+'">'+(on?'🛠️ ON · learners can’t play'+(m.until?' until '+esc(new Date(m.until).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})):''):'✅ OFF · learners can play')+'</div>'+
+  '<div class="small muted">Turn this on before big changes. Learners see a “come back later” screen; you can still use the dashboard.</div>'+
+  '<form id="mtform" class="clnote"><textarea id="mtmsg" maxlength="160" rows="2" placeholder="Message for learners (optional)">'+esc(m.msg||'')+'</textarea><label class="cllbl">Back by <select id="mtuntil"><option value="0">No time set</option><option value="30">30 minutes</option><option value="60">1 hour</option><option value="180">3 hours</option><option value="720">12 hours</option></select></label>'+
+  '<button class="gbtn '+(on?'green':'red')+' block" type="submit">'+(on?'✅ Turn OFF maintenance':'🛠️ Turn ON maintenance')+'</button></form></div>';}
+function clUpdPanel(){const v=APPCFG.ver||{};
+ return '<div class="panel plain clpanel"><div class="shead">UPDATE PUSH</div><div class="small muted">After you upload a new web version or build a new app, open that new version here and publish it. Older copies then show an update message, and phones get a notification.</div>'+
+  '<div class="clvers"><div><small>THIS COPY</small><b>'+(isNative()?'📱 App':'🌐 Web')+' · '+(myBuild()||'—')+'</b></div><div><small>NEWEST WEB</small><b>'+(v.web||'—')+'</b></div><div><small>NEWEST APP</small><b>'+(v.apk||'—')+'</b></div></div>'+
+  '<form id="upform" class="clnote"><textarea id="upnotes" maxlength="160" rows="2" placeholder="What’s new (shown in the update message)">'+esc(v.notes||'')+'</textarea><label class="rcchk"><input type="checkbox" id="upforce"> Require it (older versions must update before playing)</label><button class="gbtn blue block" type="submit"'+(myBuild()?'':' disabled')+'>🚀 Publish this '+(isNative()?'app':'web')+' version</button></form></div>';}
+{const c=TTABS.find(t=>t[0]==='class');if(c)c[3].push('MAINTENANCE MODE','UPDATE PUSH');}
 capOn('submit',async e=>{const f=e.target;if(!f||(f.id!=='mtform'&&f.id!=='upform'))return;e.preventDefault();e.stopImmediatePropagation();if(!clT()){toast('Connect to the school server first.');return;}
  try{if(f.id==='mtform'){const on=!maintOn();const msg=(($('mtmsg')||{}).value||'').trim().slice(0,160);const mins=+(($('mtuntil')||{}).value||0);
    await FB.set('config/app',{maint:{on,msg,until:on&&mins?Date.now()+mins*60000:0,by:CL.uid,t:Date.now()}},true);
@@ -46461,8 +46522,6 @@ capOn('submit',async e=>{const f=e.target;if(!f||(f.id!=='mtform'&&f.id!=='upfor
    Matchmaking and answers travel through the Realtime Database. Each phone sends only its own answer
    (right/wrong, time, damage packet); both phones then run the same damage maths, so both see the same HP. */
 let LV=null;
-function lvKeys(n){const isl=curIsl();const all=TOPICS.filter(t=>t.isl===isl).map(t=>t.id);const reached=reachedTopics(isl).filter(t=>all.includes(t));
- let pool=keysOf(QB,reached.length?reached:all);if(pool.length<n)pool=keysOf(QB,all);return {isl,keys:pickRot(pool,n,'duel:'+isl)};}
 function lvMeta(){const st=warStats();const X=tset();hbInit();const ul=skById(S.hb.ult)||skById((S.hb.eq||[]).find(x=>x));
  return {uid:CL.uid,n:S.hero.name,look:JSON.parse(JSON.stringify(S.hero.look||{})),tr:S.arena.tr||0,atk:st.atk||0,hpb:st.hp||0,crit:st.crit||0,qt:(X.qt||12)+(st.time||0),cls:S.hb.cls||'phys',ue:ul?ul.e:'⚡'};}
 const lvHP=(me,op,n)=>Math.max(50,Math.round((100+(me.hpb||0))*n*.8*(21+(op.atk||0))/100/10)*10);
@@ -46471,9 +46530,10 @@ function lvOppDmg(oc,oFirst){const L=M&&M.live;if(!L||!oc||!L.op)return 0;return
 function lvWaitHTML(){const n=LV?LV.n:0;const st=LV&&LV.st;
  return '<div class="ptitle outline">🌐 LIVE QUIZ DUEL</div><div class="lvspin" aria-hidden="true"><i></i><i></i><i></i></div><p style="text-align:center;margin:0"><b>'+(st==='joining'||st==='host'?'Classmate found! Connecting…':'Looking for a classmate…')+'</b></p>'+
   '<div class="small muted" style="text-align:center">'+(n?n+' other player'+(n>1?'s':'')+' looking right now.':'Ask a classmate to tap Live Quiz Duel too.')+' Both of you get the same questions. Faster right answers hit harder.</div><button class="gbtn dark block" data-act="lvCancel">Cancel</button>';}
-async function lvCancel(quiet){const L=LV;LV=null;if(!L)return;clearTimeout(L.to);[L.off,L.roff,L.aoff,L.poff].forEach(f=>{try{f&&f();}catch(e){}});
- try{await FB.rt.remove('mm/duel/'+CL.uid);}catch(e){}if(L.host&&L.rid&&!L.started)try{await FB.rt.remove('rooms/'+L.rid);}catch(e){}
- if(!L.started)try{FB.rt.online(false);}catch(e){}if(!quiet&&queue[0]&&queue[0].t==='lvwait')closeModal();}
+async function lvCancel(quiet){const L=LV;LV=null;if(queue[0]&&queue[0].t==='lvwait'){queue.shift();const ly=$('layer');if(ly)ly.innerHTML='';if(queue.length)showQueue();}if(!L)return;L.dead=1;clearTimeout(L.to);[L.off,L.roff,L.aoff,L.poff].forEach(f=>{try{f&&f();}catch(e){}});
+ const rm=p=>Promise.race([FB.rt.remove(p),new Promise(r=>setTimeout(r,4000))]).catch(()=>{});
+ await rm('mm/duel/'+CL.uid);if(L.host&&L.rid&&!L.started)await rm('rooms/'+L.rid);else if(L.rid&&!L.started)await rm('rooms/'+L.rid+'/on/'+CL.uid);
+ if(!L.started&&!LV)try{FB.rt.online(false);}catch(e){}}
 A.lvCancel=()=>{sfx('tap');lvCancel();};
 A.lvGo=async()=>{if(!clOk()){toast('Live duels open once your teacher approves your account online.');return;}if(!clNet()){toast('You need internet for a live duel.');return;}
  if(!modeOn('duel')){toast('Your teacher turned off Quiz Duels for now.');return;}if(!canPlay())return;energy();if(S.energy.n<1){spend(1);return;}
@@ -46492,19 +46552,19 @@ async function lvQueue(q){const L=LV;if(!L||L.busy)return;const me=CL.uid,mine=q
   try{await FB.rt.set('mm/duel/'+c+'/room',rid);}catch(e){await FB.rt.remove('rooms/'+rid).catch(()=>{});L.rid=null;L.host=false;return;}
   await FB.rt.set('mm/duel/'+me+'/room',rid);L.st='host';lvRoom();}
  catch(e){clWarn(e,'lvhost');}finally{L.busy=0;}}
-async function lvJoin(){const L=LV;try{await FB.rt.set('rooms/'+L.rid+'/b',lvMeta());lvRoom();}catch(e){clWarn(e,'lvjoin');lvCancel();toast('That duel could not start. Try again.');}}
+async function lvJoin(){const L=LV;if(!L||L.dead)return;try{await FB.rt.set('rooms/'+L.rid+'/b',lvMeta());lvRoom();}catch(e){clWarn(e,'lvjoin');lvCancel();toast('That duel could not start. Try again.');}}
 function lvRoom(){const L=LV;if(!L||!L.rid)return;try{FB.rt.set('rooms/'+L.rid+'/on/'+CL.uid,true);FB.rt.disc('rooms/'+L.rid+'/on/'+CL.uid,null);}catch(e){}
  showQueue();L.roff=FB.rt.on('rooms/'+L.rid,R=>{if(LV!==L)return;if(!R){if(!L.started){lvCancel();toast('The duel was cancelled.');}return;}
   if(L.host&&!R.go&&R.b&&R.b.n)FB.rt.set('rooms/'+L.rid+'/go',Date.now());
   if(R.go&&!L.started&&R.a&&R.a.n&&R.b&&R.b.n){L.started=1;L.R=R;lvStart(R);}
   if(L.started&&M&&M.live&&R.on){const os=M.live.os;const was=M.live.gone;M.live.gone=!R.on[R[os].uid];if(M.live.gone&&!was){toast('⚠️ '+R[os].n+' left the duel.');lvTry();}}});}
-function lvStart(R){const L=LV;clearTimeout(L.to);try{L.off&&L.off();}catch(e){}L.off=null;FB.rt.remove('mm/duel/'+CL.uid).catch(()=>{});
+function lvStart(R){const L=LV;if(!L||L.dead)return;clearTimeout(L.to);try{L.off&&L.off();}catch(e){}L.off=null;FB.rt.remove('mm/duel/'+CL.uid).catch(()=>{});
  if(queue[0]&&queue[0].t==='lvwait')closeModal();if(!spend(1)){lvCancel(true);return;}
  const side=R.a.uid===CL.uid?'a':'b',os=side==='a'?'b':'a';const me=R[side],op=R[os];op.n=clS(op.n,14);op.look=clLook(op.look);['atk','hpb','crit','qt','tr'].forEach(k=>{op[k]=Math.max(0,Math.min(k==='qt'?40:k==='tr'?1e6:200,+op[k]||0));});if(!op.qt)op.qt=12;
  const st=warStats();hbInit();const ul=skById(S.hb.ult)||skById((S.hb.eq||[]).find(x=>x));const n=R.n;
  const qs=R.qs.map(k=>{const p=String(k).split('|');return prepQ(p[0],+p[1]);});
  const maxhp=lvHP(me,op,n),omax=lvHP(op,me,n);
- M={run:Date.now(),phase:'search',opp:{n:op.n,a:'🌐',tr:op.tr||0,acc:0,look:op.look||lookFor(op.n)},st,maxhp,omax,hp:maxhp,ohp:omax,hpK:1,charges:st.charge,qt:me.qt,oqt:op.qt,round:0,n,qs,isl:R.isl,log:[],heroes:heroSel(),used:{},boost:0,fifty:0,shield:0,dbl:0,loot:0,ok:0,str:0,
+ M={run:Date.now(),phase:'search',opp:{n:op.n,a:'🌐',tr:op.tr||0,acc:0,look:(op.look&&Object.keys(op.look).length)?(()=>{try{return lookOf({look:op.look,name:op.n},{});}catch(e){return lookFor(op.n);}})():lookFor(op.n)},st,maxhp,omax,hp:maxhp,ohp:omax,hpK:1,charges:st.charge,qt:me.qt,oqt:op.qt,round:0,n,qs,isl:R.isl,log:[],heroes:heroSel(),used:{},boost:0,fifty:0,shield:0,dbl:0,loot:0,ok:0,str:0,
   cls:S.hb.cls||'phys',ult:ul?{n:ul.n,e:ul.e}:{n:'Science Surge',e:'⚡'},combos:0,ults:0,live:{rid:L.rid,side,os,ouid:op.uid,ans:{},mine:{},op:null,gone:false}};
  L.aoff=FB.rt.on('rooms/'+L.rid+'/ans/'+op.uid,v=>{if(!M||!M.live||M.live.rid!==L.rid)return;M.live.ans=v||{};const a=M.live.ans[M.round];
   if(a&&M.state==='q'&&M.oppTime>100){M.oppTime=Math.max(0,(performance.now()-M.t0)/1000);}lvTry();});
@@ -46531,12 +46591,247 @@ function mEnd(){const live=M&&M.live;mEnd44();if(live&&LV){const L=LV;LV=null;[L
  FB.rt.remove('rooms/'+L.rid+'/on/'+CL.uid).catch(()=>{});if(L.host)setTimeout(()=>FB.rt.remove('rooms/'+L.rid).catch(()=>{}),8000);setTimeout(()=>{try{FB.rt.online(false);}catch(e){}},9000);
  if(RES&&RES.lines)RES.lines.unshift('🌐 Live duel vs '+esc(M.opp.n));}}
 
+/* ===================== v46 · fixes from internal testing ===================== */
+
+/* ---------- typing is never interrupted ----------
+   Background updates (server, timers) used to redraw the screen while a learner typed, which closed the phone
+   keyboard and lost the text (primer prediction, 2–3 sentence answers). While a text box has focus, background
+   redraws wait until the learner leaves the box; typed text is also kept if a redraw happens anyway. */
+const TYPE46={g:0,pend:0,d:{}};
+const isTyping=()=>{const a=document.activeElement;return !!(a&&(a.tagName==='TEXTAREA'||(a.tagName==='INPUT'&&/^(text|search|email|password|number|tel|url|)$/i.test(a.type||'')))&&a.closest&&a.closest('#view,#layer'));};
+['pointerdown','click'].forEach(ev=>addEventListener(ev,()=>{TYPE46.g=Date.now();},{capture:true,passive:true}));
+addEventListener('keydown',e=>{if(e.key==='Enter')TYPE46.g=Date.now();},{capture:true,passive:true});
+addEventListener('input',e=>{const t=e.target;if(t&&t.id&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT')&&t.type!=='password'&&t.type!=='file'&&t.type!=='checkbox')TYPE46.d[t.id]=t.value;},{capture:true,passive:true});
+addEventListener('focusout',()=>{setTimeout(()=>{if(TYPE46.pend&&!isTyping()){TYPE46.pend=0;render();}},60);},true);
+let LASTV46='';
+function render(){
+ if(isTyping()&&Date.now()-TYPE46.g>450&&V.name===LASTV46){TYPE46.pend=1;return;}
+ LASTV46=V.name;
+ const a=document.activeElement,fid=a&&a.id&&isTyping()?a.id:null,ss=fid?a.selectionStart:0;
+ render45();
+ Object.keys(TYPE46.d).forEach(id=>{const el=$(id);if(el&&!el.value&&TYPE46.d[id])el.value=TYPE46.d[id];});
+ if(fid){const el=$(fid);if(el&&document.activeElement!==el){try{el.focus({preventScroll:true});el.setSelectionRange(ss,ss);}catch(e){}}}}
+/* text kept for a box only while that screen is open */
+const A_prSave46=A.prSave,A_priSave46=A.priSave;
+A.prSave=()=>{A_prSave46();delete TYPE46.d.pripred;};A.priSave=d=>{A_priSave46(d);delete TYPE46.d.pripred;};
+/* the phone keyboard resizes the screen: only redraw lessons/exams when the WIDTH changes (turning the phone) */
+['lesson','primer','exam'].forEach(k=>{delete FITV[k];});
+{let w0=innerWidth,t46=0;addEventListener('resize',()=>{clearTimeout(t46);t46=setTimeout(()=>{if(Math.abs(innerWidth-w0)<40)return;w0=innerWidth;if(['lesson','primer','exam'].includes(V.name)&&!isTyping())render();},180);});}
+/* keep the box being typed in above the keyboard */
+addEventListener('focusin',e=>{const t=e.target;if(!t||!(t.tagName==='TEXTAREA'||t.tagName==='INPUT'))return;setTimeout(()=>{try{t.scrollIntoView({block:'center',behavior:'smooth'});}catch(x){}},350);});
+
+/* ---------- Quiz Duel: the answer explanation sits on the battle picture, not on the choices ---------- */
+function duelFeedFix(){document.querySelectorAll('.duelv #mq > .roundres,.bossv #bq > .roundres').forEach(r=>{const g=r.closest('.duelv,.bossv');const f=g&&g.querySelector('.dfield,.bfield,#dfield,#bfield');if(f){f.appendChild(r);r.classList.add('onfield');}});}
+
+/* ---------- start screen: plays once, with its sound from the first second ----------
+   Browsers only allow sound after a tap, so when sound is still locked the game shows TAP TO START first
+   and then plays the logo intro once with its sound. The Android app can play sound at once and skips that. */
+let INTRO46=0;
+function start(data){start19(data);UI.lg={step:'pick'};if(S.hero)accSync();
+ try{audioInit();}catch(e){}
+ const run=()=>{if(INTRO46)return;INTRO46=1;UI.gate=false;introStart();};
+ const c=AU&&AU.ctx;
+ if(c&&c.state==='running'){run();return;}
+ try{if(c)c.resume().catch(()=>{});}catch(e){}
+ setTimeout(()=>{if(INTRO46)return;if(c&&c.state==='running'){run();return;}UI.gate=true;UI.intro=false;render();},120);}
+A.gateGo=()=>{if(INTRO46)return;audioUnlock().then(()=>{if(INTRO46)return;INTRO46=1;UI.gate=false;INTRO_GEST=true;introStart();});};
+
+/* ---------- one teacher account everywhere ----------
+   With the school server, the teacher logs in with the same email and password on the web and in the app.
+   That one login opens the dashboard AND connects to the server (no second "connect" step). */
+const TEM46='siklab-temail';
+function vTlogin(){if(!(window.FB&&FB.ready)||UI.tlOff)return vTlogin44();const L=UI.tl46||(UI.tl46={});let em='';try{em=localStorage.getItem(TEM46)||'';}catch(e){}const cur=FB.user&&FB.user();
+ const same=cur&&clT()&&cur.email===(L.em||em);
+ return loginShell('<form class="lgcard" id="tlcform" novalidate><div class="lgh">👩‍🏫 TEACHER LOGIN</div><div class="lgsub">Use your teacher email and password. It is the same account on the web link and in the Android app.</div>'+
+  '<input id="tlem" type="email" placeholder="Teacher email" autocomplete="username" value="'+esc(L.em||em)+'" aria-label="Teacher email">'+clInp('tlpw','Password','current-password')+
+  '<div class="lgerr" role="alert">'+(L.err||'')+'</div><button class="gbtn green block" type="submit"'+(L.busy?' disabled':'')+'>'+(L.busy?'Logging in…':'Log in ▶')+'</button>'+
+  (same?'<div class="small muted" style="text-align:center">☁️ Connected as '+esc(cur.email)+'</div>':'')+
+  '<button class="lglink" type="button" data-act="tlBack46">‹ Back</button><button class="lglink small" type="button" data-act="tlOffline">No internet? Use this device’s offline teacher login</button></form>');}
+capOn('submit',async e=>{const f=e.target;if(!f||f.id!=='tlcform')return;e.preventDefault();e.stopImmediatePropagation();const L=UI.tl46||(UI.tl46={});if(L.busy)return;
+ const em=((($('tlem')||{}).value)||'').trim(),pw=($('tlpw')||{}).value||'';L.em=em;if(!em||!pw){L.err='Type your teacher email and password.';render();return;}
+ L.busy=true;L.err='';render();
+ try{await clTeacherIn(em,pw);try{localStorage.setItem(TEM46,em);}catch(x){}
+  /* the dashboard on this device uses the same password, so it also works when the internet drops */
+  let t=null;try{t=JSON.parse(localStorage.getItem(TKEY)||'null');}catch(x){}
+  const salt=(t&&t.salt)||hexB(crypto.getRandomValues(new Uint8Array(16)));const h=await tHash(pw,salt);
+  t=Object.assign(t||{made:Date.now()},{n:(t&&t.n)||CL.tname||'Teacher',salt,h,cloud:em});if(!t.rh)t.rh='';tPut(t);
+  await clTData(false);UI.tl46=null;UI.tl=null;tEnter();}
+ catch(x){clWarn(x,'tlogin');L.busy=false;L.err=clErrTxt(x);sfx('bad');render();}},true);
+Object.assign(A,{tlBack46:()=>{sfx('tap');UI.tl46=null;go(tBack());},tlOffline:()=>{sfx('tap');UI.tlOff=1;render();}});
+/* the separate "connect" card is now only for the offline-login case */
+const A_tOut46=A.tOut;A.tOut=()=>{UI.tlOff=0;A_tOut46();};
+{let q46=0;new MutationObserver(()=>{if(q46)return;q46=requestAnimationFrame(()=>{q46=0;try{duelFeedFix();}catch(e){}});}).observe(document.documentElement,{childList:true,subtree:true});}
+{const t0=TTHELP.approve;Object.defineProperty(TTHELP,'approve',{get(){return clT()?'Approve new players. Online sign-ups appear here by themselves; no codes needed.':t0;},configurable:true});}
+
+/* ===================== v46 · learner feedback ===================== */
+
+/* ---------- 1) fewer repeated questions ----------
+   One memory of "seen" questions for every quiz mode (Adventure, Quiz Duel, Live Duel, battles, practice),
+   the same question twice in one round never happens, and questions with the same wording count as one. */
+const QTX46={};
+function qTxt46(k){if(QTX46[k])return QTX46[k];const p=String(k).split('|');const q=QB[p[0]]&&QB[p[0]][+p[1]];return QTX46[k]=q?String(q[0]).toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,90):String(k);}
+function pickRot(keys,n,pre){if(!keys||!keys.length)return [];pre=pre||'';const seen=S.seenQ||(S.seenQ={});const qb=pre===''||/^duel:/.test(pre);
+ const key=k=>qb?'Q|'+k:pre+k;const r=k=>seen[key(k)]||0;
+ let u=[...new Set(keys)];
+ if(qb){const by={};u.forEach(k=>{const t=qTxt46(k);if(!by[t]||r(k)<r(by[t]))by[t]=k;});u=Object.values(by);}
+ const out=shuffle(u).sort((a,b)=>r(a)-r(b)).slice(0,n);
+ if(out.length<n){let more=shuffle(u).sort((a,b)=>r(a)-r(b));while(out.length<n){if(!more.length)more=shuffle(u);const k=more.shift();if(out[out.length-1]!==k)out.push(k);}}
+ out.forEach(k=>{S.seenN=(S.seenN||0)+1;seen[key(k)]=S.seenN;});return out;}
+/* a round never needs more questions than the pool has: widen to the whole quarter, then other open quarters */
+function qPool46(n){const isl=curIsl();const all=TOPICS.filter(t=>t.isl===isl).map(t=>t.id);const reached=reachedTopics(isl).filter(t=>all.includes(t));
+ let pool=keysOf(QB,reached.length?reached:all);
+ if(pool.length<n*2)pool=keysOf(QB,all);
+ if(pool.length<n*2)pool=pool.concat(keysOf(QB,TOPICS.filter(t=>t.isl!==isl&&islOpen(t.isl)).map(t=>t.id)));
+ return {isl,pool};}
+function duelQs(n){const {isl,pool}=qPool46(n);return pickRot(pool,n,'duel:'+isl).map(k=>{const p=k.split('|');return prepQ(p[0],+p[1]);});}
+function lvKeys(n){const {isl,pool}=qPool46(n);return {isl,keys:pickRot(pool,n,'duel:'+isl)};}
+function getQ(topics,n){let tp=(topics||[]).filter(t=>QB[t]);let pool=keysOf(QB,tp);
+ if(pool.length<Math.max(12,n*3)){const isls=[...new Set(tp.map(t=>(topicById(t)||{}).isl).filter(Boolean))];if(!isls.length)isls.push(curIsl());pool=pool.concat(keysOf(QB,TOPICS.filter(t=>isls.includes(t.isl)&&!tp.includes(t.id)).map(t=>t.id)));}
+ if(!pool.length)pool=keysOf(QB,['p_daily']);
+ return pickRot(pool,n,'').map(k=>{const p=k.split('|');return prepQ(p[0],+p[1]);});}
+
+/* ---------- 2) a wrong answer on a lesson check moves on (with the right answer shown) ---------- */
+const A_lsAns46=A.lsAns;
+A.lsAns=d=>{const R=UI.ls;const l=R&&lsnById(R.id),sl=l&&l.slides[R.i];if(!R||!sl||sl[0]!=='g'||R.ok[R.i])return A_lsAns46(d);
+ const k=+d.k;A_lsAns46(d);if(k===sl[3])return;
+ R.ok[R.i]=true;(R.miss=R.miss||{})[R.i]=1;const p=R.pick[R.i]=R.pick[R.i]||[];if(!p.includes(k))p.push(k);
+ render();toast('✗ Not quite · tap Next ›');};
+
+/* ---------- 3) review every question at the end of a stage or duel ---------- */
+let RV46=[];
+function record(Q,ok){record45(Q,ok);try{if(Q&&Q.q&&Q.o&&V.name!=='results'){RV46.push({q:Q.q,a:Q.o[Q.a],ok:!!ok,f:Q.f||''});if(RV46.length>60)RV46.shift();}}catch(e){}}
+function rv46HTML(){if(!RV46.length)return '';const ok=RV46.filter(x=>x.ok).length;
+ return '<details class="panel plain rv46"'+(ok<RV46.length?' open':'')+'><summary><b>📋 Review the questions</b> <span class="small muted">'+RV46.length+' asked · ✓ '+ok+' · ✗ '+(RV46.length-ok)+'</span></summary>'+
+  RV46.map((x,i)=>'<div class="rvq '+(x.ok?'ok':'no')+'"><div class="rvh"><span>'+(x.ok?'✓':'✗')+'</span><b>'+(i+1)+'. '+x.q+'</b></div><div class="rva">Answer: <b>'+x.a+'</b></div>'+(x.f?'<div class="rvf">'+x.f+'</div>':'')+'</div>').join('')+'</details>';}
+function vResults(){let h=vResults45();const rv=rv46HTML();if(!rv)return h;const i=h.indexOf('<div class="row" style="width:100%">');return i>0?h.slice(0,i)+rv+h.slice(i):h+rv;}
+{const g46=go;go=function(name,o){const from=V&&V.name;if(from==='results'&&name!=='results')RV46=[];if(['match','game','moba','boss','mini'].includes(name)&&from!==name&&from!=='results')RV46=[];return g46(name,o);};}
+
+/* ---------- 4) brighter look ---------- */
+['AmbientLight','HemisphereLight','DirectionalLight','PointLight','SpotLight'].forEach(n=>{const C=THREE[n];if(!C||C.__b46)return;const W=function(...a){const o=new C(...a);o.intensity*=1.25;return o;};W.prototype=C.prototype;W.__b46=1;THREE[n]=W;});
+
+/* ---------- 5) background music choices ---------- */
+Object.assign(TRK,{
+ breeze:{bpm:92,key:62,m:'maj',pr:[0,5,3,4],rh:'x..x..x.x..x....',ld:'sine',dr:['x.......x.......','....x.......x...','x.x.x.x.x.x.x.x.'],bs:'half',pad:1,soft:1},
+ neon:{bpm:118,key:57,m:'min',pr:[0,5,3,6],rh:'x.x.xx.x.x.xx.x.',ld:'square',dr:['x...x...x...x...','....x.......x...','x.xxx.xxx.xxx.xx'],bs:'eighth'},
+ fiesta:{bpm:132,key:65,m:'maj',pr:[0,3,4,0],rh:'xx.x.xx.x.xx.x..',ld:'triangle',dr:['x..x..x...x..x..','....x.......x...','x.x.x.x.x.x.x.x.'],bs:'pulse'}});
+const BGM46=[['auto','🎵 Auto','changes with each place'],['lobby','🏝️ Island Hub',''],['breeze','🌊 Sea Breeze','calm'],['neon','🌃 Neon Lab','synthwave'],['fiesta','🎉 Fiesta','upbeat'],['adventure','🗺️ Adventure',''],['lab','🧪 Lab Hour','']];
+const CALM46={lobby:1,adventure:1,lab:1,study:1,map:1};
+function setTrack(){const b=S&&S.settings&&S.settings.bgm;if(!b||b==='auto'||!TRK[b])return setTrack45();
+ const n0=V.name==='results'?(RES&&RES.win?'victory':'defeat'):TMAP[V.name]||'lobby';if(!CALM46[n0])return setTrack45();
+ if(AU.track===b)return;const keep=TMAP[V.name];TMAP[V.name]=b;try{setTrack45();}finally{if(keep===undefined)delete TMAP[V.name];else TMAP[V.name]=keep;}}
+function setHTML(){let h=setHTML45();if((UI.setab||'game')!=='sound')return h;const cur=(S.settings&&S.settings.bgm)||'auto';
+ const g='<div class="sgrp"><b>BACKGROUND MUSIC</b>'+BGM46.map(([id,n,d])=>'<button class="toggle bgm46'+(cur===id?' on':'')+'" data-act="bgm46" data-v="'+id+'" aria-pressed="'+(cur===id)+'"><span>'+n+(d?' <small class="muted">'+d+'</small>':'')+'</span><span>'+(cur===id?'✓':'')+'</span></button>').join('')+'</div>';
+ const i=h.lastIndexOf('</div>');return i>0?h.slice(0,i)+g+h.slice(i):h+g;}
+A.bgm46=d=>{S.settings.bgm=d.v;save();sfx('tap');AU.track=null;try{audioInit();setTrack();musicOn();}catch(e){}A.setTab({t:'sound'});};
+
+/* ---------- 6) emotes and quick chat in duels ---------- */
+const EMO46=['👍','😂','😮','😢','🔥','🤝'],PHR46=['Good luck!','Nice answer!','So close!','GG!','Rematch?','Thanks!'];let EMOT46=0;
+function emoBar46(){return '<div class="emo46" id="emo46"><button class="emob" data-act="emoOpen" aria-label="Emotes and quick chat">😀</button><div class="emop" id="emop" hidden>'+EMO46.map(e=>'<button data-act="emoSend" data-e="'+e+'">'+e+'</button>').join('')+'<div class="emoph">'+PHR46.map((p,i)=>'<button data-act="emoSend" data-p="'+i+'">'+p+'</button>').join('')+'</div></div></div>';}
+function emoShow46(side,txt){const p=document.querySelector(side==='me'?'.duel .p:not(.r)':'.duel .p.r');if(!p)return;const b=document.createElement('div');b.className='emobub '+(txt.length>3?'txt':'');b.textContent=txt;p.appendChild(b);setTimeout(()=>b.remove(),2600);}
+Object.assign(A,{
+ emoOpen:()=>{const p=$('emop');if(p)p.hidden=!p.hidden;sfx('tap');},
+ emoSend:d=>{if(Date.now()-EMOT46<1800)return;EMOT46=Date.now();const txt=d.e||PHR46[+d.p]||'👍';const p=$('emop');if(p)p.hidden=true;emoShow46('me',txt);sfx('tap');
+  if(M&&M.live&&window.FB&&FB.rt){FB.rt.set('rooms/'+M.live.rid+'/emo/'+CL.uid,{x:d.e?d.e:'p'+(+d.p),t:Date.now()}).catch(()=>{});}
+  else if(M&&!M.live&&Math.random()<.45)setTimeout(()=>{if(V.name==='match')emoShow46('op',Math.random()<.6?EMO46[Math.floor(Math.random()*EMO46.length)]:PHR46[Math.floor(Math.random()*PHR46.length)]);},900+Math.random()*900);}});
+function emoDecor46(){if(V.name!=='match'||!M||$('emo46'))return;const g=document.querySelector('.duelv .duel');if(g)g.insertAdjacentHTML('beforeend',emoBar46());}
+function emoListen46(){const L=M&&M.live;if(!L||L.emoOff||!window.FB||!FB.rt)return;let last=0;L.emoOff=FB.rt.on('rooms/'+L.rid+'/emo/'+L.ouid,v=>{if(!v||!v.t||v.t<=last)return;last=v.t;const x=String(v.x||'');const txt=x[0]==='p'?PHR46[+x.slice(1)]:(EMO46.includes(x)?x:'');if(txt&&V.name==='match')emoShow46('op',txt);});}
+
+/* ---------- 7) My Learning: what I have mastered and what needs practice ---------- */
+function learnStats46(){const st={};TOPICS.forEach(t=>st[t.id]={t,r:0,w:0,seen:0,n:(QB[t.id]||[]).length});
+ Object.keys(S.qstat||{}).forEach(k=>{const tid=k.split('|')[0];const x=st[tid];if(!x)return;const q=S.qstat[k];x.r+=q.r||0;x.w+=q.w||0;x.seen++;});
+ Object.values(st).forEach(x=>{const tot=x.r+x.w;x.acc=tot?Math.round(x.r/tot*100):null;x.lvl=!tot?'new':tot>=12&&x.acc>=80?'master':x.acc>=60?'near':'practice';});return st;}
+function vLearn46(){const st=learnStats46();const isl=UI.lrn||curIsl();const L=Object.values(st).filter(x=>x.t.isl===isl);
+ const cnt=k=>Object.values(st).filter(x=>x.lvl===k).length;
+ const lab={master:['🏆','Mastered'],near:['📈','Almost there'],practice:['🔁','Needs practice'],new:['✨','Not started']};
+ return topbar('MY LEARNING','home')+'<div class="pad lrn46"><div class="panel plain"><div class="lrsum">'+['master','near','practice','new'].map(k=>'<div class="'+k+'"><b>'+cnt(k)+'</b><small>'+lab[k][0]+' '+lab[k][1]+'</small></div>').join('')+'</div>'+
+  '<div class="small muted">Mastered = at least 12 answers and 80% right. Your answers in every mode count.</div></div>'+
+  '<div class="tabs" role="group">'+ISLANDS.map(I=>'<button data-act="lrnIsl" data-v="'+I.id+'" aria-pressed="'+(I.id===isl)+'">Q'+I.q+' '+esc(I.s)+'</button>').join('')+'</div>'+
+  L.map(x=>'<div class="panel plain lrt '+x.lvl+'"><div class="lrh"><b>'+esc(x.t.n)+'</b><span class="lrchip">'+lab[x.lvl][0]+' '+lab[x.lvl][1]+'</span></div><div class="small muted">'+esc(x.t.w||'')+' · '+x.seen+' of '+x.n+' questions seen'+(x.acc!=null?' · '+x.acc+'% right ('+(x.r+x.w)+' answers)':'')+'</div>'+
+   '<div class="lrbar"><i style="width:'+(x.acc||0)+'%"></i></div><button class="gbtn sm '+(x.lvl==='master'?'dark':'green')+'" data-act="lrnPrac" data-v="'+x.t.id+'">🎯 Practice 5 questions</button></div>').join('')+'</div>';}
+XVIEW.learn=()=>vLearn46();TMAP.learn='study';
+Object.assign(A,{lrnIsl:d=>{UI.lrn=d.v;sfx('tap');render();},learn46:()=>{sfx('tap');go('learn');},
+ lrnPrac:d=>{const qs=getQ([d.v],5);if(!qs.length)return;queue.unshift({t:'prac46',tid:d.v,qs,i:0,sc:0});sfx('go');showQueue();},
+ pracAns:d=>{const m=queue[0];if(!m||m.t!=='prac46'||m.lock)return;m.lock=1;const Q=m.qs[m.i],k=+d.k,ok=k===Q.a;if(ok)m.sc++;record(Q,ok);markOpts('#layer .opt',Q,k);
+  const fb=$('pracfb');if(fb)fb.innerHTML='<div class="roundres"><b>'+(ok?'✓ Correct!':'✗ The answer is '+Q.o[Q.a])+'</b><br><span class="muted">'+Q.f+'</span></div><button class="gbtn green block" data-act="pracNext">'+(m.i<m.qs.length-1?'Next ›':'Finish')+'</button>';sfx(ok?'good':'bad');},
+ pracNext:()=>{const m=queue[0];if(!m)return;m.lock=0;if(m.i<m.qs.length-1){m.i++;showQueue();return;}queue.shift();addXP(m.sc*3);save();toast('🎯 Practice done: '+m.sc+'/'+m.qs.length+' · +'+(m.sc*3)+' XP');showQueue();render();}});
+function pracHTML46(m){const Q=m.qs[m.i];return '<div class="ptitle outline">🎯 PRACTICE</div><div class="small muted" style="text-align:center;font-weight:700">'+esc((topicById(m.tid)||{}).n||'')+' · '+(m.i+1)+' of '+m.qs.length+'</div><div class="qcard"><p class="qq">'+Q.q+'</p></div><div class="opts">'+optsHTML(Q,'pracAns')+'</div><div id="pracfb"></div><button class="gbtn dark sm" data-act="qok">Close</button>';}
+function homeDecor46(){if(V.name!=='home'||$('lrn46b'))return;const ev=document.querySelector('#view .rail.r [data-v="events"]');if(!ev)return;
+ const b=ev.cloneNode(true);b.id='lrn46b';b.setAttribute('data-act','learn46');b.removeAttribute('data-v');b.setAttribute('aria-label','My Learning');
+ const sv=b.querySelector('svg');if(sv)sv.outerHTML=hexIco('<text x="32" y="41" font-size="24" text-anchor="middle">📈</text>','#46c8ff');
+ b.querySelectorAll('span,small,b').forEach(x=>{if(/events/i.test(x.textContent))x.textContent='LEARN';});ev.after(b);}
+
+/* ---------- 8) decorations after each redraw ---------- */
+{let q=0;new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;try{emoDecor46();emoListen46();homeDecor46();}catch(e){}});}).observe(document.documentElement,{childList:true,subtree:true});}
+
+/* ===================== v46 · VOICE CHAT in live duels (teacher-moderated) =====================
+   Two players in a Live Quiz Duel can talk to each other. The teacher turns voice chat on or off for
+   everyone from the Class tab (on only while supervising), and can see which live duels are running.
+   Voice goes directly phone-to-phone (WebRTC); the school server only passes the "connect" messages,
+   and nothing is recorded or stored. */
+const VC={on:false,mic:true,spk:true,pc:null,ls:null,el:null,rid:null,side:null,ouid:null,offs:[],seen:{},st:'',busy:Promise.resolve()};
+const voiceOK=()=>!!(APPCFG.voice&&APPCFG.voice.on);
+function vcStatus(){if(!VC.on)return 'Voice chat';if(!VC.pc)return 'Waiting for '+esc((M&&M.opp&&M.opp.n)||'opponent')+'…';
+ return VC.st==='connected'?'🟢 Talking':VC.st==='failed'?'Voice failed':'Connecting…';}
+function vcHTML(){return '<button class="vcb'+(VC.on?' on':'')+(VC.on&&!VC.mic?' muted':'')+'" data-act="vcTog" aria-label="'+(VC.on?(VC.mic?'Mute my microphone':'Unmute my microphone'):'Join voice chat')+'">'+(VC.on?(VC.mic?'🎙️':'🔇'):'🎧')+'</button>'+
+ (VC.on?'<button class="vcb sm" data-act="vcSpk" aria-label="'+(VC.spk?'Mute opponent':'Unmute opponent')+'">'+(VC.spk?'🔊':'🔈')+'</button><button class="vcb sm" data-act="vcEnd" aria-label="Leave voice chat">✕</button>':'')+'<small>'+vcStatus()+'</small>';}
+function vcRefresh(){const b=$('vc46');if(b)b.innerHTML=vcHTML();}
+function vcDecor(){if(V.name!=='match'||!M||!M.live)return;const has=$('vc46');if(!voiceOK()){if(has)has.remove();return;}if(has)return;
+ const g=document.querySelector('.duelv .duel');if(!g)return;const d=document.createElement('div');d.id='vc46';d.className='vc46';d.innerHTML=vcHTML();g.appendChild(d);}
+function vcPC(){const pc=new RTCPeerConnection({iceServers:[{urls:['stun:stun.l.google.com:19302','stun:stun1.l.google.com:19302','stun:stun2.l.google.com:19302']}]});
+ if(VC.ls)VC.ls.getTracks().forEach(t=>pc.addTrack(t,VC.ls));else pc.addTransceiver('audio',{direction:'recvonly'});
+ pc.onicecandidate=e=>{if(e.candidate&&VC.rid)FB.rt.push('rooms/'+VC.rid+'/rtc/'+CL.uid+'/ice',JSON.stringify(e.candidate));};
+ pc.ontrack=e=>{if(!VC.el){VC.el=new Audio();VC.el.autoplay=true;VC.el.setAttribute('playsinline','');}VC.el.srcObject=(e.streams&&e.streams[0])||new MediaStream([e.track]);VC.el.muted=!VC.spk;const p=VC.el.play();if(p&&p.catch)p.catch(()=>{});};
+ pc.onconnectionstatechange=()=>{VC.st=pc.connectionState;vcRefresh();if(VC.st==='failed')toast('Voice chat could not connect on this network. The duel goes on.');};
+ return pc;}
+function vcSig(o){VC.busy=VC.busy.then(async()=>{if(!VC.on||!o)return;const me='rooms/'+VC.rid+'/rtc/'+CL.uid;
+ try{
+  if(o.on&&!VC.pc&&VC.side==='a'){VC.pc=vcPC();const off=await VC.pc.createOffer();await VC.pc.setLocalDescription(off);await FB.rt.set(me+'/sdp',{type:off.type,sdp:off.sdp});}
+  if(o.sdp&&o.sdp.type==='offer'&&VC.side==='b'&&!VC.pc){VC.pc=vcPC();await VC.pc.setRemoteDescription(o.sdp);const an=await VC.pc.createAnswer();await VC.pc.setLocalDescription(an);await FB.rt.set(me+'/sdp',{type:an.type,sdp:an.sdp});}
+  if(o.sdp&&o.sdp.type==='answer'&&VC.side==='a'&&VC.pc&&!VC.pc.currentRemoteDescription)await VC.pc.setRemoteDescription(o.sdp);
+  if(o.ice&&VC.pc&&VC.pc.remoteDescription){for(const k of Object.keys(o.ice)){if(VC.seen[k])continue;VC.seen[k]=1;try{await VC.pc.addIceCandidate(JSON.parse(o.ice[k]));}catch(e){}}}
+ }catch(e){clWarn(e,'voice');}vcRefresh();});}
+async function vcJoin(){const L=M&&M.live;if(!L||!voiceOK()||!window.FB||!FB.rt)return;
+ Object.assign(VC,{on:true,mic:true,spk:true,rid:L.rid,side:L.side,ouid:L.ouid,seen:{},st:'',pc:null});vcRefresh();
+ try{VC.ls=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true},video:false});}
+ catch(e){VC.ls=null;VC.mic=false;toast('Microphone is blocked, so you can listen only. Allow the microphone for SIKLAB to talk.');}
+ if(!VC.on)return vcStop();
+ const base='rooms/'+VC.rid+'/rtc/';
+ try{await FB.rt.set(base+CL.uid+'/on',true);FB.rt.disc(base+CL.uid,null);VC.offs.push(FB.rt.on(base+VC.ouid,v=>vcSig(v)));sfx('good');}
+ catch(e){clWarn(e,'voicejoin');toast('Voice chat could not start.');vcStop();}vcRefresh();}
+function vcStop(){VC.offs.forEach(f=>{try{f();}catch(e){}});VC.offs=[];try{VC.pc&&VC.pc.close();}catch(e){}
+ try{VC.ls&&VC.ls.getTracks().forEach(t=>t.stop());}catch(e){}try{if(VC.el){VC.el.pause();VC.el.srcObject=null;}}catch(e){}
+ if(VC.rid&&CL.uid&&window.FB&&FB.rt)FB.rt.remove('rooms/'+VC.rid+'/rtc/'+CL.uid).catch(()=>{});
+ Object.assign(VC,{on:false,pc:null,ls:null,rid:null,st:'',seen:{},busy:Promise.resolve()});vcRefresh();}
+Object.assign(A,{
+ vcTog:()=>{if(!VC.on){vcJoin();return;}if(!VC.ls){toast('Allow the microphone for SIKLAB to talk.');return;}VC.mic=!VC.mic;VC.ls.getAudioTracks().forEach(t=>t.enabled=VC.mic);sfx('tap');vcRefresh();},
+ vcSpk:()=>{VC.spk=!VC.spk;if(VC.el)VC.el.muted=!VC.spk;sfx('tap');vcRefresh();},
+ vcEnd:()=>{sfx('tap');vcStop();}});
+/* voice ends with the duel, or at once when the teacher turns it off */
+{const e46=mEnd;mEnd=function(){if(VC.on)vcStop();return e46.apply(this,arguments);};}
+{const c46=cfgApply;cfgApply=function(){c46();if(VC.on&&!voiceOK()){vcStop();toast('Your teacher turned voice chat off.');}try{vcDecor();}catch(e){}};}
+{let q=0;new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;try{vcDecor();}catch(e){}});}).observe(document.documentElement,{childList:true,subtree:true});}
+addEventListener('pagehide',()=>{if(VC.on)vcStop();});
+
+/* ---------- teacher: the voice switch and the live duels list (Class tab) ---------- */
+const LVT={off:null,rooms:{}};
+function lvWatchT(){if(LVT.off||!clT()||!window.FB||!FB.rt)return;try{FB.rt.online(true);LVT.off=FB.rt.on('rooms',v=>{LVT.rooms=v||{};const b=$('lvtlist');if(b)b.innerHTML=lvListHTML();});}catch(e){clWarn(e,'rooms');}}
+function lvListHTML(){const R=Object.values(LVT.rooms||{}).filter(r=>r&&r.a&&r.b&&r.b.n&&Date.now()-(r.t||0)<3600e3);
+ if(!R.length)return '<div class="small muted">No live duels right now.</div>';
+ return R.map(r=>'<div class="kv"><span>⚔️ '+esc(clS(r.a.n,14))+' vs '+esc(clS(r.b.n,14))+'</span><b>'+(r.rtc&&Object.keys(r.rtc).length?'🎙️ '+Object.keys(r.rtc).length+' in voice':'no voice')+'</b></div>').join('');}
+function clVoicePanel(){const on=voiceOK();setTimeout(lvWatchT,0);
+ return '<div class="panel plain clpanel"><div class="shead">VOICE CHAT (LIVE DUELS)</div><div class="clstate '+(on?'ok':'bad')+'">'+(on?'🎙️ ON · players in a live duel can talk':'🔇 OFF · no voice chat')+'</div>'+
+  '<div class="small muted">Turn this on only while you supervise. Players must tap 🎧 to join, can mute themselves and their opponent, and voice stops at once for everyone when you turn it off. Nothing is recorded.</div>'+
+  '<button class="gbtn '+(on?'red':'green')+' block" data-act="vcAdmin">'+(on?'🔇 Turn voice chat OFF':'🎙️ Turn voice chat ON')+'</button>'+
+  '<div class="kvh">LIVE DUELS NOW</div><div id="lvtlist">'+lvListHTML()+'</div></div>';}
+A.vcAdmin=async()=>{if(!clT())return;const on=!voiceOK();try{await FB.set('config/app',{voice:{on,t:Date.now(),by:CL.uid}},true);sfx(on?'good':'tap');toast(on?'🎙️ Voice chat is ON for live duels.':'🔇 Voice chat is OFF.');}catch(e){clWarn(e,'voiceadmin');toast('Could not reach the server.');}};
+{const c=TTABS.find(t=>t[0]==='class');if(c)c[3].push('VOICE CHAT');}
+
 /* ============ BOOT ============ */
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot)window.claude.hot.snapshot(()=>({S}));}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready)window.claude.hot.ready(start);else start((window.claude&&window.claude.hot&&window.claude.hot.data)||{});
 })();
 </script>
 <!-- school server bridge (built from src/main.jsx by "npm run build") -->
-<script src="siklab-cloud.js?b=988260"></script>
+<script src="siklab-cloud.js?b=989008"></script>
 </body>
 </html>
