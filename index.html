@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Project SIKLAB v46</title>
+<title>Project SIKLAB v47</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -2854,6 +2854,83 @@ html.native input,html.native textarea{-webkit-user-select:text;user-select:text
 .vcb{min-width:40px;height:36px;border-radius:12px;border:2px solid #46a6ff;background:#1b2a6b;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 3px 0 #0a1a4a;padding:0 8px}
 .vcb.on{border-color:#38e08f;background:#14583c}.vcb.muted{border-color:#ff4f6d;background:#5e1424}.vcb.sm{min-width:36px;font-size:15px}
 .vc46 small{font-size:12px;font-weight:800;color:#d6ffe9}
+/* ===================== v47 ===================== */
+/* intro: the sound hint is small and out of the way */
+.isnd{font-size:11px!important;opacity:.7;padding:4px 10px!important;background:rgba(0,0,0,.35)!important;border-radius:999px}
+/* teacher logout: a clear power icon */
+.tlogout svg{display:block;width:22px;height:22px}
+/* approvals */
+.ap47 .aprow{background:rgba(11,8,38,.5);border:2px solid #3b3190;border-radius:14px;padding:10px 12px}
+.ap47 .aprow small{display:block}
+.apdh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.apdh small{font:700 11px var(--body,sans-serif);color:var(--muted);letter-spacing:0;text-transform:none}
+.apdl{display:flex;flex-direction:column;gap:6px}
+.apd{display:grid;grid-template-columns:36px 1fr auto;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;background:rgba(11,8,38,.5);border:1.5px solid #322a7c}
+.apav{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:800 16px var(--display,sans-serif);color:#1d1850;background:#ffc600}
+.apd.no .apav{background:#b9b4dc}
+.apnm{min-width:0;display:flex;flex-direction:column}
+.apnm b{font-size:15px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.apnm small{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;line-height:1.3}
+.appill{font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:999px;white-space:nowrap;background:#14935a;color:#fff}
+.apd.no .appill{background:#8c2238}
+.apmore summary{cursor:pointer;font-weight:800;font-size:13px;color:#ffe27a;padding:8px 2px;list-style:none}
+.apmore summary::before{content:'▸ '}.apmore[open] summary::before{content:'▾ '}
+.ap47 .clrs{background:rgba(11,8,38,.5);border:1.5px dashed #4a3fa8;border-radius:12px;padding:6px 10px}
+.ap47 .clrs summary{cursor:pointer;font-size:13px!important;line-height:1.3}
+/* My Learning */
+.lrn47{display:flex;flex-direction:column;gap:10px}
+.lr47h{gap:10px!important}
+.lr47top{display:flex;align-items:center;gap:14px}
+.lr47ring{--p:0;flex:none;width:76px;height:76px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ background:radial-gradient(closest-side,#221b5e 78%,transparent 80% 100%),conic-gradient(#38e08f calc(var(--p)*1%),rgba(255,255,255,.12) 0)}
+.lr47ring b{font:800 26px var(--display,sans-serif);color:#ffe27a;line-height:1}.lr47ring small{font-size:11px;color:var(--muted);font-weight:700}
+.lr47t{display:flex;flex-direction:column;gap:3px;min-width:0}.lr47t b{font:800 17px var(--display,sans-serif);letter-spacing:.3px}.lr47t small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.lr47seg{display:flex;height:10px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.1);gap:2px}.lr47seg i{display:block;height:100%}
+.lr47leg{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+.lr47leg span{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#e4e0fb;white-space:nowrap}
+.lr47leg i{flex:none;width:10px;height:10px;border-radius:3px}.lr47leg b{margin-left:auto;font:800 15px var(--display,sans-serif);color:#fff}
+.lr47tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.lr47tabs button{--c:#ffc600;display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 2px 6px;border-radius:12px;border:2px solid #3b3190;background:rgba(11,8,38,.55);color:#e4e0fb;cursor:pointer;min-width:0}
+.lr47tabs .q{font:800 14px var(--display,sans-serif)}.lr47tabs .s{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.2px;max-width:100%;text-align:center;line-height:1.1;min-height:2.2em;display:flex;align-items:center}
+.lr47tabs .m{font-size:10.5px;color:var(--muted);font-weight:700}
+.lr47tabs button[aria-selected=true]{border-color:var(--c);background:linear-gradient(180deg,color-mix(in srgb,var(--c) 35%,#221b5e),#221b5e);color:#fff;box-shadow:0 0 0 2px color-mix(in srgb,var(--c) 30%,transparent)}
+.lr47tabs button[aria-selected=true] .m{color:#fff}
+.lr47list{display:flex;flex-direction:column;gap:8px}
+.lr47c{--c:#8b84c9;position:relative;padding:11px 12px 11px 16px;border-radius:14px;background:rgba(34,27,94,.92);border:1.5px solid #3b3190;overflow:hidden}
+.lr47c::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+.lr47ch{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.lr47ch b{font-size:15px;line-height:1.25}
+.lr47chip{flex:none;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:color-mix(in srgb,var(--c) 30%,#1d1850);border:1px solid var(--c);white-space:nowrap}
+.lr47m{font-size:12px;color:var(--muted);margin:2px 0 8px}
+.lr47st{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end}
+.lr47st>span{display:flex;flex-direction:column;gap:3px;min-width:0}.lr47st small{font-size:10.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.lr47st b{font:800 15px var(--display,sans-serif);font-variant-numeric:tabular-nums}
+.lr47bar{display:block;height:6px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}.lr47bar>i{display:block;height:100%;background:#46a6ff;border-radius:999px}
+.lr47bar.acc>i{background:linear-gradient(90deg,#ff9a3d,#ffc600,#38e08f)}
+.lr47go{align-self:center;padding:9px 12px;border-radius:12px;border:2px solid #38e08f;background:rgba(56,224,143,.14);color:#c9ffe4;font:800 13px var(--display,sans-serif);cursor:pointer;white-space:nowrap}
+.lr47go:active{transform:translateY(1px)}
+/* online hero battles */
+.hbw{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(11,8,38,.55);border:2px solid #3b3190}
+.hbw>div:last-child{display:flex;flex-direction:column;gap:2px}.hbw small{font-size:12px;color:var(--muted)}
+.hbspin{flex:none;width:28px;height:28px;border-radius:50%;border:4px solid rgba(255,255,255,.15);border-top-color:#ffc600;animation:hbspin 1s linear infinite}
+@keyframes hbspin{to{transform:rotate(360deg)}}
+.hbwho{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.hbwho li{display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:10px;background:rgba(11,8,38,.45);font-weight:700;font-size:13.5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.hbwho li.me{outline:2px solid #ffc600}.hbwho small{color:var(--muted)}
+.hbdot{flex:none;width:10px;height:10px;border-radius:50%;background:#46a6ff}.hbdot.r{background:#ff4f6d}
+.hbnet{position:absolute;left:calc(8px*var(--hs,1));top:calc(var(--hcb,120px) + 6px);z-index:6;display:flex;flex-direction:column;align-items:flex-start;gap:6px;pointer-events:none}
+.hbnet>*{pointer-events:auto}
+.hblive{font:800 11px var(--display,sans-serif);letter-spacing:.6px;padding:3px 8px;border-radius:999px;background:#c8102e;color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+.hbemob{width:40px;height:40px;border-radius:12px;border:2px solid #6c5fd0;background:rgba(29,24,80,.9);font-size:20px;cursor:pointer}
+.hbemop{display:flex;flex-wrap:wrap;gap:4px;max-width:230px;padding:8px;border-radius:14px;background:rgba(20,16,60,.96);border:2px solid #6c5fd0}
+.hbemop[hidden]{display:none}.hbemop>button{font-size:22px;width:40px;height:40px;border:0;background:transparent;cursor:pointer}
+.hbemop .emoph{display:flex;flex-direction:column;gap:4px;width:100%}.hbemop .emoph button{text-align:left;padding:6px 8px;border-radius:8px;border:1px solid #3b3190;background:#221b5e;color:#fff;font-weight:700;font-size:13px;cursor:pointer}
+.hbchat{display:flex;flex-direction:column;gap:3px;max-width:240px;pointer-events:none!important}
+.hbchat span{font-size:12.5px;padding:4px 8px;border-radius:10px;background:rgba(0,0,0,.55);color:#fff;animation:hbin .2s ease-out}.hbchat span.mine{background:rgba(255,198,0,.3)}
+.hbchat b{color:#ffe27a}
+@keyframes hbin{from{opacity:0;transform:translateX(-8px)}}
+.vc46.inmoba{position:absolute;right:calc(8px*var(--hs,1));top:calc(var(--hcb,120px) + 6px);z-index:6}
+body .tview .panel[hidden]{display:none!important}
+#view .clcard[hidden],#view details.clcard[hidden]{display:none!important}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#140f36"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="SIKLAB"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><meta name="description" content="Project SIKLAB: a G11 General Science adventure game for Manuel Luis Quezon Senior High School, SDO Manila.">
 </head>
@@ -38906,7 +38983,7 @@ Object.assign(ART,{
 /* ===================== v10 · TITLE HEADING ===================== */
 function vTitle19(){let h=vTitle9();
  if(!S.hero&&UI.creating)return h.replace('<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>',schoolHead('sm')+'<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>');
- return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v46');}
+ return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v47');}
 function vHome10(){let h=vHome9().replace(schoolStrip('lob'),'');const t=S.hb.tr;
  return h.replace('<div class="ltiles">','<div class="ltiles three">').replace('<button class="ltile base"','<button class="ltile sd" data-act="go" data-v="hb"><span class="li sdi">⚔️</span><span><b>CLAN BATTLE</b><small>Hero battle · '+t+' 🏆</small></span></button><button class="ltile base"');}
 /* ===================== v10 · SCIENCE CAPSULES ===================== */
@@ -40229,7 +40306,7 @@ function render22(){if(UI.creating&&S&&S.hero){UI.creating=false;UI.lockNick=fal
 let INTRO_T0=0,INTRO_SND=false,INTRO_GEST=false;
 function vIntro(){return '<div class="intro" aria-label="Intro"><div class="ilogos"><span class="ilw w1"><img src="'+LOGO_SDO+'" alt="Schools Division Office of Manila seal"></span><span class="ilw w2"><img src="'+LOGO_MLQ+'" alt="Manuel Luis Quezon Senior High School seal"></span></div>'+
  '<div class="itxt"><small>Schools Division Office of Manila</small><b>Manuel Luis Quezon<br>Senior High School</b><span>presents</span></div><div class="iflash"></div>'+
- '<span class="isnd" id="isnd"'+(INTRO_SND?' hidden':'')+'>🔊 Tap anywhere for sound</span><button class="iskipb" data-act="introSkip">Skip ›</button></div>';}
+ '<span class="isnd" id="isnd"'+(INTRO_SND?' hidden':'')+'>🔈 Tap for sound</span><button class="iskipb" data-act="introSkip">Skip ›</button></div>';}
 function introSounds(off){off=Math.max(0,off||0);if(S&&S.settings&&S.settings.sfx===false)return false;
  try{audioInit();const c=AU.ctx;if(!c)return false;if(c.state!=='running'){try{c.resume();}catch(e){}if(!INTRO_GEST)return false;}
  const t0=c.currentTime+.03-off;const at=(d,fn)=>{if(d+.03<off)return;fn(Math.max(c.currentTime+.01,t0+d));};
@@ -45717,7 +45794,7 @@ A.rSec=d=>{UI.rsec=d.s;sfx('tap');render();};
 function refreshHud(){refreshHud43();try{teachHead();}catch(e){}}
 function teachHead44(){const v=$('view');if(!v)return;v.classList.toggle('tview',V.name==='teacher'&&!!UI.teach);if(V.name!=='teacher'||!UI.teach)return;const hud=v.querySelector('.hud');if(!hud||hud.dataset.t44)return;hud.dataset.t44=1;hud.classList.add('thud');
  hud.querySelectorAll('.res,.tutorbtn,[data-act=go][aria-label=Back]').forEach(e=>e.remove());
- if(!hud.querySelector('[data-act=tOut]')){const b=document.createElement('button');b.className='tlogout';b.dataset.act='tOut';b.setAttribute('aria-label','Log out of the teacher dashboard');b.innerHTML='<span aria-hidden="true">⏻</span>';b.title='Log out';hud.appendChild(b);}
+ if(!hud.querySelector('[data-act=tOut]')){const b=document.createElement('button');b.className='tlogout';b.dataset.act='tOut';b.setAttribute('aria-label','Log out of the teacher dashboard');b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2v8.3" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/><path d="M6.6 6.6a7.6 7.6 0 1 0 10.8 0" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg>';b.title='Log out';hud.appendChild(b);}
  requestAnimationFrame(()=>{v.style.setProperty('--thud',hud.offsetHeight+'px');});}
 
 /* ---------- 4. Hero: crown text, zoom/rotate buttons, coats and style ---------- */
@@ -46369,8 +46446,8 @@ function vLogin(){let h=vLogin44L();const L=UI.lg||{};
  if(L.step==='pick'&&fbOn()){const i=h.indexOf('data-act="lgNew"');if(i>0){const j=h.indexOf('</button>',i)+9;h=h.slice(0,j)+'<button class="gbtn blue block lgcloud" data-act="clLg">☁️ I have an account</button>'+clGetApp()+h.slice(j);}}
  if(L.step==='cloud')h=loginShell('<form class="lgcard" id="clform" novalidate><div class="lgh">LOG IN</div><div class="lgsub">Use the nickname and password you made when you signed up. Your save comes from the school server.</div><input id="clnick" maxlength="14" placeholder="Nickname" autocomplete="username" aria-label="Nickname" value="'+esc(L.nick||'')+'" autocapitalize="off" spellcheck="false">'+clInp('clpw','Password','current-password')+
   '<div class="lgerr" role="alert">'+(L.err||'')+'</div><button class="gbtn green block" type="submit"'+(L.busy?' disabled':'')+'>'+(L.busy?'☁️ Getting your save…':'Log in ▶')+'</button><button class="lglink" type="button" data-act="lgBack">‹ Back</button></form>');
- if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v46');
- return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v46');}
+ if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v47');
+ return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v47');}
 function clGetApp(){if(!window.FB||FB.native)return '';const ua=navigator.userAgent;const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
  if(/Android/i.test(ua)&&FB.cfg&&FB.cfg.apk)return '<a class="lglink lgapp" href="'+esc(FB.cfg.apk)+'" rel="noopener">📱 Get the Android app</a>';
  if(ios&&!sa)return '<div class="lgsub small lgapp">📱 iPhone: tap Share › <b>Add to Home Screen</b> to open SIKLAB like an app.</div>';return '';}
@@ -46623,18 +46700,20 @@ addEventListener('focusin',e=>{const t=e.target;if(!t||!(t.tagName==='TEXTAREA'|
 /* ---------- Quiz Duel: the answer explanation sits on the battle picture, not on the choices ---------- */
 function duelFeedFix(){document.querySelectorAll('.duelv #mq > .roundres,.bossv #bq > .roundres').forEach(r=>{const g=r.closest('.duelv,.bossv');const f=g&&g.querySelector('.dfield,.bfield,#dfield,#bfield');if(f){f.appendChild(r);r.classList.add('onfield');}});}
 
-/* ---------- start screen: plays once, with its sound from the first second ----------
-   Browsers only allow sound after a tap, so when sound is still locked the game shows TAP TO START first
-   and then plays the logo intro once with its sound. The Android app can play sound at once and skips that. */
+/* ---------- start screen: no TAP TO START, the logo intro plays at once ----------
+   The Android app lets the game play sound without a tap (see scripts/patch-android.mjs), so the intro
+   sound and the music start right away. A web browser may still hold sound until the first touch; then
+   the sound joins in at that touch, from the right point of the intro. */
 let INTRO46=0;
 function start(data){start19(data);UI.lg={step:'pick'};if(S.hero)accSync();
  try{audioInit();}catch(e){}
- const run=()=>{if(INTRO46)return;INTRO46=1;UI.gate=false;introStart();};
+ if(INTRO46)return;INTRO46=1;UI.gate=false;
  const c=AU&&AU.ctx;
- if(c&&c.state==='running'){run();return;}
- try{if(c)c.resume().catch(()=>{});}catch(e){}
- setTimeout(()=>{if(INTRO46)return;if(c&&c.state==='running'){run();return;}UI.gate=true;UI.intro=false;render();},120);}
-A.gateGo=()=>{if(INTRO46)return;audioUnlock().then(()=>{if(INTRO46)return;INTRO46=1;UI.gate=false;INTRO_GEST=true;introStart();});};
+ const late=()=>{try{if(c&&c.state==='running'){UNLOCKED=true;if(UI.intro&&!INTRO_SND){INTRO_GEST=true;introSounds((performance.now()-INTRO_T0)/1000);}}}catch(e){}};
+ try{if(c&&c.state!=='running')c.resume().then(late,()=>{});}catch(e){}
+ try{if(c&&c.addEventListener)c.addEventListener('statechange',late);}catch(e){}
+ introStart();late();}
+A.gateGo=()=>{};
 
 /* ---------- one teacher account everywhere ----------
    With the school server, the teacher logs in with the same email and password on the web and in the app.
@@ -46768,9 +46847,9 @@ function homeDecor46(){if(V.name!=='home'||$('lrn46b'))return;const ev=document.
    everyone from the Class tab (on only while supervising), and can see which live duels are running.
    Voice goes directly phone-to-phone (WebRTC); the school server only passes the "connect" messages,
    and nothing is recorded or stored. */
-const VC={on:false,mic:true,spk:true,pc:null,ls:null,el:null,rid:null,side:null,ouid:null,offs:[],seen:{},st:'',busy:Promise.resolve()};
+const VC={base:'rooms/',onm:'',on:false,mic:true,spk:true,pc:null,ls:null,el:null,rid:null,side:null,ouid:null,offs:[],seen:{},st:'',busy:Promise.resolve()};
 const voiceOK=()=>!!(APPCFG.voice&&APPCFG.voice.on);
-function vcStatus(){if(!VC.on)return 'Voice chat';if(!VC.pc)return 'Waiting for '+esc((M&&M.opp&&M.opp.n)||'opponent')+'…';
+function vcStatus(){if(!VC.on)return 'Voice chat';if(!VC.pc)return 'Waiting for '+esc(VC.onm||'opponent')+'…';
  return VC.st==='connected'?'🟢 Talking':VC.st==='failed'?'Voice failed':'Connecting…';}
 function vcHTML(){return '<button class="vcb'+(VC.on?' on':'')+(VC.on&&!VC.mic?' muted':'')+'" data-act="vcTog" aria-label="'+(VC.on?(VC.mic?'Mute my microphone':'Unmute my microphone'):'Join voice chat')+'">'+(VC.on?(VC.mic?'🎙️':'🔇'):'🎧')+'</button>'+
  (VC.on?'<button class="vcb sm" data-act="vcSpk" aria-label="'+(VC.spk?'Mute opponent':'Unmute opponent')+'">'+(VC.spk?'🔊':'🔈')+'</button><button class="vcb sm" data-act="vcEnd" aria-label="Leave voice chat">✕</button>':'')+'<small>'+vcStatus()+'</small>';}
@@ -46779,28 +46858,29 @@ function vcDecor(){if(V.name!=='match'||!M||!M.live)return;const has=$('vc46');i
  const g=document.querySelector('.duelv .duel');if(!g)return;const d=document.createElement('div');d.id='vc46';d.className='vc46';d.innerHTML=vcHTML();g.appendChild(d);}
 function vcPC(){const pc=new RTCPeerConnection({iceServers:[{urls:['stun:stun.l.google.com:19302','stun:stun1.l.google.com:19302','stun:stun2.l.google.com:19302']}]});
  if(VC.ls)VC.ls.getTracks().forEach(t=>pc.addTrack(t,VC.ls));else pc.addTransceiver('audio',{direction:'recvonly'});
- pc.onicecandidate=e=>{if(e.candidate&&VC.rid)FB.rt.push('rooms/'+VC.rid+'/rtc/'+CL.uid+'/ice',JSON.stringify(e.candidate));};
+ pc.onicecandidate=e=>{if(e.candidate&&VC.rid)FB.rt.push(VC.base+VC.rid+'/rtc/'+CL.uid+'/ice',JSON.stringify(e.candidate));};
  pc.ontrack=e=>{if(!VC.el){VC.el=new Audio();VC.el.autoplay=true;VC.el.setAttribute('playsinline','');}VC.el.srcObject=(e.streams&&e.streams[0])||new MediaStream([e.track]);VC.el.muted=!VC.spk;const p=VC.el.play();if(p&&p.catch)p.catch(()=>{});};
  pc.onconnectionstatechange=()=>{VC.st=pc.connectionState;vcRefresh();if(VC.st==='failed')toast('Voice chat could not connect on this network. The duel goes on.');};
  return pc;}
-function vcSig(o){VC.busy=VC.busy.then(async()=>{if(!VC.on||!o)return;const me='rooms/'+VC.rid+'/rtc/'+CL.uid;
+function vcSig(o){VC.busy=VC.busy.then(async()=>{if(!VC.on||!o)return;const me=VC.base+VC.rid+'/rtc/'+CL.uid;
  try{
   if(o.on&&!VC.pc&&VC.side==='a'){VC.pc=vcPC();const off=await VC.pc.createOffer();await VC.pc.setLocalDescription(off);await FB.rt.set(me+'/sdp',{type:off.type,sdp:off.sdp});}
   if(o.sdp&&o.sdp.type==='offer'&&VC.side==='b'&&!VC.pc){VC.pc=vcPC();await VC.pc.setRemoteDescription(o.sdp);const an=await VC.pc.createAnswer();await VC.pc.setLocalDescription(an);await FB.rt.set(me+'/sdp',{type:an.type,sdp:an.sdp});}
   if(o.sdp&&o.sdp.type==='answer'&&VC.side==='a'&&VC.pc&&!VC.pc.currentRemoteDescription)await VC.pc.setRemoteDescription(o.sdp);
   if(o.ice&&VC.pc&&VC.pc.remoteDescription){for(const k of Object.keys(o.ice)){if(VC.seen[k])continue;VC.seen[k]=1;try{await VC.pc.addIceCandidate(JSON.parse(o.ice[k]));}catch(e){}}}
  }catch(e){clWarn(e,'voice');}vcRefresh();});}
-async function vcJoin(){const L=M&&M.live;if(!L||!voiceOK()||!window.FB||!FB.rt)return;
- Object.assign(VC,{on:true,mic:true,spk:true,rid:L.rid,side:L.side,ouid:L.ouid,seen:{},st:'',pc:null});vcRefresh();
+async function vcJoin(){const L=M&&M.live;if(!L)return;VC.base='rooms/';return vcJoinAt(L.rid,L.side,L.ouid,M.opp&&M.opp.n);}
+async function vcJoinAt(rid,side,ouid,onm){if(!voiceOK()||!window.FB||!FB.rt)return;
+ Object.assign(VC,{on:true,mic:true,spk:true,rid,side,ouid,onm:onm||'',seen:{},st:'',pc:null});vcRefresh();
  try{VC.ls=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true},video:false});}
  catch(e){VC.ls=null;VC.mic=false;toast('Microphone is blocked, so you can listen only. Allow the microphone for SIKLAB to talk.');}
  if(!VC.on)return vcStop();
- const base='rooms/'+VC.rid+'/rtc/';
+ const base=VC.base+VC.rid+'/rtc/';
  try{await FB.rt.set(base+CL.uid+'/on',true);FB.rt.disc(base+CL.uid,null);VC.offs.push(FB.rt.on(base+VC.ouid,v=>vcSig(v)));sfx('good');}
  catch(e){clWarn(e,'voicejoin');toast('Voice chat could not start.');vcStop();}vcRefresh();}
 function vcStop(){VC.offs.forEach(f=>{try{f();}catch(e){}});VC.offs=[];try{VC.pc&&VC.pc.close();}catch(e){}
  try{VC.ls&&VC.ls.getTracks().forEach(t=>t.stop());}catch(e){}try{if(VC.el){VC.el.pause();VC.el.srcObject=null;}}catch(e){}
- if(VC.rid&&CL.uid&&window.FB&&FB.rt)FB.rt.remove('rooms/'+VC.rid+'/rtc/'+CL.uid).catch(()=>{});
+ if(VC.rid&&CL.uid&&window.FB&&FB.rt)FB.rt.remove(VC.base+VC.rid+'/rtc/'+CL.uid).catch(()=>{});
  Object.assign(VC,{on:false,pc:null,ls:null,rid:null,st:'',seen:{},busy:Promise.resolve()});vcRefresh();}
 Object.assign(A,{
  vcTog:()=>{if(!VC.on){vcJoin();return;}if(!VC.ls){toast('Allow the microphone for SIKLAB to talk.');return;}VC.mic=!VC.mic;VC.ls.getAudioTracks().forEach(t=>t.enabled=VC.mic);sfx('tap');vcRefresh();},
@@ -46826,12 +46906,434 @@ function clVoicePanel(){const on=voiceOK();setTimeout(lvWatchT,0);
 A.vcAdmin=async()=>{if(!clT())return;const on=!voiceOK();try{await FB.set('config/app',{voice:{on,t:Date.now(),by:CL.uid}},true);sfx(on?'good':'tap');toast(on?'🎙️ Voice chat is ON for live duels.':'🔇 Voice chat is OFF.');}catch(e){clWarn(e,'voiceadmin');toast('Could not reach the server.');}};
 {const c=TTABS.find(t=>t[0]==='class');if(c)c[3].push('VOICE CHAT');}
 
+/* ===================== v47 · fixes from the second round of testing ===================== */
+/* ---------- no TAP TO START screen, ever ---------- */
+UI.gate=false;A.gateGo=()=>{};
+
+/* ---------- teacher approvals: a tidy list of recent decisions ---------- */
+function apDec47(){const t=tGet()||{};const log=Object.keys(t.apr||{}).map(r=>Object.assign({r},t.apr[r])).sort((x,y)=>(y.t||0)-(x.t||0));if(!log.length)return '';
+ const row=x=>{const ok=x.st==='ok';const n=String(x.n||'?');return '<div class="apd '+(ok?'ok':'no')+'"><span class="apav" aria-hidden="true">'+esc(n.trim().charAt(0).toUpperCase()||'?')+'</span>'+
+  '<span class="apnm"><b>'+esc(n)+'</b><small>'+esc(x.r||'')+(x.t?' · '+ago(x.t):'')+'</small></span><span class="appill">'+(ok?'✓ Approved':'✕ Declined')+'</span></div>';};
+ const a=log.slice(0,5),b=log.slice(5,40);const okN=log.filter(x=>x.st==='ok').length;
+ return '<div class="kvh apdh">RECENT DECISIONS <small>'+okN+' approved · '+(log.length-okN)+' declined</small></div><div class="apdl">'+a.map(row).join('')+'</div>'+
+  (b.length?'<details class="apmore"><summary>Show '+b.length+' more</summary><div class="apdl">'+b.map(row).join('')+'</div></details>':'');}
+{const f=apprPanel;apprPanel=function(){let h=f();const i=h.indexOf('<div class="kvh">RECENT DECISIONS</div>');
+ if(i>=0){const j=h.lastIndexOf('</div>');h=h.slice(0,i)+apDec47()+h.slice(j);}
+ else if(tGet()&&Object.keys(tGet().apr||{}).length){const j=h.lastIndexOf('</div>');h=h.slice(0,j)+apDec47()+h.slice(j);}
+ return h.replace('<div class="panel plain tbank">','<div class="panel plain tbank ap47">');};}
+
+/* ---------- home: the side buttons always fit, so LEARN is never hidden ---------- */
+function railFit47(){if(V.name!=='home')return;const R=[...document.querySelectorAll('#view .rail')];if(!R.length)return;const st=document.querySelector('#view .s3d');
+ R.forEach(r=>r.style.zoom='');if(!st)return;const sb=st.getBoundingClientRect().bottom-6;let z=1;
+ R.forEach(r=>{const b=r.getBoundingClientRect();if(b.height>0&&b.bottom>sb)z=Math.min(z,Math.max(.6,(sb-b.top)/b.height));});
+ if(z<1)R.forEach(r=>r.style.zoom=z.toFixed(3));}
+{let q=0;const run=()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;try{railFit47();}catch(e){}});};new MutationObserver(run).observe(document.body,{childList:true,subtree:true});addEventListener('resize',run);}
+
+/* ---------- My Learning: clearer summary, quarter tabs that fit, compact topic cards ---------- */
+const LR47={master:['🏆','Mastered','#38e08f'],near:['📈','Almost there','#46a6ff'],practice:['🔁','Needs practice','#ff9a3d'],new:['✨','Not started','#8b84c9']};
+function vLearn47(){const st=learnStats46();const all=Object.values(st);const isl=UI.lrn||curIsl();const L=all.filter(x=>x.t.isl===isl);
+ const cnt=k=>all.filter(x=>x.lvl===k).length,K=['master','near','practice','new'],tot=all.length||1,pm=Math.round(cnt('master')/tot*100);
+ const head='<div class="panel plain lr47h"><div class="lr47top"><div class="lr47ring" style="--p:'+pm+'"><b>'+cnt('master')+'</b><small>of '+all.length+'</small></div>'+
+  '<div class="lr47t"><b>Topics mastered</b><small>Mastered = at least 12 answers and 80% right. Answers in every mode count.</small></div></div>'+
+  '<div class="lr47seg" aria-hidden="true">'+K.map(k=>cnt(k)?'<i style="flex:'+cnt(k)+';background:'+LR47[k][2]+'"></i>':'').join('')+'</div>'+
+  '<div class="lr47leg">'+K.map(k=>'<span><i style="background:'+LR47[k][2]+'"></i>'+LR47[k][0]+' '+LR47[k][1]+'<b>'+cnt(k)+'</b></span>').join('')+'</div></div>';
+ const tabs='<div class="lr47tabs" role="tablist" aria-label="Quarters">'+ISLANDS.map(I=>{const n=all.filter(x=>x.t.isl===I.id),m=n.filter(x=>x.lvl==='master').length;
+  return '<button role="tab" data-act="lrnIsl" data-v="'+I.id+'" aria-selected="'+(I.id===isl)+'" style="--c:'+(ELC[I.id]||'#ffc600')+'"><span class="q">'+(ISLE[I.id]||'')+' Q'+I.q+'</span><span class="s">'+esc(I.s)+'</span><span class="m">'+m+'/'+n.length+' 🏆</span></button>';}).join('')+'</div>';
+ const card=x=>{const l=LR47[x.lvl];const pct=Math.round(x.seen/Math.max(1,x.n)*100);
+  return '<div class="lr47c" style="--c:'+l[2]+'"><div class="lr47ch"><b>'+esc(x.t.n)+'</b><span class="lr47chip">'+l[0]+' '+l[1]+'</span></div>'+
+   '<div class="lr47m">'+esc(x.t.w||'')+'</div>'+
+   '<div class="lr47st"><span><small>Seen</small><b>'+x.seen+'/'+x.n+'</b><i class="lr47bar"><i style="width:'+pct+'%"></i></i></span><span><small>Right</small><b>'+(x.acc!=null?x.acc+'%':'–')+'</b><i class="lr47bar acc"><i style="width:'+(x.acc||0)+'%"></i></i></span>'+
+   '<button class="lr47go" data-act="lrnPrac" data-v="'+x.t.id+'" aria-label="Practice 5 questions on '+esc(x.t.n)+'">🎯 Practice</button></div></div>';};
+ return topbar('MY LEARNING','home')+'<div class="pad lrn46 lrn47">'+head+tabs+'<div class="lr47list">'+(L.length?L.map(card).join(''):'<div class="small muted" style="text-align:center">No topics here yet.</div>')+'</div></div>';}
+XVIEW.learn=()=>vLearn47();
+
+/* ---------- teacher dashboard: online panels stay in the Class tab only ---------- */
+{const c=TTABS.find(t=>t[0]==='class');if(c&&!c[3].includes('☁️ ONLINE'))c[3].push('☁️ ONLINE');}
+function tPanels47(){if(V.name!=='teacher')return;const pad=document.querySelector('.tview .pad');if(!pad)return;const cur=UI.ttab||'class';
+ document.querySelectorAll('.tview > .panel').forEach(p=>{pad.appendChild(p);p.hidden=cur!=='class';});
+ pad.querySelectorAll(':scope > .panel').forEach(p=>{const d=p.hidden?'none':'';if(p.style.display!==d)p.style.display=d;});}
+{let q=0;new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;try{tPanels47();}catch(e){}});}).observe(document.body,{childList:true,subtree:true});}
+
+/* ===================== v47 · ONLINE HERO BATTLES (1 v 1 up to 5 v 5, live) =====================
+   One phone runs the battle (the "host": the player who waited longest). The other players' phones send
+   their joystick, taps and skills to the host through the Realtime Database and draw what the host sends
+   back about 6 times a second. Empty slots are played by AI heroes. Every player sees their own base at the
+   bottom-left, so a player on the other team gets the whole map turned around (top and bottom lanes swap). */
+const HBC={ctx:null};                 /* the remote hero the host is acting for right now */
+let HB=null;                           /* matchmaking state */
+const HBTICK=1/6,HBWAIT=30;
+const HBT=['swing','cast','stun','slowT','haste','atkUp','shieldT','ivT','recall','resp','auraT','life'];
+const HBX=new Set(['C','W','hitBy','lastHit','dots','hot','qcast','mvTo','lastT','fogHide','me','rem','sk','tgt','aggro','chase','atkT','pcd','retreat','back','mk','studyT']);
+const HBTH={x:1,y:1,hp:1,gold:1,xp:1,mana:1,dH:25,dT:25,dTk:25};
+const LSW={top:'bot',bot:'top',mid:'mid'};
+const r1=v=>Math.round(v*10)/10;
+const hbNet=()=>MB&&MB.net;
+const hbHost=()=>!!(MB&&MB.net&&MB.net.host);
+const hbGuest=()=>!!(MB&&MB.net&&MB.net.guest);
+
+/* ---------- turning game objects into data and back ---------- */
+function hbVal(k,v){if(v==null)return v;const t=typeof v;
+ if(t==='number'){if(!isFinite(v))return 0;return (k==='x'||k==='y'||k==='hp'||k==='gold')?Math.round(v):r1(v);}
+ if(t==='string'||t==='boolean')return v;
+ if(Array.isArray(v))return v.every(e=>e==null||typeof e!=='object')?v.map(e=>typeof e==='number'?r1(e):e):undefined;
+ if(t==='object'&&Object.getPrototypeOf(v)===Object.prototype){const o={};for(const [a,b] of Object.entries(v)){if(b==null||(typeof b!=='object'&&typeof b!=='function'))o[a]=typeof b==='number'?r1(b):b;}return o;}
+ return undefined;}
+function hbSk(u){return u.sk?u.sk.map(q=>q?[q.id,q.r,r1(q.cd)]:0):undefined;}
+function hbFull(u){const o={};for(const k in u){if(HBX.has(k)||k[0]==='_')continue;const v=hbVal(k,u[k]);if(v!==undefined)o[k]=v;}
+ if(u.sk)o.sk=hbSk(u);o.tgt=u.tgt&&u.tgt.uid||0;return o;}
+function hbMark(u,now){const f=hbFull(u);u._ns={};for(const k in f)u._ns[k]=JSON.stringify(f[k]);u._nt={};HBT.concat(['sk']).forEach(k=>u._nt[k]=now);}
+function hbDiff(u,now){const L=u._ns;const o={};let any=0;
+ for(const k in u){if(HBX.has(k)||k[0]==='_')continue;const v=hbVal(k,u[k]);if(v===undefined)continue;
+  if(HBT.includes(k)){const last=+(L[k]||0),pred=Math.max(0,last-(now-(u._nt[k]||now)));if(Math.abs((+v||0)-pred)>.3){o[k]=v;L[k]=String(v);u._nt[k]=now;any=1;}continue;}
+  const s=JSON.stringify(v);if(L[k]===s)continue;
+  if(typeof v==='number'&&L[k]!=null&&!isNaN(+L[k])&&Math.abs(v-(+L[k]))<(HBTH[k]||.05))continue;
+  o[k]=v;L[k]=s;any=1;}
+ if(u.sk){const last=JSON.parse(L.sk||'[]'),el=now-(u._nt.sk||now);let ch=false;
+  u.sk.forEach((q,i)=>{const p=last[i];if(!q){if(p)ch=true;return;}if(!p||p[1]!==q.r){ch=true;return;}const pred=Math.max(0,p[2]-el);if(Math.abs(q.cd-pred)>.4)ch=true;});
+  if(ch){const s=hbSk(u);o.sk=s;L.sk=JSON.stringify(s);u._nt.sk=now;any=1;}}
+ const tg=u.tgt&&u.tgt.uid||0;if(L.tgt!==String(tg)){o.tgt=tg;L.tgt=String(tg);any=1;}
+ return any?o:null;}
+function hbFx(f){const o={};['k','x','y','x2','y2','r','c','t','d','w','fill'].forEach(k=>{const v=f[k];if(v==null)return;o[k]=typeof v==='number'?r1(v):typeof v==='string'||typeof v==='boolean'?v:undefined;});return o;}
+
+/* ---------- what each player brings to the battle ---------- */
+function hbLoad(){hbInit();const C=clsOf();fixWpn();const W=wpOf(S.hb.wpn);
+ const own=SKILLS.filter(s=>s.el===C.id&&S.hb.skills[s.id]&&!s.ult).map(s=>s.id);const eq=S.hb.eq.slice();own.forEach(id=>{if(!eq.includes(id)){const i=eq.indexOf(null);if(i>=0)eq[i]=id;}});
+ return {n:S.hero.name,cls:C.id,wpn:W.id,wl:S.hb.weapons[W.id]||1,skills:eq.slice(0,3).concat([S.hb.ult||null]),look:JSON.parse(JSON.stringify(myLook()||{})),kit:kitBonus()};}
+function hbClean(L){L=L||{};const C=CLASSES.find(c=>c.id===L.cls)||CLASSES[0];let W=wpOf(L.wpn);if(!W||!fitW(W,C))W=WEAPONS.find(w=>fitW(w,C))||WEAPONS[0];
+ const sk=(Array.isArray(L.skills)?L.skills:[]).slice(0,4).map((id,i)=>{const s=id&&skById(id);return s&&s.el===C.id&&(i===3?!!s.ult:!s.ult)?id:null;});while(sk.length<4)sk.push(null);
+ const K=L.kit||{},lim={max:3000,atk:200,def:150,manaMax:600,mreg:25,spd:200,as:3,cdr:.5,hpr:50,rng:100},kit={};for(const k in lim)kit[k]=Math.max(0,Math.min(lim[k],+K[k]||0));
+ return {n:clS(L.n,14)||'Player',cls:C.id,wpn:W.id,wl:Math.max(1,Math.min(10,Math.round(+L.wl||1))),skills:sk,look:clLook(L.look),kit};}
+function hbMana(h){if(!h.sk)return;h.sk.forEach((k,i)=>{if(!k||!k.s)return;k.s=Object.assign({},k.s,{sp:Math.max(i===3?150:40,Math.round(k.s.sp*MANAX[i]))});});}
+
+/* ---------- matchmaking: a queue per team size and per class / school ---------- */
+const hbScope=()=>UI.hbScope==='school'?'sch':'c'+String(mySec()||'gst').replace(/[^A-Za-z0-9_-]/g,'');
+const hbKey=md=>md+'_'+hbScope();
+A.hbScope=d=>{UI.hbScope=d.v;sfx('tap');showQueue();};
+A.hbFind=async()=>{if(!clOk()){toast('Online battles open once your teacher approves your account online.');return;}
+ if(!clNet()){toast('You need internet for an online battle.');return;}if(!modeOn('clan')){toast('Your teacher turned off Clan Battles for now.');return;}
+ if(!canPlay())return;energy();if(S.energy.n<1){queue.unshift({t:'noEnergy'});showQueue();return;}if(HB)await hbCancel(true);
+ const md=UI.bm||'5v5',tn=teamN(md);HB={st:'search',mode:md,tn,need:2*tn,key:hbKey(md),t0:Date.now(),list:[],lead:false};const H=HB;
+ if(queue[0]&&queue[0].t==='bset')queue.shift();queue.unshift({t:'hbwait'});showQueue();sfx('go');
+ try{FB.rt.online(true);const p='hbq/'+H.key+'/'+CL.uid;await FB.rt.set(p,{n:S.hero.name,t:Date.now(),l:JSON.stringify(hbLoad())});FB.rt.disc(p,null);
+  H.off=FB.rt.on('hbq/'+H.key,q=>hbQueue(H,q||{}));H.iv=setInterval(()=>hbTickQ(H),1000);}
+ catch(e){clWarn(e,'hbfind');hbCancel(true);toast('Could not reach the game server. Try again.');}};
+function hbQueue(H,q){if(HB!==H||H.st!=='search')return;const me=CL.uid,mine=q[me];
+ if(mine&&mine.room){H.st='join';hbJoin(H,mine.room);return;}
+ H.list=Object.keys(q).filter(u=>q[u]&&!q[u].room&&Date.now()-(q[u].t||0)<150000).map(u=>({uid:u,n:clS(q[u].n,14),t:q[u].t||0,l:q[u].l})).sort((a,b)=>a.t-b.t||(a.uid<b.uid?-1:1));
+ H.lead=!!H.list.length&&H.list[0].uid===me;hbWaitRef();}
+function hbTickQ(H){if(HB!==H)return;if(H.st!=='search'){hbWaitRef();return;}const n=H.list.length;
+ if(H.lead&&!H.busy&&(n>=H.need||(n>=2&&Date.now()-H.t0>=HBWAIT*1000)))hbMake(H);hbWaitRef();}
+A.hbNow=()=>{const H=HB;if(!H||!H.lead||H.list.length<2||H.busy)return;sfx('go');hbMake(H);};
+A.hbCancel=()=>{sfx('tap');hbCancel();};
+async function hbCancel(quiet){const H=HB;HB=null;if(queue[0]&&queue[0].t==='hbwait'){queue.shift();const ly=$('layer');if(ly)ly.innerHTML='';if(queue.length)showQueue();}
+ if(!H)return;H.dead=1;clearInterval(H.iv);clearTimeout(H.to);[H.off,H.ioff].forEach(f=>{try{f&&f();}catch(e){}});
+ try{await FB.rt.remove('hbq/'+H.key+'/'+CL.uid);}catch(e){}if(!quiet)toast('Search cancelled.');
+ if(!hbNet())setTimeout(()=>{if(!HB&&!hbNet())try{FB.rt.online(false);}catch(e){}},4000);}
+function hbWaitHTML(){const H=HB;if(!H)return '<div class="ptitle outline">ONLINE BATTLE</div><button class="gbtn dark block" data-act="qok">Close</button>';
+ const s=Math.floor((Date.now()-H.t0)/1000),n=H.list.length,mm=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+ const auto=H.lead&&n>=2&&n<H.need?Math.max(0,HBWAIT-s):null;
+ const who=H.list.slice(0,H.need).map((p,i)=>'<li class="'+(p.uid===CL.uid?'me':'')+'"><span class="hbdot '+(i%2?'r':'b')+'"></span>'+esc(p.n)+(p.uid===CL.uid?' <small>(you)</small>':'')+'</li>').join('');
+ const st=H.st==='join'||H.st==='start'?'Joining the battle…':n>=H.need?'Team full! Starting…':n<2?'Looking for players…':'Found '+n+' of '+H.need+' players';
+ return '<div class="ptitle outline">🌐 ONLINE '+esc(modeLbl(H.mode)).toUpperCase()+'</div>'+
+  '<div class="hbw"><div class="hbspin" aria-hidden="true"></div><div><b>'+st+'</b><small>'+(UI.hbScope==='school'?'🏫 Any MLQSHS learner':'👥 Classmates in my section')+' · waiting '+mm+'</small></div></div>'+
+  (who?'<ul class="hbwho">'+who+'</ul>':'')+
+  '<div class="small muted" style="text-align:center">'+(H.need>2?'Blue and red teams are made in the order players join. AI heroes fill any empty slots.':'You need one more player.')+(auto!=null?' Starts by itself in '+auto+' s.':'')+'</div>'+
+  (H.lead&&n>=2&&n<H.need&&H.st==='search'?'<button class="gbtn green block" data-act="hbNow">▶ Start now · AI fills '+(H.need-n)+' slot'+(H.need-n>1?'s':'')+'</button>':'')+
+  '<button class="gbtn dark block" data-act="hbCancel">Cancel</button>';}
+function hbWaitRef(){if(queue[0]&&queue[0].t==='hbwait'&&!$('pracfb'))showQueue();}
+{const w=warModal;warModal=function(m){return m.t==='hbwait'?hbWaitHTML():w(m);};}
+
+/* the host makes the room, tells everyone, builds the battle and sends it */
+async function hbMake(H){H.busy=1;const L=H.list.slice(0,H.need);const me=CL.uid;
+ try{const m={},nm={};L.forEach(p=>{m[p.uid]=true;nm[p.uid]=p.n;});
+  const rid=FB.rt.push('hbr',{h:me,m,nm,mode:H.mode,t:Date.now()});H.rid=rid;
+  for(const p of L)if(p.uid!==me)await FB.rt.set('hbq/'+H.key+'/'+p.uid+'/room',rid);
+  await FB.rt.set('hbl/'+rid,{h:me,nm,mode:H.mode,t:Date.now()}).catch(()=>{});
+  H.st='start';clearInterval(H.iv);try{H.off&&H.off();}catch(e){}FB.rt.remove('hbq/'+H.key+'/'+me).catch(()=>{});
+  hbBuildHost(H,rid,L);}
+ catch(e){clWarn(e,'hbmake');H.busy=0;toast('That battle could not start. Try again.');}}
+function hbJoin(H,rid){H.rid=rid;clearInterval(H.iv);try{H.off&&H.off();}catch(e){}FB.rt.remove('hbq/'+H.key+'/'+CL.uid).catch(()=>{});hbWaitRef();
+ H.to=setTimeout(()=>{if(HB===H){hbCancel(true);toast('That battle could not start. Try again.');}},25000);
+ H.ioff=FB.rt.on('hbr/'+rid+'/init',v=>{if(HB!==H||!v||H.built)return;H.built=1;clearTimeout(H.to);try{H.ioff&&H.ioff();}catch(e){}
+  let P;try{P=JSON.parse(v);}catch(e){hbCancel(true);return;}hbBuildGuest(H,rid,P);});}
+
+/* ---------- host: build the battle with real players in it ---------- */
+function hbBuildHost(H,rid,L){const md=H.mode;const bd=S.settings.bdiff;S.settings.bdiff='normal';
+ if(queue[0]&&queue[0].t==='hbwait')queue.shift();const ly=$('layer');if(ly)ly.innerHTML='';
+ try{startShowdown(md);}finally{S.settings.bdiff=bd;}
+ const B=MB;if(!B||V.name!=='moba'||B.state==='end'){HB=null;FB.rt.remove('hbr/'+rid).catch(()=>{});FB.rt.remove('hbl/'+rid).catch(()=>{});return;}
+ HB=null;const now=performance.now();
+ B.net={host:true,rid,pl:{},seq:0,acc:0,sent:new Set(),pk:'',v1:teamN(md)===1,offs:[],nm:{}};
+ S.settings.bdiff='normal';
+ L.forEach((p,i)=>{B.net.nm[p.uid]=p.n;if(p.uid===CL.uid){B.net.pl[p.uid]={uid:p.uid,hu:B.me,side:0,self:1};return;}
+  const side=i%2?1:0;const old=B.U.find(h=>h.kind==='hero'&&h.side===side&&!h.me&&!h.rem);if(!old)return;
+  let lo;try{lo=hbClean(JSON.parse(p.l||'{}'));}catch(e){lo=hbClean({});}lo.n=lo.n||p.n;
+  const nh=mHero(side,{nm:lo.n,cls:lo.cls,wpn:lo.wpn,wl:lo.wl,skills:lo.skills,look:lo.look,kit:lo.kit,pow:1,role:old.role,uid:old.uid});
+  nh.x=old.x;nh.y=old.y;nh.sk.forEach(k=>{if(k)k.r=0;});nh.pts=1;hbMana(nh);nh.rem=p.uid;nh.gold=old.gold;
+  B.U[B.U.indexOf(old)]=nh;if(B.foe===old)B.foe=nh;
+  B.net.pl[p.uid]={uid:p.uid,hu:nh,side,seen:Date.now(),ci:0,ev:[],j:null};});
+ S.settings.bdiff=bd;
+ const P={mode:md,lanes:B.lanes,home:B.home,clan:B.clan,rival:B.rival,rlab:B.rlab,t:r1(B.t),kills:B.kills,wave:B.wave,pick:B.pick.map(p=>({k:p.k,x:Math.round(p.x),y:Math.round(p.y)})),
+  U:B.U.map(u=>{hbMark(u,now);B.net.sent.add(u.uid);return hbFull(u);}),
+  obs:B.obs.map(o=>[Math.round(o.x),Math.round(o.y),r1(o.r),o.u?o.u.uid:0]),
+  trees:genTrees().map(t=>{const o={};for(const k in t){const v=t[k];if(typeof v==='number')o[k]=r1(v);else if(typeof v==='string'||typeof v==='boolean')o[k]=v;}return o;}),
+  decos:JSON.parse(JSON.stringify(B.decos||[])),pl:{},nm:B.net.nm,host:CL.uid};
+ Object.values(B.net.pl).forEach(p=>{P.pl[p.uid]={hu:p.hu.uid,side:p.side};});
+ B.net.pk=JSON.stringify(P.pick);
+ FB.rt.set('hbr/'+rid+'/init',JSON.stringify(P)).catch(e=>clWarn(e,'hbinit'));
+ B.net.offs.push(FB.rt.on('hbr/'+rid+'/in',v=>hbInputs(B,v||{})));
+ hbEmoListen(B);B.net.started=Date.now();
+ later(()=>{if(MB===B)mbMsg('Online battle! Real players: '+Object.keys(B.net.pl).length+'. AI heroes fill the rest.');},4300);}
+
+/* the host reads what the other players pressed */
+function hbInputs(B,v){if(MB!==B||!B.net)return;const N=B.net,F=x=>x;
+ Object.keys(v).forEach(uid=>{const P=N.pl[uid];if(!P||P.self)return;let o;try{o=JSON.parse(v[uid]);}catch(e){return;}if(!o)return;
+  P.seen=Date.now();const h=P.hu;if(P.gone&&h&&B.U.includes(h)){P.gone=false;h.rem=uid;}
+  P.mv=!!o.m;P.jx=+o.j[0]||0;P.jy=+o.j[1]||0;P.px=o.p?+o.p[0]:null;P.py=o.p?+o.p[1]:null;if(o.rs)P.rs=1;
+  (o.c||[]).forEach(c=>{if(!c||!(c.n>P.ci))return;P.ci=c.n;try{hbCmd(B,P,c);}catch(e){console.error(e);}});});}
+function hbUnit(B,id){return id?B.U.find(u=>u.uid===id)||null:null;}
+function hbWith(h,fn){const B=MB;const me0=B.me,joy0=B.joy,rc0=B.recallT;HBC.ctx=h;B.me=h;try{return fn();}finally{B.me=me0;B.joy=joy0;B.recallT=rc0;HBC.ctx=null;}}
+function hbCmd(B,P,c){const h=P.hu;if(!h||!B.U.includes(h)||!h.rem)return;
+ switch(c.a){
+  case 'use':{const i=+c.i;if(!(i>=0&&i<4))return;const t=hbUnit(B,c.tg);if(t&&enemyOf(h,t))h.tgt=t;hbWith(h,()=>mbUse(i));break;}
+  case 'tgt':{const t=hbUnit(B,c.u);if(t&&enemyOf(h,t)){h.tgt=t;h.chase=true;h.mvTo=null;h.recall=0;}break;}
+  case 'mv':{const x=+c.x,y=+c.y;if(!isFinite(x)||!isFinite(y))return;h.tgt=null;h.chase=false;h.qcast=null;h.recall=0;h.mvTo=[Math.max(0,Math.min(MW,x)),Math.max(0,Math.min(MW,y)),Math.max(14,Math.min(200,+c.r||14))];break;}
+  case 'learn':{const i=+c.i;if(canLearn(h,i)){h.sk[i].r++;h.pts--;}break;}
+  case 'recall':if(!h.dead&&!h.studying){h.recall=3;h.tgt=null;h.chase=false;h.mvTo=null;}break;
+  case 'buy':{const it=ITM(c.id);if(!it)return;const p=Math.round(it.g*((c.c||h.C.id)===h.C.id?.9:1));if(h.gold>=p&&h.items.length<6){h.gold-=p;h.items.push(it.id);heroCalc(h);}break;}
+  case 'sell':{const id=h.items[+c.i];if(!id)return;h.items.splice(+c.i,1);h.gold+=Math.round(itVal(id)*.6);heroCalc(h);break;}
+  case 'craft':{const it=ITM(c.id);if(!it)return;hbWith(h,()=>craft(h,it,(c.c||h.C.id)===h.C.id?.9:1));break;}
+  case 'qz':{if(c.k==='rune'){if(!h.studying)return;h.studying=false;h.ivT=1.5;if(c.ok){h.atkUp=30;h.mana=h.manaMax;}}
+   else if(c.k==='revive'&&c.ok&&h.dead&&(h.rev||0)<2){h.rev=(h.rev||0)+1;h.resp=.01;}break;}
+  case 'leave':h.rem=null;P.gone=true;P.left=true;aiLearn(h);hbFeedNote(B,P.hu.nm+' left the battle. An AI hero took over.');break;}}
+function hbFeedNote(B,txt){B.net.notes=B.net.notes||[];B.net.notes.push(txt);mbMsg(txt);}
+function hbEv(h,type,val){const B=MB;if(!B||!B.net||!B.net.host||!h||!h.rem)return;const P=B.net.pl[h.rem];if(!P||!P.ev)return;if(P.ev.length<16)P.ev.push([type,val]);}
+
+/* a real player's hero, moved by what that player pressed */
+function hbRemote(h,dt){const B=MB,N=B.net,P=N.pl[h.rem];
+ if(!P||Date.now()-(P.seen||0)>12000){if(P)P.gone=true;h.rem=null;aiLearn(h);return aiHero46(h,dt);}
+ if(h.studying){h.atkT-=dt;return;}
+ if(h._lhp!=null&&h.hp<h._lhp-.5&&h.recall>0){h.recall=0;hbEv(h,'m','Recall cancelled');}h._lhp=h.hp;
+ if(h.recall>0){if(P.mv){h.recall=0;hbEv(h,'m','Recall cancelled');}else{h.recall-=dt;h.atkT-=dt;if(h.recall<=0){const f=B.home[h.side];h.x=f[0];h.y=f[1];mCollide(h);hbEv(h,'m','Home! Tap a store building to shop.');hbEv(h,'s','tap');}return;}}
+ hbWith(h,()=>{B.joy=P.mv?{dx:P.jx,dy:P.jy}:null;mPlayer(dt);});
+ if(P.mv&&P.px!=null&&!(h.stun>0)&&!h.dead){const d=Math.hypot(P.px-h.x,P.py-h.y);if(d<260){h.x=P.px;h.y=P.py;mCollide(h);}}}
+{const f=aiLearn;aiLearn=function(h){if(h&&h.rem&&hbHost())return;return f(h);};}
+{const f=genTrees;genTrees=function(){const B=MB;if(B&&B.netTrees)return B.netTrees;return f.apply(this,arguments);};}
+const aiHero46=aiHero;aiHero=function(h,dt){if(h.rem&&hbHost())return hbRemote(h,dt);return aiHero46(h,dt);};
+
+/* runes and crates picked up by real players */
+function hbPre(dt){const B=MB,N=B.net;
+ for(let i=B.pick.length-1;i>=0;i--){const p=B.pick[i];const h=B.U.find(u=>u.kind==='hero'&&u.rem&&!u.dead&&!u.studying&&Math.hypot(u.x-p.x,u.y-p.y)<36);if(!h)continue;B.pick.splice(i,1);
+  if(p.k==='rune'){h.studying=true;h.studyT=B.t;h.recall=0;h.tgt=null;h.chase=false;h.mvTo=null;hbEv(h,'q','rune');}
+  else{const r=rnd(0,2);if(r===0)h.gold+=150;else if(r===1){h.hp=Math.min(h.max,h.hp+h.max*.4);B.fx.push({k:'heal',x:h.x,y:h.y,c:'#38e08f',t:0,d:.8});}else h.haste=8;
+   hbEv(h,'m',['Specimen crate: +150 gold!','Specimen crate: healed!','Specimen crate: speed boost!'][r]);hbEv(h,'s','tap');}}
+ B.U.forEach(h=>{if(h.rem&&h.studying&&B.t-(h.studyT||B.t)>35){h.studying=false;h.ivT=1;}});}
+
+/* the host sends what changed about 6 times a second */
+const hbKey6=n=>'k'+String(n).padStart(8,'0');
+function hbSend(B,end){const N=B.net;if(!N||!N.host)return;const now=performance.now()/1000;const D={q:++N.seq,t:r1(B.t),k:B.kills.slice()};
+ const full=Object.values(N.pl).some(p=>p.rs);
+ if(full){D.full=B.U.map(u=>{hbMark(u,now);N.sent.add(u.uid);return hbFull(u);});Object.values(N.pl).forEach(p=>p.rs=0);}
+ else{const n=[],u={};const ids=new Set();
+  B.U.forEach(x=>{ids.add(x.uid);if(!N.sent.has(x.uid)){hbMark(x,now);N.sent.add(x.uid);n.push(hbFull(x));return;}const d=hbDiff(x,now);if(d)u[x.uid]=d;});
+  const r=[];N.sent.forEach(id=>{if(!ids.has(id)){r.push(id);N.sent.delete(id);}});
+  if(n.length)D.n=n;if(Object.keys(u).length)D.u=u;if(r.length)D.r=r;}
+ const fx=B.fx.filter(f=>!f._n);fx.forEach(f=>f._n=1);if(fx.length)D.fx=fx.slice(-40).map(hbFx);
+ if(N.nmq&&N.nmq.length){D.nm=N.nmq.splice(0).slice(-30);}
+ if(N.sdq&&N.sdq.length)D.sd=N.sdq.splice(0).slice(-10);
+ if(N.fq&&N.fq.length)D.f=N.fq.splice(0);if(N.aq&&N.aq.length)D.an=N.aq.splice(0);
+ const pk=JSON.stringify(B.pick.map(p=>({k:p.k,x:Math.round(p.x),y:Math.round(p.y)})));if(pk!==N.pk){N.pk=pk;D.pk=JSON.parse(pk);}
+ const ev={},ak={};Object.values(N.pl).forEach(p=>{if(p.self)return;if(p.ev&&p.ev.length)ev[p.uid]=p.ev.splice(0);ak[p.uid]=p.ci||0;});if(Object.keys(ev).length)D.ev=ev;D.ak=ak;
+ if(N.notes&&N.notes.length)D.no=N.notes.splice(0);
+ if(end)D.e=end;
+ const base='hbr/'+N.rid+'/s/';FB.rt.set(base+hbKey6(N.seq),JSON.stringify(D)).catch(e=>clWarn(e,'hbsend'));
+ if(N.seq>60)FB.rt.remove(base+hbKey6(N.seq-60)).catch(()=>{});}
+function hbHostTick(dt){const B=MB,N=B.net;N.acc+=dt;if(N.acc>=HBTICK){N.acc=0;hbSend(B);}
+ if(!N.hl||Date.now()-N.hl>20000){N.hl=Date.now();FB.rt.update('hbl/'+N.rid,{t:Date.now(),k:B.kills.slice()}).catch(()=>{});}}
+
+/* host-side hooks: messages, sounds and numbers for a real player go to that player's phone */
+{const f=mbMsg;mbMsg=function(s){if(HBC.ctx){hbEv(HBC.ctx,'m',s);return;}return f.apply(this,arguments);};}
+{const f=sfx;sfx=function(k){if(HBC.ctx){hbEv(HBC.ctx,'s',k);return;}return f.apply(this,arguments);};}
+{const f=voiceSay;voiceSay=function(t){if(HBC.ctx){hbEv(HBC.ctx,'v',t);return;}return f.apply(this,arguments);};}
+{const f=buzz;buzz=function(p){if(HBC.ctx)return;return f.apply(this,arguments);};}
+{const f=snd;snd=function(kind,x,y,vol){const N=hbHost()?MB.net:null;if(N&&x!=null){N.sdq=N.sdq||[];if(N.sdq.length<14&&!N.sdq.some(s=>s[0]===kind&&Math.abs(s[1]-x)<200&&Math.abs(s[2]-y)<200))N.sdq.push([kind,Math.round(x),Math.round(y),vol==null?1:r1(vol)]);}if(HBC.ctx)return;return f.apply(this,arguments);};}
+{const f=mNum;mNum=function(x,y,txt,c,big){const N=hbHost()?MB.net:null;if(N){N.nmq=N.nmq||[];if(N.nmq.length<40)N.nmq.push([Math.round(x),Math.round(y),String(txt).slice(0,40),c||'#fff',big?1:0,HBC.ctx?HBC.ctx.rem:0]);}if(HBC.ctx)return;return f.apply(this,arguments);};}
+{const f=killFeed;killFeed=function(k,t,src){const r=f.apply(this,arguments);const B=MB;if(hbHost()&&B.feed&&B.feed[0]){const a=B.feed[0];B.net.fq=B.net.fq||[];B.net.fq.push({a:String(a.a).replace(' (you)',''),b:String(a.b).replace(' (you)',''),s:a.s,ku:k&&k.uid||0,tu:t&&t.uid||0});}return r;};}
+{const f=announce;announce=function(t,s,side,tier){if(hbHost()){const N=MB.net;N.aq=N.aq||[];if(N.aq.length<4)N.aq.push([t,s,side,tier]);}return f.apply(this,arguments);};}
+
+/* ---------- guest: build the same battle from what the host sent ---------- */
+function hbRot(F,x,y){return F?[MW-x,MW-y]:[x,y];}
+function hbSet(u,o,F,G,isNew){for(const k in o){const v=o[k];
+  if(k==='x'||k==='y'){const w=F?MW-v:v;if(isNew)u[k]=w;u[k==='x'?'_tx':'_ty']=w;continue;}
+  if(k==='fx'||k==='fy'){u[k]=F?-v:v;continue;}
+  if(k==='ry'){u[k]=F?v+Math.PI:v;continue;}
+  if(k==='side'){u[k]=F&&v<2?1-v:v;continue;}
+  if(k==='home'){u.home=Array.isArray(v)?(F?[MW-v[0],MW-v[1],v[2]<2?1-v[2]:v[2]]:v.slice()):v;continue;}
+  if(k==='lane'){u.lane=F?(LSW[v]||v):v;continue;}
+  if(k==='tgt'||k==='aggro'){u[k]=v?G.idx.get(v)||null:null;continue;}
+  if(k==='sk'){if(!Array.isArray(v))continue;if(!u.sk||isNew){u.sk=v.map(q=>q?{id:q[0],s:skById(q[0]),cl:1,r:q[1],cd:q[2]}:null);continue;}
+   v.forEach((q,i)=>{const s=u.sk[i];if(!s||!q)return;if(q.length===3){s.r=q[1];s.cd=q[2];}else{s.r=q[0];s.cd=q[1];}});continue;}
+  u[k]=v;}}
+function hbMakeU(o,F,G){const u=mbUnit0({});u.dots=[];u.hitBy={};hbSet(u,o,F,G,true);u._tx=u.x;u._ty=u.y;
+ if(u.kind==='hero'){u.C=CLASSES.find(c=>c.id===u.cls)||CLASSES[0];u.W=wpOf(u.wpn)||WEAPONS[0];if(u.sk&&u.sk.some(k=>k&&!k.s))u.sk=u.sk.map(k=>k&&k.s?k:null);u.kda=u.kda||[0,0,0];u.items=u.items||[];}
+ if(u.kind==='shop'){u.act=u.side===0?'mbStore':null;}
+ G.idx.set(u.uid,u);return u;}
+function hbBuildGuest(H,rid,P){const my=P.pl&&P.pl[CL.uid];if(!my){hbCancel(true);toast('That battle could not start. Try again.');return;}
+ if(queue[0]&&queue[0].t==='hbwait')queue.shift();const ly=$('layer');if(ly)ly.innerHTML='';HB=null;
+ if(!spend(1)){FB.rt.set('hbr/'+rid+'/in/'+CL.uid,JSON.stringify({m:0,j:[0,0],c:[{n:1,a:'leave'}],t:Date.now()})).catch(()=>{});return;}
+ const F=my.side===1;const G={guest:true,rid,F,hs:my.side,hu:my.hu,idx:new Map(),q:0,last:performance.now(),cq:[],cid:0,acc:0,sent:'',v1:teamN(P.mode)===1,offs:[],nm:P.nm||{},host:false,hostUid:P.host};
+ const rp=(a)=>{const r=hbRot(F,a[0],a[1]);return a.length>2?[r[0],r[1],a[2]]:r;};
+ MB={uid:0,U:[],t:P.t,mode:P.mode,spawnT:1e9,wave:P.wave||0,runeT:1e9,pick:(P.pick||[]).map(p=>({k:p.k,x:hbRot(F,p.x,p.y)[0],y:hbRot(F,p.x,p.y)[1]})),fx:[],nums:[],state:'load',joy:null,
+  kills:F?[P.kills[1],P.kills[0]]:P.kills.slice(),run:Date.now(),lanes:(P.lanes||[]).map(l=>F?(LSW[l]||l):l),runes:0,clan:F?clanName():P.clan,rival:F?P.clan:P.rival,
+  obs:[],decos:[],home:F?[rp(P.home[1]),rp(P.home[0])]:P.home.map(h=>h.slice()),rlab:P.rlab,feed:[],net:G};
+ const B=MB;P.U.forEach(o=>{const u=hbMakeU(o,F,G);B.U.push(u);B.uid=Math.max(B.uid,u.uid||0);});
+ P.U.forEach(o=>{const u=G.idx.get(o.uid);if(u&&o.tgt)u.tgt=G.idx.get(o.tgt)||null;});
+ B.me=G.idx.get(my.hu);if(!B.me){MB=null;toast('That battle could not start. Try again.');return;}B.me.me=true;
+ B.U.forEach(u=>{if(u.kind==='hero'&&u!==B.me)u.me=false;});
+ if(G.v1)B.foe=B.U.find(u=>u.kind==='hero'&&u.side===1);
+ B.obs=(P.obs||[]).map(a=>{const r=hbRot(F,a[0],a[1]);const o={x:r[0],y:r[1],r:a[2]};if(a[3]){const u=G.idx.get(a[3]);if(u)o.u=u;}return o;});
+ B.netTrees=(P.trees||[]).map(t=>{const r=hbRot(F,t.x,t.y);return Object.assign({},t,{x:r[0],y:r[1]});});
+ B.decos=(P.decos||[]).map(d=>{if(d&&typeof d==='object'&&d.x!=null&&d.y!=null){const r=hbRot(F,d.x,d.y);return Object.assign({},d,{x:r[0],y:r[1]});}return d;});
+ try{manaScale();}catch(e){}try{shopsInit();}catch(e){}ANN={q:[],until:0};fogInit();fogUpd();
+ go('moba');
+ const host=$('view').querySelector('.moba');if(host&&!$('mload'))host.insertAdjacentHTML('beforeend',loadHTML());
+ [[350,30,'Connecting to the battle…'],[1200,60,'Building the islands…'],[2200,88,'Meeting your team…'],[3000,100,'Ready!']].forEach(([t,p,txt])=>later(()=>{if(MB!==B)return;const b=$('mlbi'),l=$('mls');if(b)b.style.width=p+'%';if(l)l.textContent=txt;if(p===100)sfx('go');},t));
+ later(()=>{if(MB!==B||B.state!=='load')return;const el=$('mload');if(el)el.classList.add('out');later(()=>{const e2=$('mload');if(e2)e2.remove();},450);B.state='play';mbLoop();mbMsg('Online battle! Destroy the rival HQ with your team.');},3400);
+ const path='hbr/'+rid+'/s';G.last=performance.now();
+ const onD=(k,v)=>{if(MB!==B||!v)return;if(G.keys&&G.keys[k])return;(G.keys=G.keys||{})[k]=1;let D;try{D=JSON.parse(v);}catch(e){return;}try{hbApply(B,D);}catch(e){console.error(e);}};
+ if(FB.rt.onAdd)G.offs.push(FB.rt.onAdd(path,onD));
+ else G.offs.push(FB.rt.on(path,obj=>{if(!obj)return;Object.keys(obj).sort().forEach(k=>onD(k,obj[k]));}));
+ FB.rt.disc('hbr/'+rid+'/in/'+CL.uid,null);hbSendIn(B,true);hbEmoListen(B);}
+
+/* guest: apply what the host sent */
+function hbApply(B,D){const G=B.net,F=G.F,me=B.me;G.last=performance.now();
+ if(D.q&&G.q&&D.q!==G.q+1&&!D.full)G.rs=1;if(D.q)G.q=Math.max(G.q,D.q);
+ if(D.t!=null&&Math.abs(B.t-D.t)>.6)B.t=D.t;
+ if(D.k)B.kills=F?[D.k[1],D.k[0]]:D.k.slice();
+ const lv0=me.lv,dead0=new Map();B.U.forEach(u=>{if(u.kind==='hero'||u.st)dead0.set(u,u.dead);});
+ if(D.full){G.rs=0;const seen=new Set();D.full.forEach(o=>{let u=G.idx.get(o.uid);if(!u){u=hbMakeU(o,F,G);B.U.push(u);}else hbSet(u,o,F,G,false);seen.add(o.uid);});
+  B.U=B.U.filter(u=>{if(seen.has(u.uid))return true;G.idx.delete(u.uid);return false;});}
+ if(D.n)D.n.forEach(o=>{if(G.idx.has(o.uid)){hbSet(G.idx.get(o.uid),o,F,G,false);return;}const u=hbMakeU(o,F,G);if(u.kind==='hero')u.me=u===me;B.U.push(u);B.uid=Math.max(B.uid,u.uid);});
+ if(D.u)for(const id in D.u){const u=G.idx.get(+id);if(!u){G.rs=1;continue;}hbSet(u,D.u[id],F,G,false);}
+ if(D.r){const R=new Set(D.r);B.U=B.U.filter(u=>{if(R.has(u.uid)){G.idx.delete(u.uid);return false;}return true;});}
+ if(D.fx)D.fx.forEach(f=>{const a=hbRot(F,f.x||0,f.y||0);const o=Object.assign({},f,{x:a[0],y:a[1]});if(f.x2!=null){const b=hbRot(F,f.x2,f.y2);o.x2=b[0];o.y2=b[1];}B.fx.push(o);});
+ if(B.fx.length>160)B.fx.splice(0,B.fx.length-160);
+ if(D.nm)D.nm.forEach(n=>{if(n[5]&&n[5]!==CL.uid)return;const a=hbRot(F,n[0],n[1]);if(Math.hypot(a[0]-me.x,a[1]-me.y)<1000)B.nums.push({x:a[0]+rnd(-10,10),y:a[1],txt:n[2],c:n[3],t:0,big:!!n[4]});});
+ if(D.sd)D.sd.forEach(s=>{const a=hbRot(F,s[1],s[2]);try{snd(s[0],a[0],a[1],s[3]);}catch(e){}});
+ if(D.pk)B.pick=D.pk.map(p=>{const a=hbRot(F,p.x,p.y);return {k:p.k,x:a[0],y:a[1]};});
+ if(D.f)D.f.forEach(a=>{B.feed=B.feed||[];B.feed.unshift({a:a.a+(a.ku===me.uid?' (you)':''),b:a.b+(a.tu===me.uid?' (you)':''),s:F?1-a.s:a.s,at:performance.now()});B.feed=B.feed.slice(0,4);B.feedV=(B.feedV||0)+1;if(a.ku===me.uid){sfx('win');buzz(60);}});
+ if(D.an)D.an.forEach(a=>{const sd=F&&a[2]<2?1-a[2]:a[2];const s=a[0]==='TOTAL ECLIPSE'?(sd===0?'The whole rival team is down!':'Your whole team is down!'):a[1];try{announce(a[0],s,sd,a[3]);}catch(e){}});
+ if(D.no)D.no.forEach(t=>mbMsg(t));
+ const E=D.ev&&D.ev[CL.uid];if(E)E.forEach(([t,v])=>{if(t==='m')mbMsg(v);else if(t==='s')sfx(v);else if(t==='v')voiceSay(v);else if(t==='q'&&v==='rune'){B.runes++;mqShow('rune');}});
+ if(D.ak&&D.ak[CL.uid]!=null){const a=D.ak[CL.uid];G.cq=G.cq.filter(c=>c.n>a);}
+ /* messages from this player's point of view */
+ dead0.forEach((was,u)=>{if(!was&&u.dead){if(u===me){sfx('lose');mbMsg('You were defeated!');}else if(u.st&&u.kind!=='shop'){snd('boom',u.x,u.y);mbMsg(u.side===1?'Destroyed the rival '+(u.bname||'tower')+'!':'Your '+(u.bname||'tower')+' was destroyed!');}}});
+ if(me.lv>lv0){sfx('lvl');mbMsg('Level '+me.lv+'! Tap + to learn a skill.');}
+ if(D.e)hbGuestEnd(B,D.e);}
+function hbGuestEnd(B,e){if(B.net.ended)return;B.net.ended=1;const w=e.w;const G=B.net;
+ if(B.state==='load'){B.state='play';const el=$('mload');if(el)el.remove();}
+ if(w===-2)mbMsg('The host left, so the battle ended in a draw.');
+ const win=w===G.hs,draw=w<0;try{mEnd2(win,draw);}catch(e2){console.error(e2);}hbStop(B);}
+function hbStop(B){const N=B&&B.net;if(!N||N.stopped)return;N.stopped=1;N.offs.forEach(f=>{try{f&&f();}catch(e){}});N.offs=[];try{if(VC.on)vcStop();}catch(e){}
+ if(N.guest)FB.rt.remove('hbr/'+N.rid+'/in/'+CL.uid).catch(()=>{});
+ if(N.host)setTimeout(()=>{FB.rt.remove('hbr/'+N.rid).catch(()=>{});FB.rt.remove('hbl/'+N.rid).catch(()=>{});},10000);
+ setTimeout(()=>{if(!hbNet()&&!HB&&!LV)try{FB.rt.online(false);}catch(e){}},12000);}
+
+/* guest: send the joystick, position and button presses */
+function hbSendIn(B,force){const G=B.net,me=B.me;const J=B.joy,mv=!!(J&&(Math.abs(J.dx)+Math.abs(J.dy))>.15);const F=G.F;
+ const o={m:mv?1:0,j:mv?[r1(F?-J.dx:J.dx),r1(F?-J.dy:J.dy)]:[0,0],p:mv?hbRot(F,Math.round(me.x),Math.round(me.y)):null,c:G.cq.slice(0,12),t:0};if(G.rs)o.rs=1;
+ const key=JSON.stringify(o);const nowt=Date.now();if(!force&&key===G.sent&&nowt-(G.st||0)<1000)return;G.sent=key;G.st=nowt;o.t=nowt;
+ FB.rt.set('hbr/'+G.rid+'/in/'+CL.uid,JSON.stringify(o)).catch(e=>clWarn(e,'hbin'));}
+function hbSendCmd(c){const B=MB;if(!hbGuest())return;const G=B.net;c.n=++G.cid;if(G.cq.length<30)G.cq.push(c);hbSendIn(B,true);}
+function hbG(x,y){return hbRot(MB.net.F,x,y);}
+
+/* guest: move things smoothly between updates; your own hero moves at once */
+function hbGStep(dt){const B=MB,G=B.net;if(!B||B.state!=='play')return;const was=B.t;B.t+=dt;
+ if(was<0){const left=Math.ceil(-B.t);if(B.t<0&&left<=10&&left!==B.cd){B.cd=left;const c=$('mcd');if(c){c.textContent=left;c.classList.remove('go');void c.offsetWidth;c.classList.add('go');}if(S.settings.sfx&&AU.ctx)tone(left<=3?880:660,.12,'square',.1);}
+  if(B.t>=0){const c=$('mcd');if(c)c.textContent='';announce('THE BATTLE BEGINS','Minions are marching down every lane!',0,4);hornSnd();}}
+ const me=B.me,J=B.joy,mv=!!(J&&(Math.abs(J.dx)+Math.abs(J.dy))>.15)&&!me.dead&&!(me.stun>0)&&!me.studying;
+ const k=Math.min(1,dt*9);
+ for(const u of B.U){for(const t of HBT)if(u[t]>0)u[t]=Math.max(0,u[t]-dt);if(u.sk)for(const q of u.sk)if(q&&q.cd>0)q.cd=Math.max(0,q.cd-dt);
+  if(u===me&&mv)continue;if(u._tx==null)continue;const dx=u._tx-u.x,dy=u._ty-u.y,d=Math.hypot(dx,dy);if(d>400){u.x=u._tx;u.y=u._ty;}else if(d>.5){u.x+=dx*k;u.y+=dy*k;}}
+ if(mv){me.recall=0;G.store=null;mMove(me,me.x+J.dx*100,me.y+J.dy*100,dt*Math.min(1,Math.hypot(J.dx,J.dy)*1.2));if(me._tx!=null&&Math.hypot(me._tx-me.x,me._ty-me.y)>420){me.x=me._tx;me.y=me._ty;}}
+ if(G.store&&!me.dead){const sh=B.U.find(u=>u.kind==='shop'&&u.side===me.side&&u.cat===G.store);if(sh&&Math.hypot(me.x-sh.x,me.y-sh.y)<=210){const c=G.store;G.store=null;A.mbStore({i:c});}}
+ B.fx.forEach(f=>{f.t+=dt;});B.fx=B.fx.filter(f=>f.t<f.d);B.nums.forEach(n=>{n.t+=dt;});B.nums=B.nums.filter(n=>n.t<1.1);
+ B.fogT=(B.fogT||0)-dt;if(B.fogT<=0){B.fogT=.2;fogUpd();}
+ B.dang=null;if(!me.dead){let bd=1e9;B.U.forEach(u=>{if(!u.st||u.dead||u.side===me.side||u.kind==='shop'||u.fogHide||!u.rng||!u.atk)return;const d=D2(me,u);if(d<u.rng+240&&d<bd){bd=d;B.dang=u;}});}
+ G.acc+=dt;if(G.acc>=.12){G.acc=0;hbSendIn(B);}
+ if(performance.now()-G.last>12000&&!G.ended){G.ended=1;mbMsg('Lost the connection to the battle.');try{mEnd2(false,true);}catch(e){}hbStop(B);}}
+
+/* the battle step, loop and end, for online battles */
+{const f=mStep;mStep=function(dt){const B=MB;if(B&&B.net&&B.net.guest)return hbGStep(dt);if(B&&B.net&&B.net.host&&B.state==='play')hbPre(dt);f(dt);if(MB===B&&B&&B.net&&B.net.host&&B.state==='play')hbHostTick(dt);};}
+{const f=mbLoop;mbLoop=function(){if(!hbNet())return f();cancelAnimationFrame(loopId);let last=performance.now();
+ const step=t2=>{if(!MB||V.name!=='moba'||MB.state!=='play')return;const dt=Math.min(.05,Math.max(0,(t2-last)/1000));last=t2;
+  mStep(dt);if(!MB||MB.state!=='play')return;
+  if(gfx3()){const sc=S3D.get('main');if(sc){sc.ext=performance.now();try{sc.frame(dt);}catch(e){console.error(e);}}}else mbDraw();
+  mbHUD();hbHUD();loopId=requestAnimationFrame(step);};loopId=requestAnimationFrame(step);};}
+{const f=mEnd2;mEnd2=function(win,draw){const B=MB;if(B&&B.net&&B.net.host&&B.state==='play'&&!B.net.ended){B.net.ended=1;try{hbSend(B,{w:draw?-1:win?0:1});}catch(e){}const r=f.apply(this,arguments);hbStop(B);return r;}return f.apply(this,arguments);};}
+{const f=A.doQuit;A.doQuit=function(){const B=MB;if(B&&B.net&&B.state==='play'){if(B.net.host){B.net.ended=1;try{hbSend(B,{w:-2});}catch(e){}}else{hbSendCmd({a:'leave'});}const r=f.apply(this,arguments);hbStop(B);return r;}return f.apply(this,arguments);};}
+
+/* guest: buttons and taps go to the host */
+{const f=mbUse;mbUse=function(i){if(!hbGuest())return f(i);const B=MB,me=B.me;if(B.state!=='play'||me.dead||me.stun>0||me.studying)return;const k=me.sk[i];if(!k)return;
+ if(k.r<1){mbMsg(canLearn(me,i)?'Tap + to learn this skill':'Learn it at level '+skNeed(i,0));return;}if(k.cd>0)return;if(me.mana<k.s.sp){mbMsg('Not enough mana');return;}
+ me.recall=0;hbSendCmd({a:'use',i,tg:me.tgt&&me.tgt.uid||0});};}
+{const f=mbTap;mbTap=function(e){if(!hbGuest())return f(e);const B=MB;if(B.state!=='play'||B.me.dead||B.me.studying)return;const g=scr2w(e);if(!g)return;const me=B.me;me.recall=0;
+ const sh=B.U.find(u=>u.kind==='shop'&&u.side===me.side&&Math.hypot(u.x-g[0],u.y-g[1])<95);if(sh){A.mbStore({i:sh.cat});return;}
+ let best=null,bd=1e9;B.U.forEach(v=>{if(v.dead||v.fogHide||!enemyOf(me,v))return;const d=Math.hypot(v.x-g[0],v.y-g[1])-v.r-(v.kind==='hero'?30:0);if(d<70&&d<bd){bd=d;best=v;}});
+ if(best){me.tgt=best;B.fx.push({k:'ring',x:best.x,y:best.y,r:best.r+22,c:'#ff4f6d',t:0,d:.45});sfx('tap');hbSendCmd({a:'tgt',u:best.uid});return;}
+ me.tgt=null;B.net.store=null;const h=hbG(g[0],g[1]);B.fx.push({k:'ring',x:g[0],y:g[1],r:24,c:'#7fd0ff',t:0,d:.4});hbSendCmd({a:'mv',x:Math.round(h[0]),y:Math.round(h[1]),r:14});};}
+{const f=A.mbStore;A.mbStore=function(d){if(!hbGuest())return f(d);const B=MB,me=B.me;const sh=B.U.find(u=>u.kind==='shop'&&u.side===me.side&&u.cat===d.i);if(!sh)return;
+ if(me.dead){mbMsg('Wait until you respawn');return;}
+ if(Math.hypot(me.x-sh.x,me.y-sh.y)>210){me.tgt=null;me.recall=0;B.net.store=d.i;const h=hbG(sh.x,sh.y);hbSendCmd({a:'mv',x:Math.round(h[0]),y:Math.round(h[1]),r:180});mbMsg('Walking to the '+shopOf(sh.cat).n+'…');sfx('tap');return;}
+ UI.mst=d.i;sfx('tap');queue.unshift({t:'mstore'});showQueue();};}
+{const L=A.mbLearn;A.mbLearn=function(d){const B=MB;const ok=hbGuest()&&B.me&&canLearn(B.me,+d.i);const r=L(d);if(ok)hbSendCmd({a:'learn',i:+d.i});return r;};}
+{const R=A.mbRecall;A.mbRecall=function(){const r=R();if(hbGuest()&&MB.me&&!MB.me.dead)hbSendCmd({a:'recall'});return r;};}
+{const b=A.stBuy;A.stBuy=function(d){if(hbGuest())hbSendCmd({a:'buy',id:d.id,c:UI.mst||''});return b(d);};}
+{const b=A.stSell;A.stSell=function(d){if(hbGuest())hbSendCmd({a:'sell',i:+d.i});return b(d);};}
+{const b=A.stCraft;A.stCraft=function(d){if(hbGuest())hbSendCmd({a:'craft',id:d.id,c:UI.mst||''});return b(d);};}
+{const q=A.mqAns;A.mqAns=function(d){const B=MB;const Z=B&&B.quiz;const send=hbGuest()&&Z&&Z.a==null;const r=q(d);if(send)hbSendCmd({a:'qz',k:Z.kind,ok:+d.k===Z.q.a});return r;};}
+
+/* ---------- emotes and quick chat in online battles ---------- */
+function hbEmoListen(B){const N=B.net;const seen={};N.offs.push(FB.rt.on('hbr/'+N.rid+'/emo',v=>{if(MB!==B||!v)return;Object.keys(v).forEach(uid=>{const e=v[uid];if(!e||!e.t||seen[uid]>=e.t)return;seen[uid]=e.t;if(Date.now()-e.t>15000)return;
+ const x=String(e.x||'');const txt=x[0]==='p'?PHR46[+x.slice(1)]:(EMO46.includes(x)?x:'');if(!txt)return;hbChat(B,clS(N.nm[uid]||'Player',14),txt,uid===CL.uid);});}));}
+function hbChat(B,n,txt,mine){B.net.chat=B.net.chat||[];B.net.chat.unshift({n,txt,at:performance.now(),mine});B.net.chat=B.net.chat.slice(0,3);B.net.chatV=(B.net.chatV||0)+1;if(!mine)sfx('tap');}
+A.hbEmoOpen=()=>{const p=$('hbemop');if(p){p.hidden=!p.hidden;sfx('tap');}};
+A.hbEmo=d=>{const B=MB;if(!B||!B.net)return;const N=B.net;const nowt=Date.now();if(nowt-(N.emoT||0)<2500){toast('Wait a moment before the next one.');return;}N.emoT=nowt;
+ const p=$('hbemop');if(p)p.hidden=true;FB.rt.set('hbr/'+N.rid+'/emo/'+CL.uid,{x:d.e?d.e:'p'+(+d.p),t:nowt}).catch(()=>{});sfx('tap');};
+function hbHUD(){const B=MB;if(!B||!B.net)return;const v=$('view').querySelector('.moba');if(!v)return;
+ if(!$('hbnet')){const d=document.createElement('div');d.id='hbnet';d.className='hbnet';
+  d.innerHTML='<span class="hblive">🌐 LIVE</span><button class="hbemob" data-act="hbEmoOpen" aria-label="Emotes and quick chat">😀</button><div class="hbemop" id="hbemop" hidden>'+EMO46.map(e=>'<button data-act="hbEmo" data-e="'+e+'">'+e+'</button>').join('')+'<div class="emoph">'+PHR46.map((p,i)=>'<button data-act="hbEmo" data-p="'+i+'">'+p+'</button>').join('')+'</div></div><div class="hbchat" id="hbchat" aria-live="polite"></div>';v.appendChild(d);}
+ const c=$('hbchat');if(c){const now=performance.now();const L=(B.net.chat||[]).filter(a=>now-a.at<6000);const key=L.length+':'+(B.net.chatV||0);if(c.dataset.k!==key){c.dataset.k=key;c.innerHTML=L.map(a=>'<span'+(a.mine?' class="mine"':'')+'><b>'+esc(a.n)+'</b> '+esc(a.txt)+'</span>').join('');}}
+ if(B.net.v1)try{vcDecor();}catch(e){}}
+
+/* ---------- the battle setup card: online is real now ---------- */
+{const f=bsetHTML;bsetHTML=function(m){let h=f(m);if(m.mode==='ai')return h;const ok=clOk(),sc=UI.hbScope==='school'?'school':'class';
+ const opt=(v,ic,t,s)=>'<button class="bsopt" data-act="hbScope" data-v="'+v+'" aria-pressed="'+(sc===v)+'"'+(ok?'':' disabled')+'><b>'+ic+' '+t+'</b><small>'+s+'</small></button>';
+ const note=ok?'🌐 Real players fill the teams first and AI heroes take any empty slots. The match starts when the teams are full, or after '+HBWAIT+' seconds with at least 2 players.':'🌐 Online battles open once your teacher approves your account online. Until then, play an <b>AI battle</b>.';
+ h=h.replace(/<div class="shead">MATCH WITH<\/div>[\s\S]*?<div class="onote">[\s\S]*?<\/div>/,'<div class="shead">MATCH WITH</div><div class="bsrow">'+opt('class','👥','My class','Classmates in my section')+opt('school','🏫','My school','Any MLQSHS learner')+'</div><div class="onote">'+note+'</div>');
+ h=h.replace('<button class="gbtn block" data-act="bOpen" data-t="ai">🤖 Play an AI battle instead</button>',(ok?'<button class="gbtn green block" data-act="hbFind">🌐 Find players · '+esc(modeLbl(UI.bm||'5v5'))+'</button>':'')+'<button class="gbtn '+(ok?'dark':'')+' block" data-act="bOpen" data-t="ai">🤖 Play an AI battle instead</button>');
+ return h;};}
+{const f=A.onlineSoon;A.onlineSoon=function(){if(clOk()){A.bOpen({t:'online'});return;}return f();};}
+addEventListener('pagehide',()=>{const B=MB;if(B&&B.net&&B.state==='play'&&B.net.host){try{hbSend(B,{w:-2});}catch(e){}}if(HB)hbCancel(true);});
+
+/* ---------- voice chat in 1 v 1 hero battles (same teacher switch) ---------- */
+{const f=vcDecor;vcDecor=function(){if(V.name==='moba'){const B=MB;const has=$('vc46');if(!B||!B.net||!B.net.v1||!voiceOK()){if(has)has.remove();return;}if(has)return;
+  const g=$('view').querySelector('.moba');if(!g)return;const d=document.createElement('div');d.id='vc46';d.className='vc46 inmoba';d.innerHTML=vcHTML();g.appendChild(d);return;}return f();};}
+{const f=vcJoin;vcJoin=async function(){const B=MB;if(V.name==='moba'&&B&&B.net&&B.net.v1){const N=B.net;const o=Object.keys(N.nm||{}).find(u=>u!==CL.uid);if(!o)return;
+  VC.base='hbr/';return vcJoinAt(N.rid,N.host?'a':'b',o,N.nm[o]);}VC.base='rooms/';return f();};}
+
+/* ---------- teacher: live hero battles appear in the Class tab list ---------- */
+const HBT2={off:null,rooms:{}};
+{const f=lvWatchT;lvWatchT=function(){f();if(HBT2.off||!clT()||!window.FB||!FB.rt)return;try{HBT2.off=FB.rt.on('hbl',v=>{HBT2.rooms=v||{};const b=$('lvtlist');if(b)b.innerHTML=lvListHTML();});}catch(e){clWarn(e,'hbl');}};}
+{const f=lvListHTML;lvListHTML=function(){let h=f();const R=Object.values(HBT2.rooms||{}).filter(r=>r&&r.nm&&Date.now()-(r.t||0)<120000);if(!R.length)return h;if(/No live duels right now/.test(h))h='';
+ return h+R.map(r=>'<div class="kv"><span>🛡️ Hero battle '+esc(modeLbl(r.mode||'1v1'))+': '+Object.values(r.nm).map(n=>esc(clS(n,14))).join(', ')+'</span><b>'+(r.k?r.k[0]+' – '+r.k[1]:'starting')+'</b></div>').join('');};}
+
 /* ============ BOOT ============ */
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot)window.claude.hot.snapshot(()=>({S}));}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready)window.claude.hot.ready(start);else start((window.claude&&window.claude.hot&&window.claude.hot.data)||{});
 })();
 </script>
 <!-- school server bridge (built from src/main.jsx by "npm run build") -->
-<script src="siklab-cloud.js?b=989008"></script>
+<script src="siklab-cloud.js?b=989252"></script>
 </body>
 </html>
