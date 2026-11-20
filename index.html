@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Project SIKLAB v49</title>
+<title>Project SIKLAB v50</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -2939,7 +2939,6 @@ body .tview .panel[hidden]{display:none!important}
 .mheal48{position:absolute;right:112px;bottom:178px;width:52px;height:52px;border-radius:50%;border:3px solid #38e08f;background:radial-gradient(circle at 35% 30%,#3fd88a,#127a48);color:#fff;font-size:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;touch-action:none}
 .mheal48 small{font:800 8px var(--display,sans-serif);letter-spacing:.06em}
 .mheal48.cd{filter:grayscale(.85) brightness(.7)}.mheal48 i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 18px var(--display,sans-serif);font-style:normal;color:#fff;text-shadow:0 2px 3px #000}
-.mbx48{background:rgba(160,20,45,.92)!important;border-color:#ff8aa0!important}
 .mbuf48{position:absolute;left:50%;top:calc(var(--hcb,120px) + 8px);transform:translateX(-50%);z-index:6;font:800 13px var(--display,sans-serif);padding:4px 10px;border-radius:999px;background:rgba(20,16,60,.88);border:2px solid #ffc600;color:#fff;pointer-events:none}
 .coach48{position:absolute;left:50%;top:calc(var(--hcb,120px) + 40px);transform:translateX(-50%);z-index:8;width:min(330px,92%);padding:12px 14px;border-radius:16px;background:rgba(20,16,60,.95);border:2px solid #ffc600;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .coach48 b{font:800 14px var(--display,sans-serif);color:#ffe27a}.coach48 ul{margin:6px 0 8px;padding-left:18px;font-size:13px;line-height:1.4}.coach48 li{margin:2px 0}
@@ -2971,7 +2970,6 @@ body .tview .panel[hidden]{display:none!important}
 .rmrow{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:12px;background:rgba(11,8,38,.5);border:1.5px solid #322a7c}
 .rmi{flex:1;min-width:0;display:flex;flex-direction:column}.rmi b{font-size:14px}.rmi small{font-size:11.5px;color:var(--muted);line-height:1.3}
 .rmj{display:flex;gap:4px}.rmj .gbtn{min-width:58px;padding:6px 8px;font-size:12px}.rmj .gbtn:disabled{opacity:.45}
-.gbtn.red{background:linear-gradient(180deg,#ff5c7a,#c4183c)!important;border-color:#ff8aa0!important;color:#fff!important}
 .rmmake{display:flex;flex-direction:column;gap:6px}
 .rmcl{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:8px 10px;border-radius:12px;border:2px dashed #4a3fa8;background:rgba(11,8,38,.45);color:#fff;font-weight:800;font-size:13px;text-align:left;cursor:pointer}
 .rmcl small{font-weight:600;color:var(--muted);font-size:11.5px}.rmcl[aria-pressed=true]{border-style:solid;border-color:#ffc600}
@@ -2989,6 +2987,37 @@ body .tview .panel[hidden]{display:none!important}
 .dr49t{display:flex;align-items:center;gap:10px;justify-content:center;padding:6px 10px;border-radius:12px;background:rgba(11,8,38,.5);border:2px solid #ffc600}
 .dr49t b{font:800 28px var(--display,sans-serif);color:#ffe27a;font-variant-numeric:tabular-nums}.dr49t small{font-size:12px;color:var(--muted);max-width:200px}
 .hsel48 button:disabled{opacity:.4}.hsel48 small{font-size:9.5px;color:#ff8aa0;font-weight:800}
+/* v50 */
+/* battle buttons: ATTACK in the corner, skills in an arc around it, ultimate on top, heal above skill 3 */
+.moba .mctl #matk,.moba #matk{right:0!important;bottom:0!important;width:84px!important;height:84px!important}
+.moba .mctl.v25 .msk.s0,.moba .mctl .msk.s0{right:98px!important;bottom:0!important}
+.moba .mctl.v25 .msk.s1,.moba .mctl .msk.s1{right:92px!important;bottom:76px!important}
+.moba .mctl.v25 .msk.s2,.moba .mctl .msk.s2{right:8px!important;bottom:98px!important}
+.moba .mctl.v25 .msk.s3,.moba .mctl .msk.s3{right:100px!important;bottom:150px!important;width:74px!important;height:74px!important}
+.moba .mctl.v25 .msk.s3 .mbs,.moba .mctl.v25 .msk.s3 .mbs .skart{width:74px!important;height:74px!important}
+.moba .mctl.v25 .msk.s3 .cdn{font-size:24px!important}
+.moba .mctl .mheal48{right:14px!important;bottom:172px!important;width:50px;height:50px}
+.mheal48 svg{width:22px;height:22px;display:block}
+
+/* rooms: compact rows */
+.rmteam{align-items:stretch!important;padding:8px 6px!important;gap:4px!important;min-width:0}
+.rmteam>b{display:block;padding:0 4px 2px}
+.rmteam .rmp{width:100%;height:auto;margin:0;box-sizing:border-box;display:block;padding:6px 24px 6px 8px;min-height:0;line-height:1.25}
+.rmteam .rmp span{display:block;font-size:13px;font-weight:800;overflow-wrap:anywhere}
+.rmteam .rmp small{display:block;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rmteam .rmp.empty{padding:4px 8px;font-size:11.5px;font-style:normal;background:transparent;border:1px dashed rgba(255,255,255,.18);color:var(--muted)}
+.rmteam .gbtn.sm{min-height:32px;padding:4px 8px;font-size:12px;margin-top:2px}
+.rmteams{gap:6px!important}
+/* store levels */
+.slv50{border-radius:14px;border:2px solid #3b3190;background:rgba(11,8,38,.5);padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.slv50.lk{opacity:.72}
+.slvh{display:flex;align-items:center;gap:8px}.slvh b{flex:none;font:800 15px var(--display,sans-serif);color:#1d1850;background:#ffc600;border-radius:8px;padding:2px 8px}
+.slvh span{flex:1;font-weight:800;font-size:14px}.slvh em{font-style:normal;font-size:12px;font-weight:800;color:var(--good)}.slv50.lk .slvh em{color:var(--muted)}
+.slvr{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.slvi{display:flex;align-items:center;gap:6px;padding:5px 7px;border-radius:10px;background:rgba(255,255,255,.06);min-width:0}
+.slvi .e{flex:none;font-size:18px}.slvi .n{min-width:0;display:flex;flex-direction:column}
+.slvi .n b{font-size:12.5px;line-height:1.2}.slvi .n small{font-size:10px;color:var(--muted);line-height:1.2}
+.slvi.tl .n small{color:#ffb84a}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#140f36"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="SIKLAB"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><meta name="description" content="Project SIKLAB: a G11 General Science adventure game for Manuel Luis Quezon Senior High School, SDO Manila.">
 </head>
@@ -36140,7 +36169,7 @@ function mobaScene2(host,opt){const M=opt.M,low=opt.low;const SC=1/40,X=x=>(x-80
    const el=ovs.get(u);
    if(u.kind==='tower'||u.kind==='turret'||u.kind==='core'){n.p=[x,0,z];if(u.dead&&!n.ruin){n.ruin=1;n.s=[1.15,.22,1.15];const dk=hex('#55556a');n.col=dk;n.kids.forEach(q=>q.col=dk);n.gem.vis=false;if(n.ring)n.ring.vis=false;}if(!u.dead){n.gem.p[1]+=Math.sin(t*2+u.x)*.003;n.gem.r[1]+=dt;if(n.ring)n.ring.r[1]-=dt*1.5;n.gem.em=u.inv?.15:.55+Math.sin(t*4)*.15;}}
    else{if(u.kind==='hero'&&u.dead){n.dieT=(n.dieT||0)+dt;n.body.r[0]=Math.min(PI/2,n.dieT*5);n.vis=n.dieT<1.2;}else{if(n.dieT){n.dieT=0;n.body.r[0]=0;}n.vis=!u.dead;}
-    const mv=n._x!=null&&Math.hypot(x-n._x,z-n._z)>.002;n._x=x;n._z=z;n._mv=mv?.2:Math.max(0,(n._mv||0)-dt);if(n._dx==null||Math.hypot(x-n._dx,z-n._dz)>3){n._dx=x;n._dz=z;}else{const f=Math.min(1,dt*14);n._dx+=(x-n._dx)*f;n._dz+=(z-n._dz)*f;}n.p=[n._dx,(s.UL||0)+(n._mv>0&&!u.dead?Math.abs(Math.sin(t*11+u.x))*(u.kind==='hero'?.17:.07):0),n._dz];if(u.kind==='hero'&&n.body&&!u.dead){const w=n._mv>0&&!(u.stun>0);n.body.r[2]=w?Math.sin(t*11+u.x)*.13:n.body.r[2]*.8;n.body.r[0]=w?.1:n.body.r[0]*.8;if(n.legL){const ph=w?Math.sin(t*11+u.x)*.65:0;n.legL.r[0]=ph;n.legR.r[0]=-ph;}}
+    const mv=n._x!=null&&Math.hypot(x-n._x,z-n._z)>.002;n._x=x;n._z=z;n._mv=mv?.2:Math.max(0,(n._mv||0)-dt);if(n._dx==null||Math.hypot(x-n._dx,z-n._dz)>3){n._dx=x;n._dz=z;}else{const f=Math.min(1,dt*14);n._dx+=(x-n._dx)*f;n._dz+=(z-n._dz)*f;}const wv=u.kind==='hero'&&!u.dead&&!(u.stun>0)&&n._mv>0?1:0;n._wk=(n._wk||0)+(wv-(n._wk||0))*Math.min(1,dt*8);n._ph=(n._ph||0)+dt*7.5*n._wk;const wk=n._wk;n.p=[n._dx,(s.UL||0)+(u.kind==='hero'?Math.abs(Math.sin(n._ph))*.05*wk:(n._mv>0&&!u.dead?Math.abs(Math.sin(t*9+u.x))*.07:0)),n._dz];if(u.kind==='hero'&&n.body&&!u.dead){n.body.r[2]=Math.sin(n._ph)*.04*wk;n.body.r[0]=.06*wk;if(n.legL){const ph=Math.sin(n._ph)*.42*wk;n.legL.r[0]=ph;n.legR.r[0]=-ph;}}
     if((u.fx||u.fy)&&!u.dead){const a=Math.atan2(u.fx,u.fy);let d=a-n.r[1];while(d>PI)d-=2*PI;while(d<-PI)d+=2*PI;n.r[1]+=d*Math.min(1,dt*12);}
     if(u.kind==='hero'){n.sh.vis=u.shield>0;n.up.vis=u.atkUp>0;n.st.vis=u.stun>0;n.st.r[1]+=dt*5;
      const sw=u.swing||0,cs=u.cast||0;if(cs>0){n.w.r=[-2.6,0,-.15];n.body.p[1]=Math.sin(cs/.35*PI)*.25;}
@@ -36263,7 +36292,7 @@ function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2
    const el=ovs.get(u);
    if(u.kind==='tower'||u.kind==='turret'||u.kind==='core'){n.p=[x,0,z];if(u.dead&&!n.ruin){n.ruin=1;n.s=[1.15,.22,1.15];const dk=hex('#55556a');n.col=dk;n.kids.forEach(q=>q.col=dk);n.gem.vis=false;if(n.ring)n.ring.vis=false;}if(!u.dead){n.gem.p[1]+=Math.sin(t*2+u.x)*.003;n.gem.r[1]+=dt;if(n.ring)n.ring.r[1]-=dt*1.5;n.gem.em=u.inv?.15:.55+Math.sin(t*4)*.15;}}
    else{if(u.kind==='hero'&&u.dead){n.dieT=(n.dieT||0)+dt;n.body.r[0]=Math.min(PI/2,n.dieT*5);n.vis=n.dieT<1.2;}else{if(n.dieT){n.dieT=0;n.body.r[0]=0;}n.vis=!u.dead;}
-    const mv=n._x!=null&&Math.hypot(x-n._x,z-n._z)>.002;n._x=x;n._z=z;n._mv=mv?.2:Math.max(0,(n._mv||0)-dt);if(n._dx==null||Math.hypot(x-n._dx,z-n._dz)>3){n._dx=x;n._dz=z;}else{const f=Math.min(1,dt*14);n._dx+=(x-n._dx)*f;n._dz+=(z-n._dz)*f;}n.p=[n._dx,(s.UL||0)+(n._mv>0&&!u.dead?Math.abs(Math.sin(t*11+u.x))*(u.kind==='hero'?.17:.07):0),n._dz];if(u.kind==='hero'&&n.body&&!u.dead){const w=n._mv>0&&!(u.stun>0);n.body.r[2]=w?Math.sin(t*11+u.x)*.13:n.body.r[2]*.8;n.body.r[0]=w?.1:n.body.r[0]*.8;if(n.legL){const ph=w?Math.sin(t*11+u.x)*.65:0;n.legL.r[0]=ph;n.legR.r[0]=-ph;}}
+    const mv=n._x!=null&&Math.hypot(x-n._x,z-n._z)>.002;n._x=x;n._z=z;n._mv=mv?.2:Math.max(0,(n._mv||0)-dt);if(n._dx==null||Math.hypot(x-n._dx,z-n._dz)>3){n._dx=x;n._dz=z;}else{const f=Math.min(1,dt*14);n._dx+=(x-n._dx)*f;n._dz+=(z-n._dz)*f;}const wv=u.kind==='hero'&&!u.dead&&!(u.stun>0)&&n._mv>0?1:0;n._wk=(n._wk||0)+(wv-(n._wk||0))*Math.min(1,dt*8);n._ph=(n._ph||0)+dt*7.5*n._wk;const wk=n._wk;n.p=[n._dx,(s.UL||0)+(u.kind==='hero'?Math.abs(Math.sin(n._ph))*.05*wk:(n._mv>0&&!u.dead?Math.abs(Math.sin(t*9+u.x))*.07:0)),n._dz];if(u.kind==='hero'&&n.body&&!u.dead){n.body.r[2]=Math.sin(n._ph)*.04*wk;n.body.r[0]=.06*wk;if(n.legL){const ph=Math.sin(n._ph)*.42*wk;n.legL.r[0]=ph;n.legR.r[0]=-ph;}}
     if((u.fx||u.fy)&&!u.dead){const a=Math.atan2(u.fx,u.fy);let d=a-n.r[1];while(d>PI)d-=2*PI;while(d<-PI)d+=2*PI;n.r[1]+=d*Math.min(1,dt*12);}
     if(u.kind==='hero'){if(n.aura){const on=u.auraT>0&&!u.dead;n.aura.vis=on;n.pil.vis=on;if(on){n.aura.r[1]+=dt*3;const sc=1.05+Math.sin(t*9)*.12;n.aura.s=[sc,1,sc];n.pil.op=Math.min(.32,u.auraT*.14);const g=1+(3.2-u.auraT)*.15;n.pil.s=[1,g,1];}}n.sh.vis=u.shield>0;n.up.vis=u.atkUp>0;n.st.vis=u.stun>0;n.st.r[1]+=dt*5;
      const sw=u.swing||0,cs=u.cast||0;if(cs>0){n.w.r=[-2.6,0,-.15];n.body.p[1]=Math.sin(cs/.35*PI)*.25;}
@@ -39052,7 +39081,7 @@ Object.assign(ART,{
 /* ===================== v10 · TITLE HEADING ===================== */
 function vTitle19(){let h=vTitle9();
  if(!S.hero&&UI.creating)return h.replace('<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>',schoolHead('sm')+'<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>');
- return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v49');}
+ return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v50');}
 function vHome10(){let h=vHome9().replace(schoolStrip('lob'),'');const t=S.hb.tr;
  return h.replace('<div class="ltiles">','<div class="ltiles three">').replace('<button class="ltile base"','<button class="ltile sd" data-act="go" data-v="hb"><span class="li sdi">⚔️</span><span><b>CLAN BATTLE</b><small>Hero battle · '+t+' 🏆</small></span></button><button class="ltile base"');}
 /* ===================== v10 · SCIENCE CAPSULES ===================== */
@@ -45169,7 +45198,7 @@ function showQueue39(){showQueue38();try{const m=queue[0];if(!m||CLOSEX.indexOf(
 /* ---------- 3. Hero Battle: pick Online or AI, then set up the match in a window ---------- */
 const BDIFF={easy:['🙂','Easy','Opponents have less HP and hit softer.',.8,.75],normal:['⚖️','Normal','A fair match.',1,1],hard:['🔥','Hard','Opponents are tougher and hit harder.',1.2,1.2]};
 function vHB39(){let h=vHB37();
- const sel='<div class="bmsel big" role="group" aria-label="Battle type">'+[['online','🌐','ONLINE BATTLE','Live vs classmates · coming soon'],['ai','🤖','AI BATTLE','Vs computer players']].map(x=>'<button data-act="bOpen" data-t="'+x[0]+'"><span class="bmi">'+x[1]+'</span><b>'+x[2]+'</b><small>'+x[3]+'</small><span class="bgo">'+(x[0]==='ai'?'Set up ›':'Preview ›')+'</span></button>').join('')+'</div>';
+ const sel='<div class="bmsel big" role="group" aria-label="Battle type">'+[['online','🌐','ONLINE BATTLE','Live vs classmates'],['ai','🤖','AI BATTLE','Vs computer players']].map(x=>'<button data-act="bOpen" data-t="'+x[0]+'"><span class="bmi">'+x[1]+'</span><b>'+x[2]+'</b><small>'+x[3]+'</small><span class="bgo">'+'Set up ›'+'</span></button>').join('')+'</div>';
  h=h.replace(/<div class="hbmodes">[\s\S]*?<\/button><\/div>/,'<div class="bmwrap">'+sel+'</div>');return hbLockNote(h);}
 function warModal39(m){if(m.t==='bset')return bsetHTML(m);return warModal38(m);}
 Object.assign(A,{
@@ -45278,7 +45307,7 @@ function vHome(){let h=vHome39();
  return h;}
 
 /* ---------- 2/6. One-liners and one item per line ---------- */
-function vHB40(){let h=vHB39();return h.replace('Live vs classmates · coming soon','Coming soon').replace('Vs computer players','Vs computer');}
+function vHB40(){let h=vHB39();return h.replace('Vs computer players','Vs computer');}
 
 /* ---------- 5. Activity bank + lesson plans: Download (PDF or Word) and Event ---------- */
 function actPanel39(){const f=UI.etab||'phys';const I=islById(f);const L=LESSONS.filter(l=>l.isl===f);const ty=UI.abt||'all';const K=ty==='all'?AKO:[ty];const ac=UI.actCode;
@@ -46515,8 +46544,8 @@ function vLogin(){let h=vLogin44L();const L=UI.lg||{};
  if(L.step==='pick'&&fbOn()){const i=h.indexOf('data-act="lgNew"');if(i>0){const j=h.indexOf('</button>',i)+9;h=h.slice(0,j)+'<button class="gbtn blue block lgcloud" data-act="clLg">☁️ I have an account</button>'+clGetApp()+h.slice(j);}}
  if(L.step==='cloud')h=loginShell('<form class="lgcard" id="clform" novalidate><div class="lgh">LOG IN</div><div class="lgsub">Use the nickname and password you made when you signed up. Your save comes from the school server.</div><input id="clnick" maxlength="14" placeholder="Nickname" autocomplete="username" aria-label="Nickname" value="'+esc(L.nick||'')+'" autocapitalize="off" spellcheck="false">'+clInp('clpw','Password','current-password')+
   '<div class="lgerr" role="alert">'+(L.err||'')+'</div><button class="gbtn green block" type="submit"'+(L.busy?' disabled':'')+'>'+(L.busy?'☁️ Getting your save…':'Log in ▶')+'</button><button class="lglink" type="button" data-act="lgBack">‹ Back</button></form>');
- if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v47');
- return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v47');}
+ if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v50'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));
+ return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v50'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));}
 function clGetApp(){if(!window.FB||FB.native)return '';const ua=navigator.userAgent;const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
  if(/Android/i.test(ua)&&FB.cfg&&FB.cfg.apk)return '<a class="lglink lgapp" href="'+esc(FB.cfg.apk)+'" rel="noopener">📱 Get the Android app</a>';
  if(ios&&!sa)return '<div class="lgsub small lgapp">📱 iPhone: tap Share › <b>Add to Home Screen</b> to open SIKLAB like an app.</div>';return '';}
@@ -47770,12 +47799,38 @@ Object.assign(HATSVG,{
 /* ---------- Battle Rooms: draft pick before a hero battle ---------- */
 const DRAFT49=20;
 
+/* ===================== v50 · fixes from the v49 class test ===================== */
+/* Battle Rooms: opened from Quiz Duel shows only duel rooms; opened from Clan Battle shows only hero rooms */
+{const f=rmOpen;rmOpen=function(k){RM.lock=k||null;return f.apply(this,arguments);};}
+{const f=A.rmClose;A.rmClose=function(){RM.lock=null;return f.apply(this,arguments);};}
+{const f=rmHTML;rmHTML=function(){if(RM.lock)RM.k=RM.lock;let h=f.apply(this,arguments);if(RM.lock)h=h.replace(/<div class="rmtabs">[\s\S]*?<\/div>/,'');
+ if(RM.lock==='duel')h=h.replace('🏟️ BATTLE ROOMS','⚔️ LIVE DUEL ROOMS');return h.replace('▶ Start · waiting for a challenger','⏳ Waiting for a challenger').replace('▶ Start · waiting for players','⏳ Waiting for players');};}
+/* Quiz Duel screen: the rooms card replaces the old Live Duel card */
+{let q=0;new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;if(V.name!=='arena'||!clOk())return;const lv=$('lvcard');if(lv&&lv.style.display!=='none')lv.style.display='none';
+ const rc=$('rmcard48');if(rc&&!rc.dataset.v50){rc.dataset.v50=1;rc.innerHTML='<b>🌐 Live Duel rooms</b><small>Make a room or join a classmate’s room</small>';}});}).observe(document.body,{childList:true,subtree:true});}
+
+/* Heal button: a drawn cross instead of an emoji (some phones showed only green) */
+{const f=mbDecor48;mbDecor48=function(){f.apply(this,arguments);const b=$('mheal48');if(b&&!b.dataset.v50){b.dataset.v50=1;
+ b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z" fill="#fff" stroke="#0d5a35" stroke-width="1.2" stroke-linejoin="round"/></svg><small>HEAL</small><i id="mhcd48"></i>';}};}
+/* Leave button in battle: same look as the other corner buttons, with a red ✕ */
+{const f=mbDecor48;mbDecor48=function(){f.apply(this,arguments);const b=$('mbx48');if(b&&!b.dataset.v50){b.dataset.v50=1;b.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff5c7a" stroke-width="3.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';}};}
+
+/* Store levels in the Lab: one row per recipe instead of a long sentence */
+storeLabHTML=function(cat){shopsInit();const sh=shopOf(cat);const L=shopLv(cat);const nx=SHOPUP[L+1];
+ const lvl=t=>{const R=RECS.filter(r=>r[1]===cat&&r[2]===t);
+  return '<div class="slv50'+(t>L?' lk':'')+'"><div class="slvh"><b>Lv'+t+'</b><span>'+(t===1?'Materials + basic recipes':t===2?'Advanced recipes':'Master recipes')+'</span><em>'+(t<=L?'✓ Open':'🔒 Locked')+'</em></div>'+
+   '<div class="slvr">'+R.map(r=>{const op=tpOpen(r[11]);const tp=(tpOf(r[11])||{n:''}).n;return '<div class="slvi'+(op?'':' tl')+'"><span class="e">'+r[4]+'</span><span class="n"><b>'+r[3]+'</b>'+(op?'<small>Ready to discover</small>':'<small>📘 After: '+esc(tp)+'</small>')+'</span></div>';}).join('')+'</div></div>';};
+ return '<div class="ptitle outline">'+sh.e+' '+sh.n.toUpperCase()+'</div><div class="d" style="text-align:center">Store Lv'+L+'</div><div class="small muted" style="text-align:center">'+STRAND[cat]+'. Each level opens harder recipes; each recipe opens for discovery when you reach its topic in Adventure.</div>'+
+  [1,2,3].map(lvl).join('')+
+  (nx?'<button class="gbtn green block" data-act="storeUp" data-i="'+cat+'" '+(S.coins<nx.c||(S.parts||0)<nx.p||S.base.hq<nx.hq?'disabled':'')+'>Upgrade to Lv'+(L+1)+' · 🪙'+nx.c+' · 🔩'+nx.p+'</button><div class="small muted" style="text-align:center">Needs Lab HQ Lv'+nx.hq+' (yours: Lv'+S.base.hq+')</div>':'<div class="small" style="text-align:center;color:var(--good);font-weight:700">Max level</div>')+
+  '<button class="gbtn dark block" data-act="qok">Close</button>';};
+
 /* ============ BOOT ============ */
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot)window.claude.hot.snapshot(()=>({S}));}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready)window.claude.hot.ready(start);else start((window.claude&&window.claude.hot&&window.claude.hot.data)||{});
 })();
 </script>
 <!-- school server bridge (built from src/main.jsx by "npm run build") -->
-<script src="siklab-cloud.js?b=990770"></script>
+<script src="siklab-cloud.js?b=990824"></script>
 </body>
 </html>
