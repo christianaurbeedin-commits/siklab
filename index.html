@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Project SIKLAB v50</title>
+<title>Project SIKLAB v51</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -3018,6 +3018,50 @@ body .tview .panel[hidden]{display:none!important}
 .slvi .e{flex:none;font-size:18px}.slvi .n{min-width:0;display:flex;flex-direction:column}
 .slvi .n b{font-size:12.5px;line-height:1.2}.slvi .n small{font-size:10px;color:var(--muted);line-height:1.2}
 .slvi.tl .n small{color:#ffb84a}
+/* ===== v51 ===== */
+/* Get ready: a calm countdown ring instead of a blinking class picker */
+.dr51{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(11,8,38,.55);border:2px solid #ffc600}
+.dr51ring{--p:100;flex:0 0 64px;width:64px;height:64px;border-radius:50%;display:grid;place-content:center;text-align:center;position:relative;
+ background:conic-gradient(#ffc600 calc(var(--p)*1%),rgba(255,255,255,.12) 0);transition:background .4s linear}
+.dr51ring::before{content:"";position:absolute;inset:6px;border-radius:50%;background:#1a1450}
+.dr51ring b,.dr51ring small{position:relative;line-height:1}
+.dr51ring b{font:800 24px var(--display,sans-serif);color:#ffe27a;font-variant-numeric:tabular-nums}
+.dr51ring small{font-size:10px;color:var(--muted)}
+.dr51ring.low{background:conic-gradient(#ff5c7a calc(var(--p)*1%),rgba(255,255,255,.12) 0)}.dr51ring.low b{color:#ff9aab}
+.dr51t{display:flex;flex-direction:column;gap:3px;min-width:0}.dr51t b{font:800 15px var(--display,sans-serif);color:#fff}.dr51t small{font-size:12px;color:var(--muted);line-height:1.35}
+.rmteam .dr51p{padding-right:8px}
+.rmteam .dr51p em{position:absolute;top:6px;right:8px;font-style:normal;font-size:11px;font-weight:800;color:var(--muted)}
+.rmteam .dr51p.rd em{color:#38e08f}.rmteam .dr51p span{padding-right:58px}
+.dr51ok{text-align:center;font-weight:800;color:#38e08f;padding:8px;border-radius:12px;background:rgba(56,224,143,.12)}
+
+/* battle reminders: a close button that is always there, and a layout that fits sideways phones */
+.coach48{max-height:calc(100% - var(--hcb,120px) - 56px);overflow-y:auto;padding-right:40px!important}
+.coach48 .cx51{position:absolute;top:6px;right:6px;width:30px;height:30px;padding:0;border-radius:50%;border:2px solid #ffc600;background:#2a2470;color:#fff;font:800 14px/1 sans-serif;display:grid;place-items:center;cursor:pointer;z-index:1}
+@media (orientation:landscape) and (max-height:560px){
+ .coach48{top:8px!important;width:min(560px,62%)!important;max-height:calc(100% - 16px);padding:8px 40px 8px 12px!important}
+ .coach48 ul{columns:2;column-gap:18px;font-size:12px!important;margin:4px 0 6px!important}.coach48 li{break-inside:avoid}
+ .coach48 .gbtn{padding:6px 14px}
+ #layer .panel{max-width:min(640px,94vw)!important;max-height:92vh!important}
+}
+
+/* red team: the minimap turns with the battlefield */
+#mmap.mir51{transform:rotate(180deg)}
+.moba.mir51 .m3bar:not(.foe):not(.neu):not(.me):not(.inv) i{background:#ff4f6d}.moba.mir51 .m3bar.foe:not(.inv) i{background:#46a6ff}
+.moba.mir51 .msc .bl{color:#ff8fa3}.moba.mir51 .msc .rd{color:#7fd0ff}
+
+/* teacher: delete buttons and the account list */
+.dl51x{flex:0 0 auto;width:34px;height:34px;padding:0;border-radius:10px;border:2px solid #ff5c7a;background:rgba(255,92,122,.12);color:#ff8fa3;display:inline-grid;place-items:center;cursor:pointer}
+.dl51x svg{width:18px;height:18px}.dl51x.sm{width:28px;height:28px;border-radius:8px}.dl51x.sm svg{width:15px;height:15px}
+.dl51x:active{transform:scale(.94)}
+.abbtn2{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.apd .dl51x{margin-left:6px}
+.dl51{margin-top:12px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px}.dl51>summary{cursor:pointer}
+.dl51q{width:100%;box-sizing:border-box;margin:8px 0 6px;padding:9px 12px;border-radius:12px;border:2px solid #3b3190;background:#120e3a;color:#fff;font:600 14px var(--body)}
+.dl51l{display:flex;flex-direction:column;gap:5px;max-height:340px;overflow-y:auto;padding-right:2px}
+.dl51r{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:12px;background:rgba(255,255,255,.06)}
+.dl51r>span:first-child{flex:1;min-width:0;display:flex;flex-direction:column}.dl51r b{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dl51r small{font-size:11px;color:var(--muted)}
+.dl51s{flex:0 0 auto;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px}.dl51s.ok{background:rgba(56,224,143,.15);color:#38e08f}.dl51s.no{background:rgba(255,92,122,.15);color:#ff8fa3}.dl51s.p{background:rgba(255,198,0,.15);color:#ffe27a}
+.dl51all{margin-top:8px;color:#ff8fa3!important}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#140f36"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="SIKLAB"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><meta name="description" content="Project SIKLAB: a G11 General Science adventure game for Manuel Luis Quezon Senior High School, SDO Manila.">
 </head>
@@ -36200,9 +36244,9 @@ function mobaScene2(host,opt){const M=opt.M,low=opt.low;const SC=1/40,X=x=>(x-80
   M.nums.forEach(o=>{let el=nums.get(o);if(!el){el=s.tag('<b class="m3num'+(o.big?' big':'')+'" style="color:'+o.c+'">'+o.txt+'</b>','m3t');nums.set(o,el);}s.pin(el,[X(o.x),2.3+o.t*1.6,Z(o.y)]);el.style.opacity=String(1-o.t/.9);});
   cx+=(mx-cx)*Math.min(1,dt*6);cz+=(mz-cz)*Math.min(1,dt*6);s.cam.t=[cx,.4,cz-2.6];s.cam.p=[cx,12.5,cz+7.8];};
  return s;}
-function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2,X=x=>(x-HW)*SC,Z=y=>(y-HW)*SC;
+function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2,MR=(!opt.view&&M&&(M.mir||window.MIR51N))?-1:1,RY=MR<0?PI:0,X=x=>(x-HW)*SC*MR,Z=y=>(y-HW)*SC*MR;
  const s=new Scene(host,{bg:'#1f4f35',fog:'#1f4f35',fogN:opt.view?60:18,fogF:opt.view?130:38,low});s.light=norm([.35,1,.5]);
- const TC=['#46a6ff','#ff4f6d','#c9d0ee'];
+ const TC=MR<0?['#ff4f6d','#46a6ff','#c9d0ee']:['#46a6ff','#ff4f6d','#c9d0ee'];
  const GW=opt.W*SC+8;s.UL=.22;
  s.add(new N({geo:geo(b=>{b.color('#3a8f52').box(GW,.4,GW,{p:[0,-.2,0]});b.color('#358549');for(let z=-GW/2;z<GW/2;z+=3)for(let x=-GW/2;x<GW/2;x+=3)if(((x+z)/3&1)===0)b.box(3,.02,3,{p:[x+1.5,.005,z+1.5]});
   b.color('#2d7fc4').box(3,.05,GW*1.45,{p:[0,.03,0],r:[0,PI/4,0]});
@@ -36214,12 +36258,12 @@ function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2
   opt.homes.forEach((h,i)=>{b.color(TC[i]).cyl(7.6,7.6,.04,30,{p:[X(h[0]),.18,Z(h[1])]});});
  }),op:1}));
  opt.homes.forEach((h,i)=>s.add(new N({geo:geo(b=>b.color(TC[i]).cyl(7.4,7.4,.05,30)),p:[X(h[0]),.2,Z(h[1])],op:.25,em:.6})));
- (opt.decos||[]).forEach(d=>s.add(new N({geo:geo(b=>bldModel(b,d.b)),p:[X(d.x),.16,Z(d.y)],r:[0,d.ry||0,0]})));
+ (opt.decos||[]).forEach(d=>s.add(new N({geo:geo(b=>bldModel(b,d.b)),p:[X(d.x),.16,Z(d.y)],r:[0,(d.ry||0)+RY,0]})));
  const gMin=(t,rg)=>geo(b=>{b.color(TC[t]).cyl(.22,.28,.48,8,{p:[0,.34,0]});b.color('#e8ecff').sphere(.21,8,6,{p:[0,.7,0]});b.color('#14112e').box(.28,.07,.06,{p:[0,.72,.18]});b.color('#2a2f4a').box(.11,.16,.13,{p:[-.1,.08,0]}).box(.11,.16,.13,{p:[.1,.08,0]});if(rg){b.color('#2a2f4a').box(.12,.12,.4,{p:[.32,.45,.12]});b.color(TC[t]).sphere(.07,5,3,{p:[.32,.45,.34]});}else{b.color('#c9d0ee').box(.06,.5,.06,{p:[.32,.5,.1],r:[.4,0,0]});}});
  const GM=[[gMin(0,0),gMin(0,1)],[gMin(1,0),gMin(1,1)]];
  const gTow=(t,big)=>geo(b=>{const k=big?1.25:1;b.color('#6b6f8a').cyl(.9*k,1.1*k,.6,10,{p:[0,.3,0]});b.color('#d8dcef').box(.8*k,2.8*k,.8*k,{p:[0,1.9*k,0]});b.color(TC[t]).cyl(.7*k,.55*k,.35,8,{p:[0,3.4*k,0]}).box(.9*k,.14,.9*k,{p:[0,1.1*k,0]});b.color('#14112e').box(.24,.4,.05,{p:[0,2.2*k,.41*k]});});
  const GT=[[gTow(0,0),gTow(0,1)],[gTow(1,0),gTow(1,1)]];const hexP=r=>[0,1,2,3,4,5].map(i=>{const a=i/6*PI*2;return [Math.cos(a)*r,Math.sin(a)*r];});
- const GK=[0,1].map(t=>geo(b=>{b.color('#6b6f8a').prism(hexP(1.9),0,.5);b.color(t?'#5a1a2a':'#1a2f5a').prism(hexP(1.55),.5,.95);b.color('#ffc600');for(let i=0;i<6;i++){const a=i/6*PI*2;b.cyl(.09,.12,.9,6,{p:[Math.cos(a)*1.3,1.3,Math.sin(a)*1.3]});}}));
+ const GK=[0,1].map(t=>geo(b=>{b.color('#6b6f8a').prism(hexP(1.9),0,.5);b.color(((t?1:0)!==(MR<0?1:0))?'#5a1a2a':'#1a2f5a').prism(hexP(1.55),.5,.95);b.color('#ffc600');for(let i=0;i<6;i++){const a=i/6*PI*2;b.cyl(.09,.12,.9,6,{p:[Math.cos(a)*1.3,1.3,Math.sin(a)*1.3]});}}));
  const GCamp=geo(b=>{b.color('#7a3fd0').sphere(.5,10,8,{p:[0,.5,0],s:[1,.8,1]});b.color('#ffffff').sphere(.12,6,4,{p:[-.18,.65,.4]}).sphere(.12,6,4,{p:[.18,.65,.4]});b.color('#14112e').sphere(.06,5,3,{p:[-.18,.65,.5]}).sphere(.06,5,3,{p:[.18,.65,.5]});b.color('#c77dff').cyl(0,.12,.35,5,{p:[-.25,1,0]}).cyl(0,.12,.35,5,{p:[.25,1,0]});});
  const GGol=geo(b=>{b.color('#6b6f8a').box(1.4,1.5,1,{p:[0,1.5,0]});b.color('#8a8fa8').sphere(.55,7,5,{p:[0,2.6,0]});b.color('#ffc600').box(.5,.1,.06,{p:[0,2.65,.5]});b.color('#5b5f78').box(.45,1.2,.45,{p:[-1,1.4,0]}).box(.45,1.2,.45,{p:[1,1.4,0]}).box(.45,.8,.45,{p:[-.4,.4,0]}).box(.45,.8,.45,{p:[.4,.4,0]});b.color('#7fe8ff').sphere(.25,6,4,{p:[0,1.6,.5]});});
  const GCrate=geo(b=>{b.color('#8a5005').box(.6,.6,.6);b.color('#ffc600').box(.64,.1,.64).box(.1,.64,.64);});
@@ -36265,10 +36309,10 @@ function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2
   body.r=[0,u.ry||0,0];n.add(body);if(spin){body.add(spin);n.spin=spin;n.spinAx=ax;n.spinV=sv;}return n;};
  const make=u=>{let n;
   if(u.kind==='shop')n=mkShop(u);else if(u.kind==='hero')n=mkHero(u);else if(u.kind==='minion'||u.kind==='rminion')n=new N({geo:GM[u.side][u.kind==='rminion'?1:0]});else if(u.kind==='cell')n=new N({geo:geo(b=>{b.color(u.side?'#ff9aab':'#38e08f').sphere(.32,10,8,{p:[0,.34,0]});})});
-  else if(u.sub==='deco'){n=new N();n.add(new N({geo:geo(b=>bldModel(b,u.db)),p:[0,.16,0],r:[0,u.ry||0,0]}));n.gem=new N({vis:false});n.add(n.gem);}
-  else if(u.sub==='gate'){n=new N();n.add(new N({geo:geo(b=>{b.color('#d8dcef').box(.9,3.6,.9,{p:[-2,1.8,0]}).box(.9,3.6,.9,{p:[2,1.8,0]});b.color(TC[u.side]).box(5,.7,1,{p:[0,3.8,0]});b.color('#6b6f8a').box(1.2,.4,1.2,{p:[-2,.2,0]}).box(1.2,.4,1.2,{p:[2,.2,0]});}),r:[0,u.ry||0,0]}));n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(.55,6,4)),p:[0,4.8,0],em:.6});n.add(n.gem);}
-  else if((u.kind==='tower'||u.kind==='turret')&&u.bld){const sc=1.15;n=new N();n.add(new N({geo:geo(b=>{b.color('#6b6f8a').cyl(1.2,1.35,.35,12,{p:[0,.17,0]});b.color(TC[u.side]).cyl(1.25,1.25,.08,12,{p:[0,.37,0]});})}));n.add(new N({geo:geo(b=>bldModel(b,u.bld)),p:[0,.4,0],s:[sc,sc,sc],r:[0,u.ry||0,0]}));n.gem=new N({geo:geo(b=>b.color(u.bpc||TC[u.side]).sphere(.42,6,4)),p:[0,3.6,0],em:.7});n.add(n.gem);}
-  else if(u.kind==='core'&&u.hq){n=new N();n.add(new N({geo:geo(b=>{b.color('#6b6f8a').prism(hexP(2.1),0,.4);b.color(TC[u.side]).prism(hexP(1.9),.4,.5);})}));n.add(new N({geo:geo(b=>bldModel(b,'hq',{roof:u.roof||(u.side?'#ff6b35':'#ff6b35')})),p:[0,.5,0],s:[1.35,1.35,1.35],r:[0,u.ry||0,0]}));n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(.8,4,2,{s:[1,1.6,1]})),p:[0,5.2,0],em:.6});n.ring=new N({geo:geo(b=>{b.color('#ffc600');for(let k=0;k<14;k++){const a=k/14*PI*2;b.sphere(.09,4,3,{p:[Math.cos(a)*1.3,0,Math.sin(a)*1.3]});}}),p:[0,5.2,0],em:.8});n.add(n.gem,n.ring);}
+  else if(u.sub==='deco'){n=new N();n.add(new N({geo:geo(b=>bldModel(b,u.db)),p:[0,.16,0],r:[0,(u.ry||0)+RY,0]}));n.gem=new N({vis:false});n.add(n.gem);}
+  else if(u.sub==='gate'){n=new N();n.add(new N({geo:geo(b=>{b.color('#d8dcef').box(.9,3.6,.9,{p:[-2,1.8,0]}).box(.9,3.6,.9,{p:[2,1.8,0]});b.color(TC[u.side]).box(5,.7,1,{p:[0,3.8,0]});b.color('#6b6f8a').box(1.2,.4,1.2,{p:[-2,.2,0]}).box(1.2,.4,1.2,{p:[2,.2,0]});}),r:[0,(u.ry||0)+RY,0]}));n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(.55,6,4)),p:[0,4.8,0],em:.6});n.add(n.gem);}
+  else if((u.kind==='tower'||u.kind==='turret')&&u.bld){const sc=1.15;n=new N();n.add(new N({geo:geo(b=>{b.color('#6b6f8a').cyl(1.2,1.35,.35,12,{p:[0,.17,0]});b.color(TC[u.side]).cyl(1.25,1.25,.08,12,{p:[0,.37,0]});})}));n.add(new N({geo:geo(b=>bldModel(b,u.bld)),p:[0,.4,0],s:[sc,sc,sc],r:[0,(u.ry||0)+RY,0]}));n.gem=new N({geo:geo(b=>b.color(u.bpc||TC[u.side]).sphere(.42,6,4)),p:[0,3.6,0],em:.7});n.add(n.gem);}
+  else if(u.kind==='core'&&u.hq){n=new N();n.add(new N({geo:geo(b=>{b.color('#6b6f8a').prism(hexP(2.1),0,.4);b.color(TC[u.side]).prism(hexP(1.9),.4,.5);})}));n.add(new N({geo:geo(b=>bldModel(b,'hq',{roof:u.roof||(u.side?'#ff6b35':'#ff6b35')})),p:[0,.5,0],s:[1.35,1.35,1.35],r:[0,(u.ry||0)+RY,0]}));n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(.8,4,2,{s:[1,1.6,1]})),p:[0,5.2,0],em:.6});n.ring=new N({geo:geo(b=>{b.color('#ffc600');for(let k=0;k<14;k++){const a=k/14*PI*2;b.sphere(.09,4,3,{p:[Math.cos(a)*1.3,0,Math.sin(a)*1.3]});}}),p:[0,5.2,0],em:.8});n.add(n.gem,n.ring);}
   else if(u.kind==='tower'||u.kind==='turret'){const big=u.kind==='turret';n=new N({geo:GT[u.side][big?1:0]});n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(.5,6,4)),p:[0,big?4.75:3.9,0],em:.55});n.add(n.gem);}
   else if(u.kind==='core'){n=new N({geo:GK[u.side]});n.gem=new N({geo:geo(b=>b.color(TC[u.side]).sphere(1.1,4,2,{s:[1,1.6,1]})),p:[0,2.8,0],em:.6});n.ring=new N({geo:geo(b=>{b.color('#ffc600');for(let k=0;k<14;k++){const a=k/14*PI*2;b.sphere(.1,4,3,{p:[Math.cos(a)*1.6,0,Math.sin(a)*1.6]});}}),p:[0,2.8,0],em:.8});n.add(n.gem,n.ring);}
   else if(u.kind==='camp')n=new N({geo:GCamp});else if(u.kind==='golem')n=new N({geo:GGol});else n=new N({geo:GCamp});
@@ -36293,7 +36337,7 @@ function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2
    if(u.kind==='tower'||u.kind==='turret'||u.kind==='core'){n.p=[x,0,z];if(u.dead&&!n.ruin){n.ruin=1;n.s=[1.15,.22,1.15];const dk=hex('#55556a');n.col=dk;n.kids.forEach(q=>q.col=dk);n.gem.vis=false;if(n.ring)n.ring.vis=false;}if(!u.dead){n.gem.p[1]+=Math.sin(t*2+u.x)*.003;n.gem.r[1]+=dt;if(n.ring)n.ring.r[1]-=dt*1.5;n.gem.em=u.inv?.15:.55+Math.sin(t*4)*.15;}}
    else{if(u.kind==='hero'&&u.dead){n.dieT=(n.dieT||0)+dt;n.body.r[0]=Math.min(PI/2,n.dieT*5);n.vis=n.dieT<1.2;}else{if(n.dieT){n.dieT=0;n.body.r[0]=0;}n.vis=!u.dead;}
     const mv=n._x!=null&&Math.hypot(x-n._x,z-n._z)>.002;n._x=x;n._z=z;n._mv=mv?.2:Math.max(0,(n._mv||0)-dt);if(n._dx==null||Math.hypot(x-n._dx,z-n._dz)>3){n._dx=x;n._dz=z;}else{const f=Math.min(1,dt*14);n._dx+=(x-n._dx)*f;n._dz+=(z-n._dz)*f;}const wv=u.kind==='hero'&&!u.dead&&!(u.stun>0)&&n._mv>0?1:0;n._wk=(n._wk||0)+(wv-(n._wk||0))*Math.min(1,dt*8);n._ph=(n._ph||0)+dt*7.5*n._wk;const wk=n._wk;n.p=[n._dx,(s.UL||0)+(u.kind==='hero'?Math.abs(Math.sin(n._ph))*.05*wk:(n._mv>0&&!u.dead?Math.abs(Math.sin(t*9+u.x))*.07:0)),n._dz];if(u.kind==='hero'&&n.body&&!u.dead){n.body.r[2]=Math.sin(n._ph)*.04*wk;n.body.r[0]=.06*wk;if(n.legL){const ph=Math.sin(n._ph)*.42*wk;n.legL.r[0]=ph;n.legR.r[0]=-ph;}}
-    if((u.fx||u.fy)&&!u.dead){const a=Math.atan2(u.fx,u.fy);let d=a-n.r[1];while(d>PI)d-=2*PI;while(d<-PI)d+=2*PI;n.r[1]+=d*Math.min(1,dt*12);}
+    if((u.fx||u.fy)&&!u.dead){const a=Math.atan2(u.fx*MR,u.fy*MR);let d=a-n.r[1];while(d>PI)d-=2*PI;while(d<-PI)d+=2*PI;n.r[1]+=d*Math.min(1,dt*12);}
     if(u.kind==='hero'){if(n.aura){const on=u.auraT>0&&!u.dead;n.aura.vis=on;n.pil.vis=on;if(on){n.aura.r[1]+=dt*3;const sc=1.05+Math.sin(t*9)*.12;n.aura.s=[sc,1,sc];n.pil.op=Math.min(.32,u.auraT*.14);const g=1+(3.2-u.auraT)*.15;n.pil.s=[1,g,1];}}n.sh.vis=u.shield>0;n.up.vis=u.atkUp>0;n.st.vis=u.stun>0;n.st.r[1]+=dt*5;
      const sw=u.swing||0,cs=u.cast||0;if(cs>0){n.w.r=[-2.6,0,-.15];n.body.p[1]=Math.sin(cs/.35*PI)*.25;}
      else if(sw>0){const k=1-sw/.28;if(u.melee){n.w.r=[-1.9+k*3.2,0,-.15+Math.sin(k*PI)*.5];n.body.p[2]=Math.sin(k*PI)*.3;}else{n.w.r=[.9-Math.sin(k*PI)*.5,0,-.15];n.body.p[2]=-Math.sin(k*PI)*.12;}}
@@ -36315,7 +36359,7 @@ function mobaScene3(host,opt){const M=opt.M,low=opt.low;const SC=1/40,HW=opt.W/2
    if(f.k==='ring'||f.k==='lvl'){const r=f.r*SC*(f.k==='lvl'?1:.4+.6*k);n.s=[r,1,r];n.p=[X(f.x),(f.k==='lvl'?.2+k*2.2:.14)+(s.UL||0),Z(f.y)];n.op=(f.fill?.35:.7)*(1-k);}
    else if(f.k==='met'){const r=f.r*SC;if(f.t<0){n.vis=false;n.ball.p[1]=Math.max(.4,8*(-f.t/.45));}else{n.vis=true;n.ball.vis=false;n.s=[r*(.5+.5*k),1,r*(.5+.5*k)];n.op=.5*(1-k);}n.p=[X(f.x),.14+(s.UL||0),Z(f.y)];}
    else if(f.k==='line'||f.k==='bolt'||f.k==='beam'){const ax=X(f.x),az=Z(f.y),bx=X(f.x2),bz=Z(f.y2),L=Math.hypot(bx-ax,bz-az)||.01,w=(f.w||(f.k==='beam'?22:6))*SC;n.p=[(ax+bx)/2,1.1,(az+bz)/2];n.r=[0,Math.atan2(bx-ax,bz-az),0];n.s=[w*(f.k==='bolt'?(1+Math.sin(t*70)*.6):1),w*.8,L];n.op=.9*(1-k*k);}
-   else if(f.k==='slash'){n.p=[X(f.x),1.0,Z(f.y)];n.r=[0,Math.atan2(f.dx,f.dy)+(k-.5)*1.2,0];const sc=.8+k*.6;n.s=[sc,1,sc];n.op=.9*(1-k);}
+   else if(f.k==='slash'){n.p=[X(f.x),1.0,Z(f.y)];n.r=[0,Math.atan2(f.dx*MR,f.dy*MR)+(k-.5)*1.2,0];const sc=.8+k*.6;n.s=[sc,1,sc];n.op=.9*(1-k);}
    else if(f.k==='proj'){n.p=[X(f.x+(f.x2-f.x)*k),1.15+(f.w==='staff'?Math.sin(k*PI)*.5:0),Z(f.y+(f.y2-f.y)*k)];n.r=[0,Math.atan2(X(f.x2)-X(f.x),Z(f.y2)-Z(f.y)),0];}
    else if(n.parts){n.parts.forEach(q=>{q.p=[X(f.x)+q.d[0]*k*1.6,.6+(f.k==='heal'?k*2.4:q.d[1]*k*2-k*k*1.5),Z(f.y)+q.d[2]*k*1.6];q.op=1-k;});}
    else{n.p=[X(f.x2||f.x),1,Z(f.y2||f.y)];}});
@@ -39081,7 +39125,7 @@ Object.assign(ART,{
 /* ===================== v10 · TITLE HEADING ===================== */
 function vTitle19(){let h=vTitle9();
  if(!S.hero&&UI.creating)return h.replace('<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>',schoolHead('sm')+'<div class="ptitle outline" style="font-size:24px">CREATE YOUR HEAD SCIENTIST</div>');
- return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v50');}
+ return h.replace(schoolStrip('tstrip'),'').replace('<div class="logowrap">',schoolHead()+'<div class="logowrap">').replace('Prototype v9','Prototype v51');}
 function vHome10(){let h=vHome9().replace(schoolStrip('lob'),'');const t=S.hb.tr;
  return h.replace('<div class="ltiles">','<div class="ltiles three">').replace('<button class="ltile base"','<button class="ltile sd" data-act="go" data-v="hb"><span class="li sdi">⚔️</span><span><b>CLAN BATTLE</b><small>Hero battle · '+t+' 🏆</small></span></button><button class="ltile base"');}
 /* ===================== v10 · SCIENCE CAPSULES ===================== */
@@ -39432,7 +39476,7 @@ function vMoba12(){if(!MB)return vHome();const me=MB.me;const g3=gfx3();
  '<div class="mrc" id="mbrc"></div><div class="mbmsg" id="mbmsg"></div><div class="mbdead" id="mbdead"></div></div>';}
 function mbBind12(){const area=$('view').querySelector('.moba');const j=$('joy'),jk=$('joyk');if(!area||!j)return;MB.joy=null;MB.atkHold=false;
  const start=e=>{if(e.target.closest('.mctl,.mtl,.mtr,.mshopb,.mitems,.mbdead'))return;const r=area.getBoundingClientRect();if(e.clientX-r.left>r.width*.6)return;MB.joy={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,dy:0};j.style.left=(e.clientX-r.left)+'px';j.style.top=(e.clientY-r.top)+'px';j.classList.add('on');jk.style.transform='translate(-50%,-50%)';};
- const move=e=>{const J=MB&&MB.joy;if(!J||J.id!==e.pointerId)return;let dx=e.clientX-J.x,dy=e.clientY-J.y;const d=Math.hypot(dx,dy),m=50;if(d>m){dx=dx/d*m;dy=dy/d*m;}J.dx=dx/m;J.dy=dy/m;jk.style.transform='translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px))';};
+ const move=e=>{const J=MB&&MB.joy;if(!J||J.id!==e.pointerId)return;let dx=e.clientX-J.x,dy=e.clientY-J.y;const d=Math.hypot(dx,dy),m=50;if(d>m){dx=dx/d*m;dy=dy/d*m;}{const g51=MB&&MB.mir?-1:1;J.dx=g51*dx/m;J.dy=g51*dy/m;}jk.style.transform='translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px))';};
  const end=e=>{if(MB&&MB.joy&&MB.joy.id===e.pointerId){MB.joy=null;j.classList.remove('on');j.style.left='';j.style.top='';jk.style.transform='translate(-50%,-50%)';}};
  area.addEventListener('pointerdown',start);area.addEventListener('pointermove',move);area.addEventListener('pointerup',end);area.addEventListener('pointercancel',end);
  const ab=$('matk');ab.addEventListener('pointerdown',e=>{e.preventDefault();MB.atkHold=true;ab.classList.add('on');});const off=()=>{MB.atkHold=false;ab.classList.remove('on');};ab.addEventListener('pointerup',off);ab.addEventListener('pointercancel',off);ab.addEventListener('pointerleave',off);
@@ -39792,25 +39836,25 @@ function mbHUD14(){mbHUD12();const M=MB;if(!M)return;const b=$('mshopb');if(b)b.
  const dd=$('mbdead');if(dd&&dd.innerHTML&&M.quiz&&M.quiz.kind==='revive'){const bt=dd.querySelector('[data-act=mbRevive]');if(bt)bt.remove();}}
 function mbMini14(){const cv=$('mmap');if(!cv)return;const c=cv.getContext('2d'),k=216/MW;c.setTransform(k,0,0,k,0,0);c.fillStyle='#1f5a3a';c.fillRect(0,0,MW,MW);
  c.strokeStyle='#2d7fc4';c.lineWidth=90;c.beginPath();c.moveTo(0,0);c.lineTo(MW,MW);c.stroke();
- ISLC.forEach((p,i)=>{c.fillStyle=i?'#5a2a3a':'#2a3f6a';c.beginPath();c.arc(p[0],p[1],676,0,7);c.fill();});
+ ISLC.forEach((p,i)=>{c.fillStyle=((i?1:0)!==(mir51()?1:0))?'#5a2a3a':'#2a3f6a';c.beginPath();c.arc(p[0],p[1],676,0,7);c.fill();});
  c.strokeStyle='#c9b07a';c.lineWidth=110;Object.keys(PATHS).forEach(l=>{c.globalAlpha=MB.lanes.includes(l)?1:.3;const L=PATHS[l];c.beginPath();c.moveTo(L[2][0],L[2][1]);for(let i=3;i<L.length-2;i++)c.lineTo(L[i][0],L[i][1]);c.stroke();c.globalAlpha=1;});
- MB.U.forEach(u=>{if(u.dead&&!u.st)return;c.fillStyle=u.dead?'#555':u.side===0?'#46a6ff':u.side===1?'#ff4f6d':'#c77dff';
+ MB.U.forEach(u=>{if(u.dead&&!u.st)return;c.fillStyle=u.dead?'#555':(TCOL51(u.side)||'#c77dff');
   if(u.st){const s=u.kind==='core'?120:u.sub==='bld'?55:80;c.fillRect(u.x-s/2,u.y-s/2,s,s);}else if(u.kind==='hero'){c.beginPath();c.arc(u.x,u.y,u===MB.me?90:70,0,7);c.fill();if(u===MB.me){c.lineWidth=26;c.strokeStyle='#fff';c.stroke();}}else if(u.kind==='camp'||u.kind==='golem'){c.beginPath();c.arc(u.x,u.y,45,0,7);c.fill();}else c.fillRect(u.x-20,u.y-20,40,40);});
  MB.pick.forEach(p=>{if(p.k==='rune'){c.fillStyle='#ffc600';c.beginPath();c.arc(p.x,p.y,50,0,7);c.fill();}});
  c.strokeStyle='rgba(255,255,255,.8)';c.lineWidth=16;c.strokeRect(MB.me.x-450,MB.me.y-650,900,900);}
 function mbDraw14(){const cv=$('mbcv');if(!cv||!MB)return;const W=cv.clientWidth,H=cv.clientHeight;const dpr=Math.min(2,window.devicePixelRatio||1);if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);}
- const c=cv.getContext('2d');const k=Math.max(W,H)/(W>H?1100:900);const me=MB.me;const ox=me.x-W/k/2,oy=me.y-H/k*.55;c.setTransform(dpr*k,0,0,dpr*k,-ox*dpr*k,-oy*dpr*k);
+ const c=cv.getContext('2d');const k=Math.max(W,H)/(W>H?1100:900);const me=MB.me;const ox=me.x-W/k/2,oy=me.y-H/k*.55;const MRR=mir51();if(MRR){c.setTransform(1,0,0,1,0,0);c.fillStyle='#2f8f4e';c.fillRect(0,0,cv.width,cv.height);c.setTransform(-dpr*k,0,0,-dpr*k,dpr*k*(2*me.x-ox),dpr*k*(2*me.y-oy));const ft=CanvasRenderingContext2D.prototype.fillText;c.fillText=function(t,x,y){c.save();c.translate(x,y);c.rotate(Math.PI);ft.call(c,t,0,0);c.restore();};}else{c.setTransform(dpr*k,0,0,dpr*k,-ox*dpr*k,-oy*dpr*k);}
  c.fillStyle='#2f8f4e';c.fillRect(ox,oy,W/k,H/k);c.strokeStyle='#2d7fc4';c.lineWidth=110;c.beginPath();c.moveTo(0,0);c.lineTo(MW,MW);c.stroke();
  ISLC.forEach((p,i)=>{c.fillStyle='#2d7fc4';c.beginPath();c.ellipse(p[0],p[1],780,780,0,0,7);c.fill();c.fillStyle=i?'#d9c49a':'#e8d49a';c.beginPath();c.arc(p[0],p[1],702,0,7);c.fill();c.fillStyle=i?'#3fae70':themeOpt().grass;c.beginPath();c.arc(p[0],p[1],637,0,7);c.fill();});
  c.strokeStyle='#c9b07a';c.lineWidth=160;c.lineJoin='round';Object.values(PATHS).forEach(L=>{c.beginPath();c.moveTo(L[2][0],L[2][1]);for(let i=3;i<L.length-2;i++)c.lineTo(L[i][0],L[i][1]);c.stroke();});
  (MB.obs||[]).forEach(o=>{if(o.u||!o.k)return;c.fillStyle=o.k==='rock'||o.k==='wall'?'#7c8098':'#215f35';c.beginPath();c.arc(o.x,o.y,o.r,0,7);c.fill();});
  MB.pick.forEach(p=>{c.fillStyle=p.k==='rune'?'#ffc600':'#8a5005';c.beginPath();c.arc(p.x,p.y,16,0,7);c.fill();});
- const bar=(u,w,y)=>{c.fillStyle='rgba(0,0,0,.6)';c.fillRect(u.x-w/2-1,y-1,w+2,6);c.fillStyle=u.side===0?'#46a6ff':u.side===1?'#ff4f6d':'#c77dff';c.fillRect(u.x-w/2,y,w*Math.max(0,u.hp/u.max),4);};
- c.textAlign='center';MB.U.forEach(u=>{if(u.dead&&!u.st)return;const col=u.side===0?'#46a6ff':u.side===1?'#ff4f6d':'#7a3fd0';c.fillStyle=u.dead?'#555':col;c.strokeStyle='#14112e';c.lineWidth=3;
+ const bar=(u,w,y)=>{c.fillStyle='rgba(0,0,0,.6)';c.fillRect(u.x-w/2-1,y-1,w+2,6);c.fillStyle=(TCOL51(u.side)||'#c77dff');c.fillRect(u.x-w/2,y,w*Math.max(0,u.hp/u.max),4);};
+ c.textAlign='center';MB.U.forEach(u=>{if(u.dead&&!u.st)return;const col=TCOL51(u.side)||'#7a3fd0';c.fillStyle=u.dead?'#555':col;c.strokeStyle='#14112e';c.lineWidth=3;
   if(u.st){const s=u.r*1.5;c.fillRect(u.x-s/2,u.y-s,s,s*1.3);c.strokeRect(u.x-s/2,u.y-s,s,s*1.3);if(u.be&&!u.dead){c.font='18px sans-serif';c.fillText(u.be,u.x,u.y-s*.2);}if(!u.dead){bar(u,50,u.y-s-12);c.fillStyle='#fff';c.font='bold 10px sans-serif';c.fillText(u.bname+(u.blv?' '+u.blv:''),u.x,u.y-s-16);}return;}
   c.beginPath();c.arc(u.x,u.y,u.r,0,7);c.fill();c.stroke();if(u.kind==='hero'){c.fillStyle='#fff';c.font='bold 11px sans-serif';c.fillText((u.me?'YOU':u.nm)+' '+u.lv,u.x,u.y+u.r+13);bar(u,40,u.y-u.r-10);if(u.studying){c.strokeStyle='#ffc600';c.lineWidth=4;c.beginPath();c.arc(u.x,u.y,u.r+8,0,7);c.stroke();}}else bar(u,22,u.y-u.r-8);});
  MB.fx.forEach(f=>{if(f.t<0)return;const q=f.t/f.d;c.globalAlpha=1-q;c.strokeStyle=f.c;c.fillStyle=f.c;c.lineWidth=5;if(f.k==='ring'||f.k==='met'||f.k==='lvl'){c.beginPath();c.arc(f.x,f.y,(f.r||30)*(.4+.6*q),0,7);if(f.fill){c.globalAlpha=(1-q)*.3;c.fill();c.globalAlpha=1-q;}c.stroke();}else if(f.x2!=null){if(f.k==='proj'){c.beginPath();c.arc(f.x+(f.x2-f.x)*q,f.y+(f.y2-f.y)*q,6,0,7);c.fill();}else{c.lineWidth=f.k==='beam'?14:5;c.beginPath();c.moveTo(f.x,f.y);c.lineTo(f.x2,f.y2);c.stroke();}}else{c.beginPath();c.arc(f.x,f.y,24*q+5,0,7);c.stroke();}c.globalAlpha=1;});
- c.font='bold 14px sans-serif';MB.nums.forEach(n=>{c.globalAlpha=1-n.t/1.1;c.fillStyle=n.c;c.fillText(n.txt,n.x,n.y-n.t*40);});c.globalAlpha=1;}
+ c.font='bold 14px sans-serif';MB.nums.forEach(n=>{c.globalAlpha=1-n.t/1.1;c.fillStyle=n.c;c.fillText(n.txt,n.x,n.y-n.t*40);});c.globalAlpha=1;if(MRR)delete c.fillText;}
 function attach3D14(){if(V.name==='moba'){const host=$('s3h');if(!host||!gfx3()||!MB){S3D.unmount('main');return;}
   const th=themeOpt();const isl=[0,1].map(s=>{const ring=(a,b)=>islPts14(a,b,36).map(p=>L2W(s,p[0],p[1]));return {sea:ring(10.6,11.6),edge:ring(9.6,10.6),inner:ring(8.7,9.6),sand:s?'#e8d49a':th.sand,grass:s?'#45c47e':th.grass};});
   const segs=laneSegs().map(q=>[q[0],q[1],0]).concat(islandSegs());const br=[0,1].flatMap(s=>['top','mid','bot'].map(l=>{const e=EXL[s][l];const k=1/Math.hypot(e[0]/11.1,e[1]/12.1);const w=L2W(s,e[0]*k,e[1]*k);const c=ISLC[s];return [w[0],w[1],Math.atan2(w[0]-c[0],w[1]-c[1])];}));
@@ -40544,7 +40588,7 @@ function mbMini(){const M=MB;if(!M)return;const U=M.U;M.U=U.filter(u=>!u.fogHide
  const cv=$('mmap');if(!cv||!M.fogD)return;const N=M.fogN;if(!FOGC||FOGC.width!==N){FOGC=document.createElement('canvas');FOGC.width=FOGC.height=N;FOGCV=-1;}
  if(FOGCV!==M.fogV){FOGCV=M.fogV;const x=FOGC.getContext('2d'),im=x.createImageData(N,N);for(let i=0;i<N*N;i++){const v=M.fogD[i];im.data[i*4]=8;im.data[i*4+1]=6;im.data[i*4+2]=30;im.data[i*4+3]=v>200?0:v>50?130:225;}x.putImageData(im,0,0);}
  const c=cv.getContext('2d');c.setTransform(1,0,0,1,0,0);c.imageSmoothingEnabled=true;c.drawImage(FOGC,0,0,cv.width,cv.height);
- const k=cv.width/MW;c.setTransform(k,0,0,k,0,0);c.fillStyle='#fff';c.beginPath();c.arc(M.me.x,M.me.y,95,0,7);c.fill();c.fillStyle='#46a6ff';c.beginPath();c.arc(M.me.x,M.me.y,70,0,7);c.fill();}
+ const k=cv.width/MW;c.setTransform(k,0,0,k,0,0);c.fillStyle='#fff';c.beginPath();c.arc(M.me.x,M.me.y,95,0,7);c.fill();c.fillStyle=TCOL51(0);c.beginPath();c.arc(M.me.x,M.me.y,70,0,7);c.fill();}
 function mbDraw(){const M=MB;if(!M)return;const U=M.U;M.U=U.filter(u=>!u.fogHide);try{mbDraw14();}finally{M.U=U;}}
 
 /* ---------- 5) science stores and item recipes ---------- */
@@ -46544,8 +46588,8 @@ function vLogin(){let h=vLogin44L();const L=UI.lg||{};
  if(L.step==='pick'&&fbOn()){const i=h.indexOf('data-act="lgNew"');if(i>0){const j=h.indexOf('</button>',i)+9;h=h.slice(0,j)+'<button class="gbtn blue block lgcloud" data-act="clLg">☁️ I have an account</button>'+clGetApp()+h.slice(j);}}
  if(L.step==='cloud')h=loginShell('<form class="lgcard" id="clform" novalidate><div class="lgh">LOG IN</div><div class="lgsub">Use the nickname and password you made when you signed up. Your save comes from the school server.</div><input id="clnick" maxlength="14" placeholder="Nickname" autocomplete="username" aria-label="Nickname" value="'+esc(L.nick||'')+'" autocapitalize="off" spellcheck="false">'+clInp('clpw','Password','current-password')+
   '<div class="lgerr" role="alert">'+(L.err||'')+'</div><button class="gbtn green block" type="submit"'+(L.busy?' disabled':'')+'>'+(L.busy?'☁️ Getting your save…':'Log in ▶')+'</button><button class="lglink" type="button" data-act="lgBack">‹ Back</button></form>');
- if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v50'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));
- return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v50'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));}
+ if(fbOn())h=h.replace('🔐 Saves are encrypted on this device · Project SIKLAB v44','🔐 Encrypted saves · ☁️ synced to the school server · Project SIKLAB v51'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));
+ return h.replace(/Project SIKLAB v44/g,'Project SIKLAB v51'+(window.FB&&FB.cfg&&FB.cfg.build?' · build '+FB.cfg.build:''));}
 function clGetApp(){if(!window.FB||FB.native)return '';const ua=navigator.userAgent;const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
  if(/Android/i.test(ua)&&FB.cfg&&FB.cfg.apk)return '<a class="lglink lgapp" href="'+esc(FB.cfg.apk)+'" rel="noopener">📱 Get the Android app</a>';
  if(ios&&!sa)return '<div class="lgsub small lgapp">📱 iPhone: tap Share › <b>Add to Home Screen</b> to open SIKLAB like an app.</div>';return '';}
@@ -47176,7 +47220,7 @@ function hbBuildHost(H,rid,L){const md=H.mode;const bd=S.settings.bdiff;S.settin
   U:B.U.map(u=>{hbMark(u,now);B.net.sent.add(u.uid);return hbFull(u);}),
   obs:B.obs.map(o=>[Math.round(o.x),Math.round(o.y),r1(o.r),o.u?o.u.uid:0]),
   trees:genTrees().map(t=>{const o={};for(const k in t){const v=t[k];if(typeof v==='number')o[k]=r1(v);else if(typeof v==='string'||typeof v==='boolean')o[k]=v;}return o;}),
-  decos:JSON.parse(JSON.stringify(B.decos||[])),pl:{},nm:B.net.nm,host:CL.uid};
+  decos:JSON.parse(JSON.stringify(B.decos||[])),pl:{},nm:B.net.nm,host:CL.uid,rt:flipT?1:0};
  Object.values(B.net.pl).forEach(p=>{P.pl[p.uid]={hu:p.hu.uid,side:p.side};});
  B.net.pk=JSON.stringify(P.pick);
  FB.rt.set('hbr/'+rid+'/init',JSON.stringify(P)).catch(e=>clWarn(e,'hbinit'));
@@ -47285,7 +47329,7 @@ function hbBuildGuest(H,rid,P){const my=P.pl&&P.pl[CL.uid];if(!my){hbCancel(true
  if(!spend(1)){FB.rt.set('hbr/'+rid+'/in/'+CL.uid,JSON.stringify({m:0,j:[0,0],c:[{n:1,a:'leave'}],t:Date.now()})).catch(()=>{});return;}
  const F=my.side===1;const G={guest:true,pl0:P.pl,side0:my.side,gen:0,rid,F,hs:my.side,hu:my.hu,idx:new Map(),q:0,last:performance.now(),cq:[],cid:0,acc:0,sent:'',v1:teamN(P.mode)===1,offs:[],nm:P.nm||{},host:false,hostUid:P.host};
  const rp=(a)=>{const r=hbRot(F,a[0],a[1]);return a.length>2?[r[0],r[1],a[2]]:r;};
- MB={uid:0,U:[],t:P.t,mode:P.mode,spawnT:1e9,wave:P.wave||0,runeT:1e9,pick:(P.pick||[]).map(p=>({k:p.k,x:hbRot(F,p.x,p.y)[0],y:hbRot(F,p.x,p.y)[1]})),fx:[],nums:[],state:'load',joy:null,
+ MB={mir:((my.side===1)!==(P.rt===1))?1:0,uid:0,U:[],t:P.t,mode:P.mode,spawnT:1e9,wave:P.wave||0,runeT:1e9,pick:(P.pick||[]).map(p=>({k:p.k,x:hbRot(F,p.x,p.y)[0],y:hbRot(F,p.x,p.y)[1]})),fx:[],nums:[],state:'load',joy:null,
   kills:F?[P.kills[1],P.kills[0]]:P.kills.slice(),run:Date.now(),lanes:(P.lanes||[]).map(l=>F?(LSW[l]||l):l),runes:0,clan:F?clanName():P.clan,rival:F?P.clan:P.rival,
   obs:[],decos:[],home:F?[rp(P.home[1]),rp(P.home[0])]:P.home.map(h=>h.slice()),rlab:P.rlab,feed:[],net:G};
  const B=MB;P.U.forEach(o=>{const u=hbMakeU(o,F,G);B.U.push(u);B.uid=Math.max(B.uid,u.uid||0);});
@@ -47564,7 +47608,7 @@ function buff48(dt){const B=MB;if(!B||B.net&&B.net.guest)return;
 const JSENS={low:72,normal:52,high:36};
 mbBind12=function(){const area=$('view').querySelector('.moba');const j=$('joy'),jk=$('joyk');if(!area||!j)return;MB.joy=null;MB.atkHold=false;const m=JSENS[S.settings.jsens||'normal']||52;
  const start=e=>{if(e.target.closest('.mctl,.mtl,.mtr,.mshopb,.mitems,.mbdead,.hbnet,.coach48,.mbx48'))return;const r=area.getBoundingClientRect();if(e.clientX-r.left>r.width*.6)return;MB.joy={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,dy:0};j.style.left=(e.clientX-r.left)+'px';j.style.top=(e.clientY-r.top)+'px';j.classList.add('on');jk.style.transform='translate(-50%,-50%)';};
- const move=e=>{const J=MB&&MB.joy;if(!J||J.id!==e.pointerId)return;let dx=e.clientX-J.x,dy=e.clientY-J.y;const d=Math.hypot(dx,dy);if(d>m){dx=dx/d*m;dy=dy/d*m;}J.dx=dx/m;J.dy=dy/m;jk.style.transform='translate(calc(-50% + '+dx*50/m+'px),calc(-50% + '+dy*50/m+'px))';};
+ const move=e=>{const J=MB&&MB.joy;if(!J||J.id!==e.pointerId)return;let dx=e.clientX-J.x,dy=e.clientY-J.y;const d=Math.hypot(dx,dy);if(d>m){dx=dx/d*m;dy=dy/d*m;}{const g51=MB&&MB.mir?-1:1;J.dx=g51*dx/m;J.dy=g51*dy/m;}jk.style.transform='translate(calc(-50% + '+dx*50/m+'px),calc(-50% + '+dy*50/m+'px))';};
  const end=e=>{if(MB&&MB.joy&&MB.joy.id===e.pointerId){MB.joy=null;j.classList.remove('on');j.style.left='';j.style.top='';jk.style.transform='translate(-50%,-50%)';}};
  area.addEventListener('pointerdown',start);area.addEventListener('pointermove',move);area.addEventListener('pointerup',end);area.addEventListener('pointercancel',end);
  const ab=$('matk');if(ab){ab.addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();MB.atkHold=true;ab.classList.add('on');if(hbGuest()){const t=atkPick48(MB.me);if(t){MB.me.tgt=t;hbSendCmd({a:'tgt',u:t.uid});}}});const off=()=>{MB.atkHold=false;ab.classList.remove('on');};ab.addEventListener('pointerup',off);ab.addEventListener('pointercancel',off);ab.addEventListener('pointerleave',off);}
@@ -47577,7 +47621,7 @@ function mbDecor48(){const v=$('view').querySelector('.moba');if(!v)return;const
  const me=B&&B.me;if(me){const h=$('mheal48'),cd=$('mhcd48');if(h){const on=(me.hcd||0)>0;h.classList.toggle('cd',on);if(cd)cd.textContent=on?Math.ceil(me.hcd):'';}
   let bf=$('mbuf48');if(me.buffT>0){if(!bf){bf=document.createElement('div');bf.id='mbuf48';bf.className='mbuf48';v.appendChild(bf);}const t=(me.buffK==='red'?'🔥 ':'💧 ')+Math.ceil(me.buffT)+'s';if(bf.textContent!==t)bf.textContent=t;}else if(bf)bf.remove();}
  if(B&&B.coach&&!$('coach48')&&!B.coachDone){const d=document.createElement('div');d.id='coach48';d.className='coach48';
-  d.innerHTML='<b>🎯 GOAL: destroy the rival HQ</b><ul><li>🕹️ Drag on the left side to move</li><li>⚔️ <b>ATTACK</b> hits the nearest enemy. Hold it to keep attacking</li><li>✨ Tap a skill to cast it. The ring shows its range. <b>+</b> learns skills as you level up</li><li>🩹 Heal and 🏠 Recall when your HP is low</li><li>🏰 Towers shoot heroes. Push with your minions</li></ul><button class="gbtn green sm" data-act="coach48">Got it</button>';v.appendChild(d);
+  d.innerHTML='<button class="cx51" data-act="coach48" aria-label="Close tips">✕</button><b>🎯 GOAL: destroy the rival HQ</b><ul><li>🕹️ Drag on the left side to move</li><li>⚔️ <b>ATTACK</b> hits the nearest enemy. Hold it to keep attacking</li><li>✨ Tap a skill to cast it. The ring shows its range. <b>+</b> learns skills as you level up</li><li>🩹 Heal and 🏠 Recall when your HP is low</li><li>🏰 Towers shoot heroes. Push with your minions</li></ul><button class="gbtn green sm" data-act="coach48">Got it</button>';v.appendChild(d);
   setTimeout(()=>{if(MB===B){B.coachDone=1;const c=$('coach48');if(c)c.remove();}},16000);}}
 A.coach48=()=>{const B=MB;if(B){B.coachDone=1;S.coach48=(S.coach48||0)+1;save();}const c=$('coach48');if(c)c.remove();sfx('tap');};
 {const f=mbHUD;mbHUD=function(){f.apply(this,arguments);try{mbDecor48();}catch(e){}};}
@@ -47750,7 +47794,7 @@ A.rmPick=async d=>{const lid=RM.lid,r=RM.all[lid];if(!r||!r.dr||r.go)return;cons
  const ps=Object.keys(r.p).filter(u=>u!==CL.uid&&r.p[u].tm===me.tm&&r.p[u].pk===d.v).length;if(ps>=2){toast('Two teammates already picked that class.');return;}
  UI.bcls=d.v;const n=Object.assign({},me,{pk:d.v,l:JSON.stringify(hbLoad())});sfx('tap');try{await FB.rt.set('lobby/'+lid+'/p/'+CL.uid,n);}catch(e){clWarn(e,'rmpick');}};
 A.rmReady=async()=>{const lid=RM.lid,r=RM.all[lid];const me=r&&(r.p||{})[CL.uid];if(!me||!me.pk)return;sfx('good');try{await FB.rt.set('lobby/'+lid+'/p/'+CL.uid,Object.assign({},me,{rd:1}));}catch(e){}};
-setInterval(()=>{const r=RM.lid&&RM.all[RM.lid];if(!r||!r.dr||r.go)return;if(queue[0]&&queue[0].t==='rooms48')showQueue();
+setInterval(()=>{const r=RM.lid&&RM.all[RM.lid];if(!r||!r.dr||r.go)return;if(queue[0]&&queue[0].t==='rooms48')dr51Tick(r);
  if(r.h===CL.uid&&!RM.busy){const ps=Object.values(r.p||{});if(Date.now()>=r.dr.t||ps.every(p=>p.rd))A.rmStart(true);}},1000);
 
 /* ===================== v49 · the remaining revisions ===================== */
@@ -47825,12 +47869,115 @@ storeLabHTML=function(cat){shopsInit();const sh=shopOf(cat);const L=shopLv(cat);
   (nx?'<button class="gbtn green block" data-act="storeUp" data-i="'+cat+'" '+(S.coins<nx.c||(S.parts||0)<nx.p||S.base.hq<nx.hq?'disabled':'')+'>Upgrade to Lv'+(L+1)+' · 🪙'+nx.c+' · 🔩'+nx.p+'</button><div class="small muted" style="text-align:center">Needs Lab HQ Lv'+nx.hq+' (yours: Lv'+S.base.hq+')</div>':'<div class="small" style="text-align:center;color:var(--good);font-weight:700">Max level</div>')+
   '<button class="gbtn dark block" data-act="qok">Close</button>';};
 
+/* ===================== v51 · startup, online hero battle fixes, teacher deletes ===================== */
+
+/* ---------- 1. no loading screen after the school logos: go straight to the login screen ---------- */
+ldShow=function(){UI.loading=0;try{logo3Sync();}catch(e){}setTimeout(()=>{try{audioInit();setTrack();musicOn();}catch(e){}},250);};
+
+/* ---------- windows that refresh (rooms, draft) no longer blink: the pop-in plays only when a window first opens ---------- */
+let SQ51=null;
+{const f=showQueue;showQueue=function(){const L=$('layer');const had=L&&L.querySelector('.panel');const k0=SQ51;const sc=had?had.scrollTop:0;
+ const r=f.apply(this,arguments);const m=queue[0];const k=m?m.t+'|'+(m.k||m.id||''):null;SQ51=k;
+ if(had&&k&&k===k0){const p=L.querySelector('.panel');if(p){p.style.animation='none';if(m.t==='rooms48')p.scrollTop=sc;}}return r;};}
+
+/* ---------- hero battles use the scientist class chosen at sign-up (no class picker) ---------- */
+UI.bcls=null;A.bcls48=()=>{};
+{const f=bsetHTML;bsetHTML=function(m){UI.bcls=null;return f.apply(this,arguments).replace(/<div class="shead">YOUR HERO<\/div><div class="hsel48">[\s\S]*?<\/div>/,'');};}
+{const f=rmMe;rmMe=function(){const o=f.apply(this,arguments);try{if(S.hb&&S.hb.cls)o.pk=S.hb.cls;}catch(e){}return o;};}
+
+/* ---------- draft → "Get ready": everyone plays their own class and locks in before the timer ends ---------- */
+function dr51Tick(r){const n=$('dr51n'),g=$('dr51r');if(!n||!g)return;const left=Math.max(0,Math.ceil(((r.dr.t||0)-Date.now())/1000));
+ const t=String(left);if(n.textContent!==t)n.textContent=t;g.style.setProperty('--p',Math.round(left/DRAFT49*100));g.classList.toggle('low',left<=5);}
+rmDraftHTML=function(lid,r){const P=r.p||{},ids=Object.keys(P),me=P[CL.uid]||{},left=Math.max(0,Math.ceil(((r.dr.t||0)-Date.now())/1000));
+ const cls=u=>P[u].pk||(u===CL.uid&&S.hb?S.hb.cls:'');const mc=clsOf();
+ const col=tm=>'<div class="rmteam t'+tm+'"><b>'+(tm?'🔴 RED':'🔵 BLUE')+'</b>'+ids.filter(u=>P[u].tm===tm).map(u=>{const c=cls(u)?CLS49(cls(u)):null;
+  return '<div class="rmp dr51p'+(u===CL.uid?' me':'')+(P[u].rd?' rd':'')+'"><span>'+esc(clS(P[u].n,14))+'</span><small>'+(c?c.e+' '+esc(c.n):'🔬 Scientist')+'</small><em>'+(P[u].rd?'🔒 Ready':'⏳')+'</em></div>';}).join('')+'</div>';
+ return '<div class="ptitle outline">🎯 GET READY</div>'+
+  '<div class="dr51"><div class="dr51ring'+(left<=5?' low':'')+'" id="dr51r" style="--p:'+Math.round(left/DRAFT49*100)+'"><b id="dr51n">'+left+'</b><small>sec</small></div>'+
+  '<div class="dr51t"><b>Your hero: '+mc.e+' '+esc(mc.n)+'</b><small>This is the scientist class you chose when you signed up. Lock in before the timer ends. The battle starts when everyone is ready.</small></div></div>'+
+  '<div class="rmteams">'+col(0)+col(1)+'</div>'+
+  (me.rd?'<div class="dr51ok">🔒 Locked in. Waiting for the others…</div>':'<button class="gbtn green block" data-act="rmReady">🔒 Lock in</button>')+
+  '<button class="gbtn dark block" data-act="rmLeave">Leave the room</button>';};
+A.rmPick=()=>{};
+A.rmReady=async()=>{const lid=RM.lid,r=RM.all[lid];const me=r&&(r.p||{})[CL.uid];if(!me||me.rd)return;sfx('good');
+ const n=Object.assign({},me,{rd:1,pk:(S.hb&&S.hb.cls)||me.pk||'phys'});if(!n.l)try{n.l=JSON.stringify(hbLoad());}catch(e){}
+ try{await FB.rt.set('lobby/'+lid+'/p/'+CL.uid,n);}catch(e){clWarn(e,'rmready');}};
+
+/* ---------- when a battle starts, the battle setup and rooms windows close by themselves ---------- */
+{const f=go;go=function(name){if(name==='moba'){let n=0;for(let i=queue.length-1;i>=0;i--)if(['bset','rooms48','hbwait','tip','noEnergy'].includes(queue[i].t)){queue.splice(i,1);n++;}
+  if(n&&!queue.length){const L=$('layer');if(L)L.innerHTML='';}}return f.apply(this,arguments);};}
+/* the battle reminders are the small coach card, never a blocking window */
+try{delete TIPS.moba;}catch(e){}
+
+/* ---------- other players can move: the joystick is connected when their battle begins ---------- */
+{const f=mbBind;mbBind=function(){const a=$('view').querySelector('.moba');if(a)a._b51=1;return f.apply(this,arguments);};}
+{const f=mbLoop;mbLoop=function(){try{const a=$('view').querySelector('.moba');if(MB&&MB.state==='play'&&a&&!a._b51)mbBind();}catch(e){console.error(e);}return f.apply(this,arguments);};}
+
+/* ---------- red team plays from the red base, in red ---------- */
+const mir51=()=>!!(MB&&MB.mir);
+const TCOL51=s=>{const m=mir51();return s===0?(m?'#ff4f6d':'#46a6ff'):s===1?(m?'#46a6ff':'#ff4f6d'):null;};
+{const f=hbBuildHost;hbBuildHost=function(H,rid,L){const red=((L||[]).find(p=>p.uid===CL.uid)||{}).team===1;window.MIR51N=red?1:0;
+ try{return f.apply(this,arguments);}finally{window.MIR51N=0;if(red&&MB&&MB.net&&MB.net.host)MB.mir=1;}};}
+{const f=scr2w;scr2w=function(e){const g=f(e);if(!g||!mir51())return g;if(gfx3())return [MW-g[0],MW-g[1]];const me=MB.me;return [2*me.x-g[0],2*me.y-g[1]];};}
+{const f=mbHUD;mbHUD=function(){const r=f.apply(this,arguments);const on=mir51();const m=$('mmap');if(m&&m.classList.contains('mir51')!==on)m.classList.toggle('mir51',on);
+ const v=$('view').querySelector('.moba');if(v&&v.classList.contains('mir51')!==on)v.classList.toggle('mir51',on);return r;};}
+
+/* ---------- teacher: permanently delete sign-ups and learner accounts ---------- */
+const DEL51={list:null,busy:0,q:''};
+async function del51Local(nick){const t=tGet();if(!t||!nick)return;const k=nk(nick);
+ if(t.roster)Object.keys(t.roster).forEach(x=>{if(x===k)delete t.roster[x];});
+ if(t.apr)Object.keys(t.apr).forEach(r=>{if(nk(t.apr[r].n||'')===k)delete t.apr[r];});
+ if(t.res)Object.keys(t.res).forEach(x=>{if(x.indexOf(k+'|')===0)delete t.res[x];});
+ tPut(t);}
+async function del51Cloud(uid,nick){
+ /* the server job finishes what only it may do: the sign-in account, the private save and phone tokens */
+ let req=true;try{await FB.set('deluser/'+uid,{t:Date.now(),by:CL.uid,n:clS(nick||'',14)});}catch(e){req=false;clWarn(e,'deluser');}
+ const ops=[['del','players/'+uid],['del','progress/'+uid]];try{if(nick)ops.push(['del','nicks/'+await clNid(nick)]);}catch(e){}
+ await FB.batch(ops);
+ const each=async(coll,sub)=>{try{const L=await FB.query(coll,{where:[['uid','==',uid]]});for(const d of L){if(sub){try{const P=await FB.query(coll+'/'+d.id+'/'+sub,{});for(const p of P)await FB.del(coll+'/'+d.id+'/'+sub+'/'+p.id);}catch(e){}}await FB.del(coll+'/'+d.id);}}catch(e){}};
+ await each('subs','parts');await each('inbox');await each('attMarks');
+ try{FB.rt.online(true);await FB.rt.remove('approved/'+uid);}catch(e){}finally{try{FB.rt.online(false);}catch(e){}}
+ return req;}
+async function del51(uid,nick){if(DEL51.busy)return false;DEL51.busy=1;
+ try{let req=true;if(uid)req=await del51Cloud(uid,nick);await del51Local(nick);
+  CL.pend=(CL.pend||[]).filter(p=>p.id!==uid);if(DEL51.list)DEL51.list=DEL51.list.filter(p=>p.id!==uid);
+  sfx('tap');toast((nick||'Learner')+' was deleted.'+(req?'':' Publish the v51 Firestore rules so the server can also remove the sign-in account.'));return true;}
+ catch(e){clWarn(e,'del51');toast('Could not delete. Check the internet and try again.');return false;}
+ finally{DEL51.busy=0;if(V.name==='teacher')render();}}
+const del51Ask=n=>confirm('Permanently delete '+(n||'this learner')+'?\n\nTheir account, sign-in, save, progress, submissions, attendance and approval record are all removed. This cannot be undone.');
+Object.assign(A,{
+ del51:async d=>{if(!del51Ask(d.n))return;await del51(d.u,d.n);},
+ del51Log:async d=>{const t=tGet()||{};const x=(t.apr||{})[d.r];const n=x&&x.n;if(!del51Ask(n))return;let uid=null;
+  if(clT()){try{const L=await FB.query('players',{where:[['ref','==',d.r]]});if(L[0])uid=L[0].id;else if(n){const M=await FB.query('players',{where:[['nk','==',nk(n)]]});if(M[0])uid=M[0].id;}}catch(e){}}
+  if(t.apr&&t.apr[d.r]){delete t.apr[d.r];tPut(t);}await del51(uid,n);},
+ del51Dev:d=>{const a=accGet();const u=a.u[d.k];if(!u||!del51Ask(u.n))return;delete a.u[d.k];if(a.cur===d.k)a.cur=null;accPut(a);del51Local(u.n);sfx('tap');toast(u.n+' was deleted from this device.');render();},
+ del51Load:async()=>{if(!clT())return;DEL51.list=[];render();try{const L=await FB.query('players',{});DEL51.list=L.sort((a,b)=>String(a.nick||'').localeCompare(String(b.nick||'')));}catch(e){clWarn(e,'del51load');DEL51.list=null;toast('Could not load the accounts.');}render();},
+ del51All:async()=>{const L=DEL51.list||[];if(!L.length)return;const w=prompt('This permanently deletes ALL '+L.length+' learner accounts and their data. Type DELETE to continue.');if(w!=='DELETE'){toast('Nothing was deleted.');return;}
+  let n=0;for(const p of L.slice()){if(await del51(p.id,p.nick))n++;}toast(n+' learner accounts deleted.');}});
+function del51HTML(){if(!clT())return '';const L=DEL51.list;
+ const st=p=>p.ok==='ok'?'<span class="dl51s ok">Approved</span>':p.ok==='no'?'<span class="dl51s no">Declined</span>':'<span class="dl51s p">Waiting</span>';
+ const rows=L==null?'<button class="gbtn sm block" data-act="del51Load">👥 Show all learner accounts</button>':!L.length?'<div class="small muted">Loading accounts…</div>':
+  '<input id="dl51q" class="dl51q" placeholder="Search nickname or section" autocomplete="off"><div class="dl51l">'+L.map(p=>'<div class="dl51r" data-s="'+esc(nk((p.nick||'')+' '+(secName(p.sec)||'')))+'"><span><b>'+esc(p.nick||'?')+'</b><small>'+esc(secName(p.sec)||'No section')+' · Lv '+(p.lv||1)+'</small></span>'+st(p)+
+   '<button class="dl51x" data-act="del51" data-u="'+esc(p.id)+'" data-n="'+esc(p.nick||'')+'" aria-label="Delete '+esc(p.nick||'')+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>').join('')+'</div>'+
+   '<button class="gbtn dark sm block dl51all" data-act="del51All">Delete ALL learner accounts…</button>';
+ return '<details class="dl51"'+(L!=null?' open':'')+'><summary class="kvh">🗑️ DELETE LEARNER ACCOUNTS</summary><div class="small muted">Removes the learner for good: sign-in, save, progress, submissions, attendance and approval record. The nickname becomes free again.</div>'+rows+'</details>';}
+const TRASH51='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+{const f=apprPanel;apprPanel=function(){let h=f.apply(this,arguments);
+ h=h.replace(/data-act="clNo" data-u="([^"]*)">✕ Decline<\/button>/g,(m,u)=>{const p=(CL.pend||[]).find(x=>x.id===u);return m+'<button class="dl51x" data-act="del51" data-u="'+u+'" data-n="'+esc((p&&p.nick)||'')+'" aria-label="Delete">'+TRASH51+'</button>';});
+ h=h.replace(/data-act="apNo" data-k="([^"]*)">✕ Decline<\/button>/g,(m,k)=>m+'<button class="dl51x" data-act="del51Dev" data-k="'+k+'" aria-label="Delete">'+TRASH51+'</button>');
+ h=h.replace(/(<div class="apd (?:ok|no)">[\s\S]*?<small>)([^<·]*?)( ·[^<]*)?(<\/small><\/span><span class="appill">[^<]*<\/span>)<\/div>/g,(m,a,r,b,c)=>a+r+(b||'')+c+'<button class="dl51x sm" data-act="del51Log" data-r="'+r.trim()+'" aria-label="Delete">'+TRASH51+'</button></div>');
+ const j=h.lastIndexOf('</div>');return j>0?h.slice(0,j)+del51HTML()+h.slice(j):h+del51HTML();};}
+document.addEventListener('input',e=>{if(e.target&&e.target.id==='dl51q'){const q=nk(e.target.value||'');document.querySelectorAll('.dl51r').forEach(r=>{r.style.display=!q||(r.dataset.s||'').indexOf(q)>=0?'':'none';});}});
+
+/* ---------- a slow phone that freezes for a moment (loading the 3D island) no longer thinks the host left ---------- */
+{const f=hbGStep;hbGStep=function(dt){const B=MB,G=B&&B.net;if(G&&G.guest){const now=performance.now();if(G.ls51&&now-G.ls51>900)G.last=Math.max(G.last,now-900);G.ls51=now;}return f.apply(this,arguments);};}
+
 /* ============ BOOT ============ */
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot)window.claude.hot.snapshot(()=>({S}));}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready)window.claude.hot.ready(start);else start((window.claude&&window.claude.hot&&window.claude.hot.data)||{});
 })();
 </script>
 <!-- school server bridge (built from src/main.jsx by "npm run build") -->
-<script src="siklab-cloud.js?b=990824"></script>
+<script src="siklab-cloud.js?b=994949"></script>
 </body>
 </html>
